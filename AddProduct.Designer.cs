@@ -45,8 +45,6 @@ namespace E_Commerce_Store
             textBox4 = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
             comboBox3 = new ComboBox();
             doneButton = new Button();
             SuspendLayout();
@@ -141,18 +139,6 @@ namespace E_Commerce_Store
             label2.ForeColor = Color.FromArgb(241, 250, 238);
             label2.Name = "label2";
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(comboBox1, "comboBox1");
-            comboBox1.Name = "comboBox1";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            resources.ApplyResources(comboBox2, "comboBox2");
-            comboBox2.Name = "comboBox2";
-            // 
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
@@ -174,8 +160,6 @@ namespace E_Commerce_Store
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(doneButton);
             Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
             Controls.Add(label2);
             Controls.Add(textBox4);
             Controls.Add(label1);
@@ -208,8 +192,6 @@ namespace E_Commerce_Store
         private TextBox textBox4;
         private Label label1;
         private Label label2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
         private ComboBox comboBox3;
         private Button doneButton;
     }

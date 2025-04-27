@@ -41,10 +41,12 @@ internal partial class Register : Form
         try
         {
             // Insert into the database
-            string query = $@"
-                INSERT INTO Customer (FirstName, LastName, DateOfBirth, Email, Pass_Hashed, PhoneNumber)
-                VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
-            ";
+            var query = $"""
+                         
+                                         INSERT INTO Customer (FirstName, LastName, DateOfBirth, Email, Pass_Hashed, PhoneNumber)
+                                         VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
+                                     
+                         """;
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
