@@ -77,6 +77,7 @@ namespace E_Commerce_Store
             button1.ForeColor = Color.FromArgb(241, 250, 238);
             button1.Name = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // HomePage
             // 

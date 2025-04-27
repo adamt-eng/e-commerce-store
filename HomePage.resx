@@ -406,7 +406,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>E-Commerce Store Home Page</value>
+    <value>Home Page</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>HomePage</value>
