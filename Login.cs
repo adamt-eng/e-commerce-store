@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +9,7 @@ namespace E_Commerce_Store;
 internal partial class Login : Form
 {
     internal static Form MainForm;
-
+    internal static KeyValuePair<string, int> User;
     internal Login() => InitializeComponent();
 
     private void loginButton_Click(object sender, EventArgs e)
@@ -26,9 +28,11 @@ internal partial class Login : Form
 
         progressBarTimer.Stop();
 
-        switch (Authenticate(usernameTextBox.Text, passwordTextBox.Text))
+        var id = Authenticate(emailTextBox.Text.Trim(), passwordTextBox.Text.Trim());
+        var loginType = loginTypeComboBox.SelectedItem.ToString();
+        switch (loginType)
         {
-            case "Customer": MainForm = new HomePage(); break;
+            case "Customer": MainForm = new MyProfile(); break;
             case "Admin": MainForm = new AdminPage(); break;
             case "Seller": MainForm = new SellerPage(); break;
             default: 
@@ -37,17 +41,28 @@ internal partial class Login : Form
                 progressBarPanel.Size = new Size(6, 75);
                 return;
         }
-        
+
+        try
+        {
+            User = new KeyValuePair<string, int>(loginType, int.Parse(id));
+        }
+        catch
+        {
+            MessageBox.Show("Incorrect credentials, please check your info and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            progressBarPanel.Hide();
+            progressBarPanel.Size = new Size(6, 75);
+            return;
+        }
+
         Hide();
         MainForm.ShowDialog();
     }
 
-    private string Authenticate(string username, string password)
+    private string Authenticate(string email, string password)
     {
-        var loginType = loginTypeComboBox.SelectedItem;
-        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM {loginType} WHERE Email = '{username}' AND Pass_Hashed = '{password}'");
-
-        return string.IsNullOrWhiteSpace(result.ToString()) ? null : loginType.ToString();
+        var loginType = loginTypeComboBox.SelectedItem.ToString();
+        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{loginType}] WHERE Email = '{email}' AND Pass_Hashed = '{password}'");
+        return result is DataTable { Rows.Count: > 0 } table ? table.Rows[0][0].ToString() : null;
     }
 
     private void registerLabel_Click(object sender, EventArgs e)

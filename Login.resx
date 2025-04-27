@@ -150,38 +150,38 @@
   <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="usernameTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="emailTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
-  <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 14</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="emailTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
-  <data name="usernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Username</value>
+  <data name="emailTextBox.PlaceholderText" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="usernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="emailTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>643, 39</value>
   </data>
-  <data name="usernameTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="emailTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="usernameTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="emailTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.Name" xml:space="preserve">
-    <value>usernameTextBox</value>
+  <data name="&gt;&gt;emailTextBox.Name" xml:space="preserve">
+    <value>emailTextBox</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;emailTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;emailTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;emailTextBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="passwordTextBox.Font" type="System.Drawing.Font, System.Drawing">

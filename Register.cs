@@ -6,7 +6,7 @@ namespace E_Commerce_Store;
 internal partial class Register : Form
 {
     internal Register() => InitializeComponent();
-
+    internal bool RegisterAsAdmin;
     private void registerButton_Click(object sender, EventArgs e)
     {
         var firstName = firstNameTextBox.Text.Trim();
@@ -28,12 +28,19 @@ internal partial class Register : Form
 
         try
         {
-            var query = $"""
-                         
-                                         INSERT INTO Customer (First_Name, Last_Name, Date_Of_Birth, Email, Pass_Hashed, Phone_Number)
-                                         VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
-                                     
-                         """;
+            var query = string.Empty;
+            query = RegisterAsAdmin ? $"""
+
+                                       INSERT INTO Admin (Admin_Name, Admin_Email, Pass_Hashed, Phone_Number)
+                                       VALUES ({$"{firstName} {lastName}"}, '{email}', '{password}', '{phoneNumber}');
+                                       
+                                                   
+                                       """ : $"""
+                                              
+                                                              INSERT INTO Customer (First_Name, Last_Name, Date_Of_Birth, Email, Pass_Hashed, Phone_Number)
+                                                              VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
+                                                          
+                                              """;
 
             Program.DatabaseHandler.ExecuteQuery(query);
 

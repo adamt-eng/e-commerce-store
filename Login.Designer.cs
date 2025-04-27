@@ -34,7 +34,7 @@ namespace E_Commerce_Store
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             loginButton = new Button();
-            usernameTextBox = new TextBox();
+            emailTextBox = new TextBox();
             passwordTextBox = new TextBox();
             registerLabel = new Label();
             progressBarPanel = new Panel();
@@ -51,12 +51,12 @@ namespace E_Commerce_Store
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += loginButton_Click;
             // 
-            // usernameTextBox
+            // emailTextBox
             // 
-            usernameTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(usernameTextBox, "usernameTextBox");
-            usernameTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            usernameTextBox.Name = "usernameTextBox";
+            emailTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(emailTextBox, "emailTextBox");
+            emailTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            emailTextBox.Name = "emailTextBox";
             // 
             // passwordTextBox
             // 
@@ -108,7 +108,7 @@ namespace E_Commerce_Store
             Controls.Add(progressBarPanel);
             Controls.Add(registerLabel);
             Controls.Add(passwordTextBox);
-            Controls.Add(usernameTextBox);
+            Controls.Add(emailTextBox);
             Controls.Add(loginButton);
             MaximizeBox = false;
             Name = "Login";
@@ -120,7 +120,7 @@ namespace E_Commerce_Store
         #endregion
 
         private Button loginButton;
-        private TextBox usernameTextBox;
+        private TextBox emailTextBox;
         private TextBox passwordTextBox;
         private Label registerLabel;
         private Panel progressBarPanel;

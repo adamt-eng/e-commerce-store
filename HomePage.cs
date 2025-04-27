@@ -26,7 +26,7 @@ internal partial class HomePage : Form
 
         // Load all products with SQL
 
-        var products = Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Products");
+        Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Products");
     }
 
     private void myProfileButton_Click(object sender, EventArgs e)

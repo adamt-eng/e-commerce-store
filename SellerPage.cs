@@ -51,7 +51,7 @@ internal partial class SellerPage : Form
 
     private void AddButton_Click_1(object sender, EventArgs e)
     {
-        AddProduct addProduct = new AddProduct();
+        var addProduct = new AddProduct();
         addProduct.ShowDialog();
     }
 }

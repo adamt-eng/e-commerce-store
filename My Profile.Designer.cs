@@ -53,6 +53,8 @@ namespace E_Commerce_Store
             paymentMethodsListBox = new ListBox();
             backButton = new Button();
             showPreviousOrdersButton = new Button();
+            deleteInPaymentButton = new Button();
+            deleteInAddressButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -63,6 +65,7 @@ namespace E_Commerce_Store
             saveButton.ForeColor = Color.FromArgb(241, 250, 238);
             saveButton.Name = "saveButton";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // passwordLabel
             // 
@@ -181,6 +184,7 @@ namespace E_Commerce_Store
             addressListBox.FormattingEnabled = true;
             resources.ApplyResources(addressListBox, "addressListBox");
             addressListBox.Name = "addressListBox";
+            addressListBox.DoubleClick += addressListBox_DoubleClick;
             // 
             // groupBox2
             // 
@@ -195,6 +199,7 @@ namespace E_Commerce_Store
             paymentMethodsListBox.FormattingEnabled = true;
             resources.ApplyResources(paymentMethodsListBox, "paymentMethodsListBox");
             paymentMethodsListBox.Name = "paymentMethodsListBox";
+            paymentMethodsListBox.DoubleClick += paymentMethodsListBox_DoubleClick;
             // 
             // backButton
             // 
@@ -212,11 +217,29 @@ namespace E_Commerce_Store
             showPreviousOrdersButton.UseVisualStyleBackColor = true;
             showPreviousOrdersButton.Click += showPreviousOrdersButton_Click;
             // 
+            // deleteInPaymentButton
+            // 
+            resources.ApplyResources(deleteInPaymentButton, "deleteInPaymentButton");
+            deleteInPaymentButton.ForeColor = Color.FromArgb(241, 250, 238);
+            deleteInPaymentButton.Name = "deleteInPaymentButton";
+            deleteInPaymentButton.UseVisualStyleBackColor = true;
+            deleteInPaymentButton.Click += deleteInPaymentButton_Click;
+            // 
+            // deleteInAddressButton
+            // 
+            resources.ApplyResources(deleteInAddressButton, "deleteInAddressButton");
+            deleteInAddressButton.ForeColor = Color.FromArgb(241, 250, 238);
+            deleteInAddressButton.Name = "deleteInAddressButton";
+            deleteInAddressButton.UseVisualStyleBackColor = true;
+            deleteInAddressButton.Click += deleteInAddressButton_Click;
+            // 
             // MyProfile
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(deleteInAddressButton);
+            Controls.Add(deleteInPaymentButton);
             Controls.Add(showPreviousOrdersButton);
             Controls.Add(backButton);
             Controls.Add(groupBox2);
@@ -267,5 +290,7 @@ namespace E_Commerce_Store
         private ListBox addressListBox;
         private Button backButton;
         private Button showPreviousOrdersButton;
+        private Button deleteInPaymentButton;
+        private Button deleteInAddressButton;
     }
 }

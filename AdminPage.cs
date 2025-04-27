@@ -120,4 +120,11 @@ internal partial class AdminPage : Form
         var addCat = new AddCategory();
         addCat.ShowDialog();
     }
+
+    private void registerButton_Click(object sender, EventArgs e)
+    {
+        var register = new Register();
+        register.RegisterAsAdmin = true;
+        register.ShowDialog();
+    }
 }

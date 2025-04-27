@@ -38,6 +38,7 @@ namespace E_Commerce_Store
             comboBox1 = new ComboBox();
             deleteButton = new Button();
             addButton = new Button();
+            registerButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -77,11 +78,20 @@ namespace E_Commerce_Store
             addButton.UseVisualStyleBackColor = true;
             addButton.Click += addButton_Click;
             // 
+            // registerButton
+            // 
+            resources.ApplyResources(registerButton, "registerButton");
+            registerButton.ForeColor = Color.FromArgb(241, 250, 238);
+            registerButton.Name = "registerButton";
+            registerButton.UseVisualStyleBackColor = true;
+            registerButton.Click += registerButton_Click;
+            // 
             // AdminPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(registerButton);
             Controls.Add(addButton);
             Controls.Add(deleteButton);
             Controls.Add(comboBox1);
@@ -100,5 +110,6 @@ namespace E_Commerce_Store
         private ComboBox comboBox1;
         private Button deleteButton;
         private Button addButton;
+        private Button registerButton;
     }
 }

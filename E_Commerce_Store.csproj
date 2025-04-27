@@ -23,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
