@@ -123,8 +123,6 @@ namespace E_Commerce_Store
 
         #endregion
 
-        private Button loginButton;
-        private TextBox passwordTextBox;
         private Label titleLabel;
         private Button productImageButton;
         private NumericUpDown inCartNumericUpDown;

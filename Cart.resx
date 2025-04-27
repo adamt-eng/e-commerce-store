@@ -117,44 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CartLabelTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CartLabelTextBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CartLabelTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 9</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CartLabelTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="CartLabelTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1243, 52</value>
+  <data name="CartTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 142</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CartLabelTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="CartTable.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>72</value>
   </data>
-  <data name="CartLabelTextBox.Text" xml:space="preserve">
-    <value>Cart</value>
+  <data name="CartTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1243, 572</value>
   </data>
-  <data name="CartLabelTextBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="CartTable.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;CartLabelTextBox.Name" xml:space="preserve">
-    <value>CartLabelTextBox</value>
+  <data name="&gt;&gt;CartTable.Name" xml:space="preserve">
+    <value>CartTable</value>
   </data>
-  <data name="&gt;&gt;CartLabelTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CartTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CartLabelTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CartTable.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CartLabelTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CartTable.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -217,86 +218,61 @@
   <data name="Delete.Width" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
-  <data name="CartTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 95</value>
-  </data>
-  <data name="CartTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="CartTable.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="CartTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1089, 381</value>
-  </data>
-  <data name="CartTable.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;CartTable.Name" xml:space="preserve">
-    <value>CartTable</value>
-  </data>
-  <data name="&gt;&gt;CartTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CartTable.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CartTable.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="loginButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="proceedToCheckoutButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="loginButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="proceedToCheckoutButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13pt</value>
   </data>
-  <data name="loginButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="proceedToCheckoutButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 606</value>
+  <data name="proceedToCheckoutButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 926</value>
   </data>
-  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="proceedToCheckoutButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1245, 78</value>
   </data>
-  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 38</value>
-  </data>
-  <data name="loginButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="proceedToCheckoutButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="loginButton.Text" xml:space="preserve">
+  <data name="proceedToCheckoutButton.Text" xml:space="preserve">
     <value>Proceed to Checkout</value>
   </data>
-  <data name="&gt;&gt;loginButton.Name" xml:space="preserve">
-    <value>loginButton</value>
+  <data name="&gt;&gt;proceedToCheckoutButton.Name" xml:space="preserve">
+    <value>proceedToCheckoutButton</value>
   </data>
-  <data name="&gt;&gt;loginButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;proceedToCheckoutButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;loginButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;proceedToCheckoutButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TotalPriceLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;proceedToCheckoutButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="TotalPriceLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14pt</value>
   </data>
   <data name="TotalPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 560</value>
+    <value>12, 717</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TotalPriceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="TotalPriceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 32</value>
+    <value>1245, 206</value>
   </data>
   <data name="TotalPriceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="TotalPriceLabel.Text" xml:space="preserve">
     <value>Total Price=</value>
+  </data>
+  <data name="TotalPriceLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;TotalPriceLabel.Name" xml:space="preserve">
     <value>TotalPriceLabel</value>
@@ -308,6 +284,42 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TotalPriceLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CartLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
+  </data>
+  <data name="CartLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CartLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="CartLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="CartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1245, 78</value>
+  </data>
+  <data name="CartLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="CartLabel.Text" xml:space="preserve">
+    <value>Cart</value>
+  </data>
+  <data name="CartLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CartLabel.Name" xml:space="preserve">
+    <value>CartLabel</value>
+  </data>
+  <data name="&gt;&gt;CartLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CartLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CartLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -317,13 +329,10 @@
     <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+    <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 677</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1269, 1016</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

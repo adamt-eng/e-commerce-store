@@ -33,25 +33,17 @@ namespace E_Commerce_Store
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart));
-            CartLabelTextBox = new Label();
             CartTable = new DataGridView();
-            loginButton = new Button();
-            TotalPriceLabel = new Label();
             Item = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             Quantity = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             Delete = new DataGridViewTextBoxColumn();
+            proceedToCheckoutButton = new Button();
+            TotalPriceLabel = new Label();
+            CartLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)CartTable).BeginInit();
             SuspendLayout();
-            // 
-            // CartLabelTextBox
-            // 
-            CartLabelTextBox.BorderStyle = BorderStyle.FixedSingle;
-            resources.ApplyResources(CartLabelTextBox, "CartLabelTextBox");
-            CartLabelTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            CartLabelTextBox.Name = "CartLabelTextBox";
-            CartLabelTextBox.Click += titleLabel_Click;
             // 
             // CartTable
             // 
@@ -61,20 +53,6 @@ namespace E_Commerce_Store
             resources.ApplyResources(CartTable, "CartTable");
             CartTable.Name = "CartTable";
             CartTable.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // loginButton
-            // 
-            resources.ApplyResources(loginButton, "loginButton");
-            loginButton.ForeColor = Color.FromArgb(241, 250, 238);
-            loginButton.Name = "loginButton";
-            loginButton.UseVisualStyleBackColor = true;
-            // 
-            // TotalPriceLabel
-            // 
-            resources.ApplyResources(TotalPriceLabel, "TotalPriceLabel");
-            TotalPriceLabel.BackColor = Color.Navy;
-            TotalPriceLabel.Name = "TotalPriceLabel";
-            TotalPriceLabel.Click += label1_Click;
             // 
             // Item
             // 
@@ -101,27 +79,45 @@ namespace E_Commerce_Store
             resources.ApplyResources(Delete, "Delete");
             Delete.Name = "Delete";
             // 
+            // proceedToCheckoutButton
+            // 
+            resources.ApplyResources(proceedToCheckoutButton, "proceedToCheckoutButton");
+            proceedToCheckoutButton.ForeColor = Color.FromArgb(241, 250, 238);
+            proceedToCheckoutButton.Name = "proceedToCheckoutButton";
+            proceedToCheckoutButton.UseVisualStyleBackColor = true;
+            // 
+            // TotalPriceLabel
+            // 
+            TotalPriceLabel.BackColor = Color.FromArgb(29, 53, 87);
+            resources.ApplyResources(TotalPriceLabel, "TotalPriceLabel");
+            TotalPriceLabel.ForeColor = Color.White;
+            TotalPriceLabel.Name = "TotalPriceLabel";
+            TotalPriceLabel.Click += label1_Click;
+            // 
+            // CartLabel
+            // 
+            resources.ApplyResources(CartLabel, "CartLabel");
+            CartLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            CartLabel.Name = "CartLabel";
+            // 
             // Cart
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(CartLabel);
             Controls.Add(TotalPriceLabel);
-            Controls.Add(loginButton);
+            Controls.Add(proceedToCheckoutButton);
             Controls.Add(CartTable);
-            Controls.Add(CartLabelTextBox);
             Name = "Cart";
             Load += HomePage_Load;
             ((System.ComponentModel.ISupportInitialize)CartTable).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button loginButton;
-        private TextBox passwordTextBox;
-        private Label CartLabelTextBox;
+        private Button proceedToCheckoutButton;
         private DataGridView CartTable;
         private Label TotalPriceLabel;
         private DataGridViewTextBoxColumn Item;
@@ -129,5 +125,6 @@ namespace E_Commerce_Store
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn Delete;
+        private Label CartLabel;
     }
 }

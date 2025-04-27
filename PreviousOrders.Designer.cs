@@ -4,7 +4,7 @@ using System;
 
 namespace E_Commerce_Store
 {
-    partial class HomePage
+    partial class PreviousOrders
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,32 +32,12 @@ namespace E_Commerce_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            searchForProductsTextBox = new TextBox();
-            cartButton = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviousOrders));
             titleLabel = new Label();
             dataGridView1 = new DataGridView();
             myProfileButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // searchForProductsTextBox
-            // 
-            searchForProductsTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(searchForProductsTextBox, "searchForProductsTextBox");
-            searchForProductsTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            searchForProductsTextBox.Name = "searchForProductsTextBox";
-            searchForProductsTextBox.TabStop = false;
-            searchForProductsTextBox.TextChanged += searchForProductsTextBox_TextChanged;
-            // 
-            // cartButton
-            // 
-            cartButton.BackgroundImage = Properties.Resources.cart;
-            resources.ApplyResources(cartButton, "cartButton");
-            cartButton.ForeColor = Color.FromArgb(241, 250, 238);
-            cartButton.Name = "cartButton";
-            cartButton.UseVisualStyleBackColor = true;
-            cartButton.Click += cartButton_Click;
             // 
             // titleLabel
             // 
@@ -80,7 +60,7 @@ namespace E_Commerce_Store
             myProfileButton.UseVisualStyleBackColor = true;
             myProfileButton.Click += myProfileButton_Click;
             // 
-            // HomePage
+            // PreviousOrders
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
@@ -88,19 +68,13 @@ namespace E_Commerce_Store
             Controls.Add(myProfileButton);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
-            Controls.Add(cartButton);
-            Controls.Add(searchForProductsTextBox);
-            Name = "HomePage";
+            Name = "PreviousOrders";
             Load += HomePage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private TextBox searchForProductsTextBox;
-        private Button cartButton;
         private Label titleLabel;
         private DataGridView dataGridView1;
         private Button myProfileButton;

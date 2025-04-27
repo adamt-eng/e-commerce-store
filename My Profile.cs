@@ -32,4 +32,10 @@ internal partial class MyProfile : Form
         Hide();
         Login.HomePageInstance.Show();
     }
+
+    private void showPreviousOrdersButton_Click(object sender, EventArgs e)
+    {
+        Hide();
+        new PreviousOrders().ShowDialog();
+    }
 }

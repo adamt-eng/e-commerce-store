@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace E_Commerce_Store;
 
-internal partial class HomePage : Form
+internal partial class PreviousOrders : Form
 {
-    internal HomePage() => InitializeComponent();
+    internal PreviousOrders() => InitializeComponent();
     DataTable products = new DataTable();
 
     private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
@@ -31,11 +31,5 @@ internal partial class HomePage : Form
     {
         Hide();
         new MyProfile().ShowDialog();
-    }
-
-    private void cartButton_Click(object sender, EventArgs e)
-    {
-        Hide();
-        new Cart().ShowDialog();
     }
 }

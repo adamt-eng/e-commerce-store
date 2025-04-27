@@ -76,8 +76,6 @@ namespace E_Commerce_Store
 
         #endregion
 
-        private Button loginButton;
-        private TextBox passwordTextBox;
         private Label titleLabel;
         private DataGridView dataGridView1;
         private ComboBox comboBox1;

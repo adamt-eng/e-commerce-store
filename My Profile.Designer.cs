@@ -52,6 +52,7 @@ namespace E_Commerce_Store
             groupBox2 = new GroupBox();
             paymentMethodsListBox = new ListBox();
             backButton = new Button();
+            showPreviousOrdersButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -203,11 +204,20 @@ namespace E_Commerce_Store
             backButton.UseVisualStyleBackColor = true;
             backButton.Click += backButton_Click;
             // 
+            // showPreviousOrdersButton
+            // 
+            resources.ApplyResources(showPreviousOrdersButton, "showPreviousOrdersButton");
+            showPreviousOrdersButton.ForeColor = Color.FromArgb(241, 250, 238);
+            showPreviousOrdersButton.Name = "showPreviousOrdersButton";
+            showPreviousOrdersButton.UseVisualStyleBackColor = true;
+            showPreviousOrdersButton.Click += showPreviousOrdersButton_Click;
+            // 
             // MyProfile
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(showPreviousOrdersButton);
             Controls.Add(backButton);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -256,5 +266,6 @@ namespace E_Commerce_Store
         private ListBox paymentMethodsListBox;
         private ListBox addressListBox;
         private Button backButton;
+        private Button showPreviousOrdersButton;
     }
 }

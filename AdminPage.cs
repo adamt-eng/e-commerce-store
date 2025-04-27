@@ -13,11 +13,6 @@ internal partial class AdminPage : Form
     DataTable orders = new DataTable();
     internal AdminPage() => InitializeComponent();
 
-    private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
-    {
-        // Implement logic that refreshes the dataview control with products that match the input text
-    }
-
     private void AdminPage_Load(object sender, EventArgs e)
     {
         comboBox1.SelectedIndex = 0;
