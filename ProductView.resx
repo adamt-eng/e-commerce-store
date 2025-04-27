@@ -155,7 +155,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="productImageButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
@@ -188,16 +188,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;productImageButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="inCartNumericUpDown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="inCartNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>987, 567</value>
+    <value>801, 627</value>
   </data>
   <data name="inCartNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 45</value>
+    <value>210, 39</value>
   </data>
   <data name="inCartNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -212,58 +212,58 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;inCartNumericUpDown.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="cartLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="cartLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>771, 549</value>
+  <data name="cartLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>699, 551</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="cartLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 78</value>
+  <data name="cartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 186</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="cartLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="cartLabel.Text" xml:space="preserve">
     <value>In Cart:</value>
   </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="cartLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;cartLabel.Name" xml:space="preserve">
+    <value>cartLabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;cartLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cartLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;cartLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="priceLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="priceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="priceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 549</value>
+    <value>13, 550</value>
   </data>
   <data name="priceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="priceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 78</value>
+    <value>177, 39</value>
   </data>
   <data name="priceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -272,7 +272,7 @@
     <value>Price:</value>
   </data>
   <data name="priceLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;priceLabel.Name" xml:space="preserve">
     <value>priceLabel</value>
@@ -284,22 +284,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;priceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="publishedAtLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="publishedAtLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="publishedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 635</value>
+    <value>13, 599</value>
   </data>
   <data name="publishedAtLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="publishedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 78</value>
+    <value>177, 39</value>
   </data>
   <data name="publishedAtLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -308,7 +308,7 @@
     <value>Published At:</value>
   </data>
   <data name="publishedAtLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;publishedAtLabel.Name" xml:space="preserve">
     <value>publishedAtLabel</value>
@@ -320,43 +320,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;publishedAtLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
-  <data name="quantityInStockLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="stockLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
-  <data name="quantityInStockLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="stockLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="quantityInStockLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 721</value>
+  <data name="stockLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 648</value>
   </data>
-  <data name="quantityInStockLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="stockLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="quantityInStockLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 78</value>
+  <data name="stockLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 39</value>
   </data>
-  <data name="quantityInStockLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="stockLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="quantityInStockLabel.Text" xml:space="preserve">
-    <value>Quantity In Stock:</value>
+  <data name="stockLabel.Text" xml:space="preserve">
+    <value>Stock:</value>
   </data>
-  <data name="quantityInStockLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="stockLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;quantityInStockLabel.Name" xml:space="preserve">
-    <value>quantityInStockLabel</value>
+  <data name="&gt;&gt;stockLabel.Name" xml:space="preserve">
+    <value>stockLabel</value>
   </data>
-  <data name="&gt;&gt;quantityInStockLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;stockLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;quantityInStockLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;stockLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;quantityInStockLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;stockLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="productDescriptionLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -365,13 +365,13 @@
     <value>NoControl</value>
   </data>
   <data name="productDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 635</value>
+    <value>13, 745</value>
   </data>
   <data name="productDescriptionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="productDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>704, 250</value>
+    <value>1184, 140</value>
   </data>
   <data name="productDescriptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -392,22 +392,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;productDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="sellerLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="sellerLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="sellerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 807</value>
+    <value>13, 697</value>
   </data>
   <data name="sellerLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="sellerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 78</value>
+    <value>177, 39</value>
   </data>
   <data name="sellerLabel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -416,7 +416,7 @@
     <value>Seller:</value>
   </data>
   <data name="sellerLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;sellerLabel.Name" xml:space="preserve">
     <value>sellerLabel</value>
@@ -428,6 +428,114 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;sellerLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="emailTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 550</value>
+  </data>
+  <data name="emailTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="emailTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 39</value>
+  </data>
+  <data name="emailTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Name" xml:space="preserve">
+    <value>emailTextBox</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 599</value>
+  </data>
+  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 39</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 648</value>
+  </data>
+  <data name="textBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 39</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 697</value>
+  </data>
+  <data name="textBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 39</value>
+  </data>
+  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -441,9 +549,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1209, 898</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
