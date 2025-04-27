@@ -4,7 +4,7 @@ using System;
 
 namespace E_Commerce_Store
 {
-    partial class HomePage
+    partial class CustomerPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,7 +32,7 @@ namespace E_Commerce_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPage));
             searchForProductsTextBox = new TextBox();
             cartButton = new Button();
             titleLabel = new Label();
@@ -80,7 +80,7 @@ namespace E_Commerce_Store
             myProfileButton.UseVisualStyleBackColor = true;
             myProfileButton.Click += myProfileButton_Click;
             // 
-            // HomePage
+            // CustomerPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
@@ -90,8 +90,8 @@ namespace E_Commerce_Store
             Controls.Add(titleLabel);
             Controls.Add(cartButton);
             Controls.Add(searchForProductsTextBox);
-            Name = "HomePage";
-            Load += HomePage_Load;
+            Name = "CustomerPage";
+            Load += CustomerPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

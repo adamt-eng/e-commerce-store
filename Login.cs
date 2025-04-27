@@ -32,7 +32,7 @@ internal partial class Login : Form
         var loginType = loginTypeComboBox.SelectedItem.ToString();
         switch (loginType)
         {
-            case "Customer": MainForm = new MyProfile(); break;
+            case "Customer": MainForm = new CustomerPage(); break;
             case "Admin": MainForm = new AdminPage(); break;
             case "Seller": MainForm = new SellerPage(); break;
             default: 
