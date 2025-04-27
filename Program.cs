@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
@@ -35,7 +34,7 @@ internal static class Program
         LoadAddedToTable();
 
         DatabaseHandler = new DatabaseHandler("Data Source=ADAM;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
-        LoginFormInstance = new AdminPage();
+        LoginFormInstance = new Login();
 
         Application.Run(LoginFormInstance);
     }

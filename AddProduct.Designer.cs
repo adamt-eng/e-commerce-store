@@ -34,7 +34,6 @@ namespace E_Commerce_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             titleLabel = new Label();
-            productImageButton = new Button();
             priceLabel = new Label();
             publishedAtLabel = new Label();
             stockLabel = new Label();
@@ -47,6 +46,7 @@ namespace E_Commerce_Store
             label2 = new Label();
             categoryComboBox = new ComboBox();
             doneButton = new Button();
+            productImageButton = new Button();
             SuspendLayout();
             // 
             // titleLabel
@@ -54,15 +54,6 @@ namespace E_Commerce_Store
             resources.ApplyResources(titleLabel, "titleLabel");
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
-            titleLabel.Click += titleLabel_Click;
-            // 
-            // productImageButton
-            // 
-            productImageButton.BackgroundImage = Properties.Resources.cart;
-            resources.ApplyResources(productImageButton, "productImageButton");
-            productImageButton.ForeColor = Color.FromArgb(241, 250, 238);
-            productImageButton.Name = "productImageButton";
-            productImageButton.UseVisualStyleBackColor = true;
             // 
             // priceLabel
             // 
@@ -97,7 +88,6 @@ namespace E_Commerce_Store
             priceTextBox.Name = "priceTextBox";
             priceTextBox.ReadOnly = true;
             priceTextBox.TabStop = false;
-            priceTextBox.TextChanged += emailTextBox_TextChanged;
             // 
             // publishedAtTextBox
             // 
@@ -125,14 +115,12 @@ namespace E_Commerce_Store
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
             textBox4.TabStop = false;
-            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label1
             // 
             resources.ApplyResources(label1, "label1");
             label1.ForeColor = Color.FromArgb(241, 250, 238);
             label1.Name = "label1";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -153,6 +141,14 @@ namespace E_Commerce_Store
             doneButton.Name = "doneButton";
             doneButton.UseVisualStyleBackColor = true;
             doneButton.Click += loginButton_Click;
+            // 
+            // productImageButton
+            // 
+            productImageButton.BackgroundImage = Properties.Resources.cart;
+            resources.ApplyResources(productImageButton, "productImageButton");
+            productImageButton.ForeColor = Color.FromArgb(241, 250, 238);
+            productImageButton.Name = "productImageButton";
+            productImageButton.UseVisualStyleBackColor = true;
             // 
             // AddProduct
             // 
@@ -182,7 +178,6 @@ namespace E_Commerce_Store
         #endregion
 
         private Label titleLabel;
-        private Button productImageButton;
         private Label priceLabel;
         private Label publishedAtLabel;
         private Label stockLabel;
@@ -195,5 +190,6 @@ namespace E_Commerce_Store
         private Label label2;
         private ComboBox categoryComboBox;
         private Button doneButton;
+        private Button productImageButton;
     }
 }

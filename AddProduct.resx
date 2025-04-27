@@ -126,14 +126,14 @@
     <value>NoControl</value>
   </data>
   <data name="titleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 8</value>
+    <value>14, 12</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="titleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>789, 52</value>
+    <value>1184, 78</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
@@ -157,42 +157,6 @@
   <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="productImageButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="productImageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="productImageButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
-  </data>
-  <data name="productImageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="productImageButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 65</value>
-  </data>
-  <data name="productImageButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
-  </data>
-  <data name="productImageButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>790, 269</value>
-  </data>
-  <data name="productImageButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;productImageButton.Name" xml:space="preserve">
-    <value>productImageButton</value>
-  </data>
-  <data name="&gt;&gt;productImageButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;productImageButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;productImageButton.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="priceLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
@@ -200,13 +164,13 @@
     <value>NoControl</value>
   </data>
   <data name="priceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 379</value>
+    <value>32, 568</value>
   </data>
   <data name="priceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="priceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 27</value>
+    <value>177, 40</value>
   </data>
   <data name="priceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -236,13 +200,13 @@
     <value>NoControl</value>
   </data>
   <data name="publishedAtLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 419</value>
+    <value>32, 628</value>
   </data>
   <data name="publishedAtLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="publishedAtLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 27</value>
+    <value>177, 40</value>
   </data>
   <data name="publishedAtLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -272,13 +236,13 @@
     <value>NoControl</value>
   </data>
   <data name="stockLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 460</value>
+    <value>32, 690</value>
   </data>
   <data name="stockLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="stockLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 27</value>
+    <value>177, 40</value>
   </data>
   <data name="stockLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -308,13 +272,13 @@
     <value>NoControl</value>
   </data>
   <data name="productDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 496</value>
+    <value>14, 744</value>
   </data>
   <data name="productDescriptionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="productDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>791, 94</value>
+    <value>1186, 140</value>
   </data>
   <data name="productDescriptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -341,10 +305,13 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="priceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 377</value>
+    <value>436, 566</value>
+  </data>
+  <data name="priceTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="priceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 30</value>
+    <value>330, 39</value>
   </data>
   <data name="priceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -365,10 +332,13 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="publishedAtTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 417</value>
+    <value>436, 626</value>
+  </data>
+  <data name="publishedAtTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="publishedAtTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 30</value>
+    <value>330, 39</value>
   </data>
   <data name="publishedAtTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -389,10 +359,13 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="stockTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 459</value>
+    <value>436, 688</value>
+  </data>
+  <data name="stockTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="stockTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 30</value>
+    <value>330, 39</value>
   </data>
   <data name="stockTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -413,10 +386,13 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 339</value>
+    <value>436, 508</value>
+  </data>
+  <data name="textBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 30</value>
+    <value>330, 39</value>
   </data>
   <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -440,13 +416,13 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 341</value>
+    <value>32, 512</value>
   </data>
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 27</value>
+    <value>177, 40</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -476,13 +452,13 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 340</value>
+    <value>795, 510</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 27</value>
+    <value>177, 40</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -506,13 +482,13 @@
     <value>2</value>
   </data>
   <data name="categoryComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>654, 343</value>
+    <value>981, 514</value>
   </data>
   <data name="categoryComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>4, 6, 4, 6</value>
   </data>
   <data name="categoryComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 28</value>
+    <value>205, 38</value>
   </data>
   <data name="categoryComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -539,13 +515,13 @@
     <value>NoControl</value>
   </data>
   <data name="doneButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>654, 447</value>
+    <value>981, 670</value>
   </data>
   <data name="doneButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="doneButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 37</value>
+    <value>207, 56</value>
   </data>
   <data name="doneButton.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -565,6 +541,42 @@
   <data name="&gt;&gt;doneButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="productImageButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="productImageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="productImageButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13pt</value>
+  </data>
+  <data name="productImageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="productImageButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 98</value>
+  </data>
+  <data name="productImageButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="productImageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1185, 404</value>
+  </data>
+  <data name="productImageButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;productImageButton.Name" xml:space="preserve">
+    <value>productImageButton</value>
+  </data>
+  <data name="&gt;&gt;productImageButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;productImageButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;productImageButton.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -572,13 +584,13 @@
     <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+    <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>806, 499</value>
+    <value>1209, 748</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 3, 2, 3</value>
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

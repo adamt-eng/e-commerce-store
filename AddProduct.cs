@@ -1,9 +1,10 @@
 using System;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace E_Commerce_Store;
-//pushed
+
 internal partial class AddProduct : Form
 {
     internal AddProduct() => InitializeComponent();
@@ -14,26 +15,12 @@ internal partial class AddProduct : Form
         {
             control.ReadOnly = false;
         }
-    }
 
-    private void emailTextBox_TextChanged(object sender, EventArgs e)
-    {
-        
-    }
-
-    private void titleLabel_Click(object sender, EventArgs e)
-    {
-       
-    }
-
-    private void label1_Click(object sender, EventArgs e)
-    {
-        
-    }
-
-    private void textBox4_TextChanged(object sender, EventArgs e)
-    {
-        
+        var x = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT Category_Name FROM Category");
+        foreach (DataRow row in x.Rows)
+        {
+            categoryComboBox.Items.Add(row["Category_Name"].ToString());
+        }
     }
 
     private void loginButton_Click(object sender, EventArgs e)
@@ -74,10 +61,12 @@ internal partial class AddProduct : Form
         try
         {
            
-            string query = $@"
-                INSERT INTO Products (Price, PublishedAt, Stock, Category)
-                VALUES ({price}, '{publishedAt:yyyy-MM-dd}', {stock}, '{category}')
-            ";
+            var query = $"""
+                         
+                                         INSERT INTO Products (Price, PublishedAt, Stock, Category)
+                                         VALUES ({price}, '{publishedAt:yyyy-MM-dd}', {stock}, '{category}')
+                                     
+                         """;
 
             Program.DatabaseHandler.ExecuteQuery(query);
 

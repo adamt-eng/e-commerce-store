@@ -37,6 +37,7 @@ namespace E_Commerce_Store
             dataGridView1 = new DataGridView();
             comboBox1 = new ComboBox();
             deleteButton = new Button();
+            addButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -68,11 +69,20 @@ namespace E_Commerce_Store
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
             // 
+            // addButton
+            // 
+            resources.ApplyResources(addButton, "addButton");
+            addButton.ForeColor = Color.FromArgb(241, 250, 238);
+            addButton.Name = "addButton";
+            addButton.UseVisualStyleBackColor = true;
+            addButton.Click += addButton_Click;
+            // 
             // AdminPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(addButton);
             Controls.Add(deleteButton);
             Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
@@ -89,5 +99,6 @@ namespace E_Commerce_Store
         private DataGridView dataGridView1;
         private ComboBox comboBox1;
         private Button deleteButton;
+        private Button addButton;
     }
 }

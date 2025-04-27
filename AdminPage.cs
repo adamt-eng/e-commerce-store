@@ -22,6 +22,8 @@ internal partial class AdminPage : Form
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
+        addButton.Hide();
+        RefreshTables();
         switch (comboBox1.SelectedIndex)
         {
             case 0:
@@ -44,6 +46,7 @@ internal partial class AdminPage : Form
                 deleteButton.Hide();
                 break;
             case 4:
+                addButton.Show();
                 dataGridView1.DataSource = _categories;
                 deleteButton.Show();
                 deleteButton.Text = "Delete";
@@ -51,6 +54,12 @@ internal partial class AdminPage : Form
         }
 
         dataGridView1.Update();
+    }
+
+    internal void RefreshCategories()
+    {
+        RefreshTables();
+        dataGridView1.DataSource = _categories;
     }
 
     private void deleteButton_Click(object sender, EventArgs e)
@@ -105,5 +114,10 @@ internal partial class AdminPage : Form
         _products = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Product");
         _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]"); // [Order] because it's a reserved word
         _categories = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Category");
+    }
+    private void addButton_Click(object sender, EventArgs e)
+    {
+        var addCat = new AddCategory();
+        addCat.ShowDialog();
     }
 }

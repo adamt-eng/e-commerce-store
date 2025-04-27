@@ -6,8 +6,7 @@ namespace E_Commerce_Store;
 
 internal partial class SellerPage : Form
 {
-
-    DataTable _products = new DataTable();
+    private readonly DataTable _products = new ();
 
     internal SellerPage() => InitializeComponent();
 
@@ -31,14 +30,10 @@ internal partial class SellerPage : Form
         dataGridView1.DataSource = _products;
     }
 
-
-
-
     private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
 
     }
-
 
     private void DeleteButton_Click_1(object sender, EventArgs e)
     {
@@ -46,21 +41,12 @@ internal partial class SellerPage : Form
         {
             var selectedRowIndex = dataGridView1.SelectedRows[0].Index;
             _products.Rows.RemoveAt(selectedRowIndex);
-
             //delete-SQL
-
-
         }
-
         else
         {
             MessageBox.Show("Please select a full row to delete.");
         }
-    }
-
-    private void AddButton_Click(object sender, EventArgs e)
-    {
-        //show dialogue box
     }
 
     private void AddButton_Click_1(object sender, EventArgs e)
