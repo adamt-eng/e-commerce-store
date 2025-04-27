@@ -39,13 +39,13 @@ namespace E_Commerce_Store
             publishedAtLabel = new Label();
             stockLabel = new Label();
             productDescriptionLabel = new Label();
-            emailTextBox = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            priceTextBox = new TextBox();
+            publishedAtTextBox = new TextBox();
+            stockTextBox = new TextBox();
             textBox4 = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            comboBox3 = new ComboBox();
+            categoryComboBox = new ComboBox();
             doneButton = new Button();
             SuspendLayout();
             // 
@@ -89,33 +89,33 @@ namespace E_Commerce_Store
             productDescriptionLabel.ForeColor = Color.FromArgb(241, 250, 238);
             productDescriptionLabel.Name = "productDescriptionLabel";
             // 
-            // emailTextBox
+            // priceTextBox
             // 
-            emailTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(emailTextBox, "emailTextBox");
-            emailTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.ReadOnly = true;
-            emailTextBox.TabStop = false;
-            emailTextBox.TextChanged += emailTextBox_TextChanged;
+            priceTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(priceTextBox, "priceTextBox");
+            priceTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            priceTextBox.Name = "priceTextBox";
+            priceTextBox.ReadOnly = true;
+            priceTextBox.TabStop = false;
+            priceTextBox.TextChanged += emailTextBox_TextChanged;
             // 
-            // textBox1
+            // publishedAtTextBox
             // 
-            textBox1.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.TabStop = false;
+            publishedAtTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(publishedAtTextBox, "publishedAtTextBox");
+            publishedAtTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            publishedAtTextBox.Name = "publishedAtTextBox";
+            publishedAtTextBox.ReadOnly = true;
+            publishedAtTextBox.TabStop = false;
             // 
-            // textBox2
+            // stockTextBox
             // 
-            textBox2.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.TabStop = false;
+            stockTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(stockTextBox, "stockTextBox");
+            stockTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            stockTextBox.Name = "stockTextBox";
+            stockTextBox.ReadOnly = true;
+            stockTextBox.TabStop = false;
             // 
             // textBox4
             // 
@@ -125,6 +125,7 @@ namespace E_Commerce_Store
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
             textBox4.TabStop = false;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label1
             // 
@@ -139,11 +140,11 @@ namespace E_Commerce_Store
             label2.ForeColor = Color.FromArgb(241, 250, 238);
             label2.Name = "label2";
             // 
-            // comboBox3
+            // categoryComboBox
             // 
-            comboBox3.FormattingEnabled = true;
-            resources.ApplyResources(comboBox3, "comboBox3");
-            comboBox3.Name = "comboBox3";
+            categoryComboBox.FormattingEnabled = true;
+            resources.ApplyResources(categoryComboBox, "categoryComboBox");
+            categoryComboBox.Name = "categoryComboBox";
             // 
             // doneButton
             // 
@@ -159,13 +160,13 @@ namespace E_Commerce_Store
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(doneButton);
-            Controls.Add(comboBox3);
+            Controls.Add(categoryComboBox);
             Controls.Add(label2);
             Controls.Add(textBox4);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(emailTextBox);
+            Controls.Add(stockTextBox);
+            Controls.Add(publishedAtTextBox);
+            Controls.Add(priceTextBox);
             Controls.Add(productDescriptionLabel);
             Controls.Add(stockLabel);
             Controls.Add(publishedAtLabel);
@@ -186,13 +187,13 @@ namespace E_Commerce_Store
         private Label publishedAtLabel;
         private Label stockLabel;
         private Label productDescriptionLabel;
-        private TextBox emailTextBox;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox priceTextBox;
+        private TextBox publishedAtTextBox;
+        private TextBox stockTextBox;
         private TextBox textBox4;
         private Label label1;
         private Label label2;
-        private ComboBox comboBox3;
+        private ComboBox categoryComboBox;
         private Button doneButton;
     }
 }
