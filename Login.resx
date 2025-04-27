@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="loginButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
+    <value>Segoe UI, 11pt</value>
   </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 220</value>
+    <value>14, 110</value>
   </data>
   <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 100</value>
+    <value>643, 79</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="loginButton.TabIndex" type="System.Int32, mscorlib">
@@ -148,13 +148,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="usernameTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="usernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 100</value>
+    <value>14, 14</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="usernameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -164,7 +164,7 @@
     <value>Username</value>
   </data>
   <data name="usernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 48</value>
+    <value>643, 39</value>
   </data>
   <data name="usernameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -182,13 +182,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="passwordTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 161</value>
+    <value>14, 63</value>
   </data>
   <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -200,7 +200,7 @@
     <value>Password</value>
   </data>
   <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 48</value>
+    <value>643, 39</value>
   </data>
   <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -218,88 +218,58 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="titleLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15pt</value>
-  </data>
-  <data name="titleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 13</value>
-  </data>
-  <data name="titleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>962, 78</value>
-  </data>
-  <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="titleLabel.Text" xml:space="preserve">
-    <value>E-Commerce Store</value>
-  </data>
-  <data name="titleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
-    <value>titleLabel</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="forgotPasswordLabel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="registerLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Underline</value>
   </data>
-  <data name="forgotPasswordLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="registerLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="forgotPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 327</value>
+  <data name="registerLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 196</value>
   </data>
-  <data name="forgotPasswordLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="registerLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="forgotPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>962, 63</value>
+  <data name="registerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>644, 46</value>
   </data>
-  <data name="forgotPasswordLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="registerLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="forgotPasswordLabel.Text" xml:space="preserve">
+  <data name="registerLabel.Text" xml:space="preserve">
     <value>Don't have an account? Register Here!</value>
   </data>
-  <data name="forgotPasswordLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="registerLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;forgotPasswordLabel.Name" xml:space="preserve">
-    <value>forgotPasswordLabel</value>
+  <data name="&gt;&gt;registerLabel.Name" xml:space="preserve">
+    <value>registerLabel</value>
   </data>
-  <data name="&gt;&gt;forgotPasswordLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;registerLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;forgotPasswordLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;registerLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;forgotPasswordLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;registerLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="progressBarPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 222</value>
+    <value>16, 112</value>
   </data>
   <data name="progressBarPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>959, 100</value>
+    <value>640, 75</value>
   </data>
   <data name="progressBarPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 96</value>
+    <value>6, 75</value>
   </data>
   <data name="progressBarPanel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="progressBarPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;progressBarPanel.Name" xml:space="preserve">
     <value>progressBarPanel</value>
@@ -323,13 +293,13 @@
     <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>989, 403</value>
+    <value>667, 255</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>E-Commerce Store Login</value>
+    <value>Login</value>
   </data>
   <data name="&gt;&gt;progressBarTimer.Name" xml:space="preserve">
     <value>progressBarTimer</value>
