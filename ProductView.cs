@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace E_Commerce_Store;
 
-internal partial class HomePage : Form
+internal partial class ProductView : Form
 {
-    internal HomePage() => InitializeComponent();
+    internal ProductView() => InitializeComponent();
 
     private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
     {

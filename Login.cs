@@ -11,30 +11,26 @@ internal partial class Login : Form
 
     private void loginButton_Click(object sender, EventArgs e)
     {
-        HomePageInstance = new HomePage();
-        Hide();
-        HomePageInstance.ShowDialog();
-
-        //progressBarTimer.Start();
+        progressBarTimer.Start();
+        progressBarPanel.Show();
     }
 
     private void progressBarTimer_Tick(object sender, EventArgs e)
     {
-        while (progressBarPanel.Width != loginButton.Width - 2)
-        {
-            progressBarPanel.Width += (loginButton.Width - 2) / 20;
+        if (progressBarPanel.Width == progressBarPanel.MaximumSize.Width) return;
+        
+        progressBarPanel.Width += progressBarPanel.MaximumSize.Width / 50;
 
-            if (progressBarPanel.Width != loginButton.Width - 2) continue;
+        if (progressBarPanel.Width != progressBarPanel.MaximumSize.Width) return;
+        
+        progressBarTimer.Stop();
 
-            progressBarTimer.Stop();
-
-            HomePageInstance = new HomePage();
-            Hide();
-            HomePageInstance.ShowDialog();
-        }
+        HomePageInstance = new HomePage();
+        Hide();
+        HomePageInstance.ShowDialog();
     }
 
-    private void forgotPasswordLabel_Click(object sender, EventArgs e)
+    private void registerLabel_Click(object sender, EventArgs e)
     {
         Hide();
         new Register().ShowDialog();

@@ -181,7 +181,7 @@
     <value>10</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 68</value>
+    <value>205, 60</value>
   </data>
   <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
     <value>449, 35</value>
@@ -209,7 +209,7 @@
     <value>NoControl</value>
   </data>
   <data name="dateOfBirthLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 70</value>
+    <value>14, 60</value>
   </data>
   <data name="dateOfBirthLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -281,7 +281,7 @@
     <value>NoControl</value>
   </data>
   <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 112</value>
+    <value>14, 102</value>
   </data>
   <data name="emailLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -314,7 +314,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 112</value>
+    <value>205, 103</value>
   </data>
   <data name="emailTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -347,7 +347,7 @@
     <value>NoControl</value>
   </data>
   <data name="phoneNumberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 210</value>
+    <value>12, 201</value>
   </data>
   <data name="phoneNumberLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -380,7 +380,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="phoneNumberTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 210</value>
+    <value>206, 201</value>
   </data>
   <data name="phoneNumberTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -413,7 +413,7 @@
     <value>NoControl</value>
   </data>
   <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 159</value>
+    <value>12, 149</value>
   </data>
   <data name="passwordLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -446,7 +446,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 161</value>
+    <value>206, 152</value>
   </data>
   <data name="passwordTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -482,10 +482,10 @@
     <value>NoControl</value>
   </data>
   <data name="registerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 262</value>
+    <value>11, 248</value>
   </data>
   <data name="registerButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>643, 75</value>
+    <value>643, 79</value>
   </data>
   <data name="registerButton.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -515,13 +515,13 @@
     <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>667, 349</value>
+    <value>667, 339</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>E-Commerce Store Home Page</value>
+    <value>Register</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Register</value>

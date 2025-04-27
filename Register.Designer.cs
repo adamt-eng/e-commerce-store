@@ -147,6 +147,7 @@ namespace E_Commerce_Store
             Controls.Add(dateTimePicker1);
             Controls.Add(lastNameTextBox);
             Controls.Add(firstNameTextBox);
+            MaximizeBox = false;
             Name = "Register";
             Load += Register_Load;
             ResumeLayout(false);
