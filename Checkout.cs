@@ -30,7 +30,7 @@ internal partial class Checkout : Form
     private void backButton_Click(object sender, EventArgs e)
     {
         Hide();
-        Login.HomePageInstance.Show();
+        Login.MainForm.Show();
     }
 
     private void nameLabel_Click(object sender, EventArgs e)

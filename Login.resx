@@ -126,7 +126,7 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 110</value>
+    <value>14, 161</value>
   </data>
   <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>643, 79</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="usernameTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -182,7 +182,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="passwordTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -218,7 +218,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="registerLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Underline</value>
@@ -227,13 +227,13 @@
     <value>NoControl</value>
   </data>
   <data name="registerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 196</value>
+    <value>13, 247</value>
   </data>
   <data name="registerLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="registerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 46</value>
+    <value>644, 38</value>
   </data>
   <data name="registerLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -254,10 +254,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;registerLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="progressBarPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 112</value>
+    <value>16, 163</value>
   </data>
   <data name="progressBarPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>640, 75</value>
@@ -281,11 +281,83 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;progressBarPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="progressBarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="loginTypeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="loginTypeComboBox.Items" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="loginTypeComboBox.Items1" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="loginTypeComboBox.Items2" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="loginTypeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 113</value>
+  </data>
+  <data name="loginTypeComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="loginTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 38</value>
+  </data>
+  <data name="loginTypeComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;loginTypeComboBox.Name" xml:space="preserve">
+    <value>loginTypeComboBox</value>
+  </data>
+  <data name="&gt;&gt;loginTypeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loginTypeComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loginTypeComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="loginTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="loginTypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="loginTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 113</value>
+  </data>
+  <data name="loginTypeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="loginTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 38</value>
+  </data>
+  <data name="loginTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="loginTypeLabel.Text" xml:space="preserve">
+    <value>Login Type:</value>
+  </data>
+  <data name="loginTypeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;loginTypeLabel.Name" xml:space="preserve">
+    <value>loginTypeLabel</value>
+  </data>
+  <data name="&gt;&gt;loginTypeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loginTypeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loginTypeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -293,7 +365,7 @@
     <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>667, 255</value>
+    <value>667, 298</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

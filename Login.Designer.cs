@@ -39,6 +39,8 @@ namespace E_Commerce_Store
             registerLabel = new Label();
             progressBarPanel = new Panel();
             progressBarTimer = new Timer(components);
+            loginTypeComboBox = new ComboBox();
+            loginTypeLabel = new Label();
             SuspendLayout();
             // 
             // loginButton
@@ -82,11 +84,27 @@ namespace E_Commerce_Store
             progressBarTimer.Interval = 1;
             progressBarTimer.Tick += progressBarTimer_Tick;
             // 
+            // loginTypeComboBox
+            // 
+            resources.ApplyResources(loginTypeComboBox, "loginTypeComboBox");
+            loginTypeComboBox.FormattingEnabled = true;
+            loginTypeComboBox.Items.AddRange(new object[] { resources.GetString("loginTypeComboBox.Items"), resources.GetString("loginTypeComboBox.Items1"), resources.GetString("loginTypeComboBox.Items2") });
+            loginTypeComboBox.Name = "loginTypeComboBox";
+            loginTypeComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // loginTypeLabel
+            // 
+            resources.ApplyResources(loginTypeLabel, "loginTypeLabel");
+            loginTypeLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            loginTypeLabel.Name = "loginTypeLabel";
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(loginTypeLabel);
+            Controls.Add(loginTypeComboBox);
             Controls.Add(progressBarPanel);
             Controls.Add(registerLabel);
             Controls.Add(passwordTextBox);
@@ -94,6 +112,7 @@ namespace E_Commerce_Store
             Controls.Add(loginButton);
             MaximizeBox = false;
             Name = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,5 +125,7 @@ namespace E_Commerce_Store
         private Label registerLabel;
         private Panel progressBarPanel;
         private System.Windows.Forms.Timer progressBarTimer;
+        private ComboBox loginTypeComboBox;
+        private Label loginTypeLabel;
     }
 }

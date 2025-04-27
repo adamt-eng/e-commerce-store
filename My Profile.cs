@@ -30,7 +30,7 @@ internal partial class MyProfile : Form
     private void backButton_Click(object sender, EventArgs e)
     {
         Hide();
-        Login.HomePageInstance.Show();
+        Login.MainForm.Show();
     }
 
     private void showPreviousOrdersButton_Click(object sender, EventArgs e)
