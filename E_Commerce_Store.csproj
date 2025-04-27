@@ -22,6 +22,9 @@
     <Compile Update="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ThankYou.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PreviousOrders.cs">
       <SubType>Form</SubType>
     </Compile>
