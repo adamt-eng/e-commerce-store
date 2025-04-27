@@ -79,7 +79,7 @@ namespace E_Commerce_Store
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
             Name = "SellerPage";
-            Load += AdminPage_Load;
+            Load += SellerPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

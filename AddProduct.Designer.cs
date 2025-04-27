@@ -35,11 +35,9 @@ namespace E_Commerce_Store
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
             titleLabel = new Label();
             priceLabel = new Label();
-            publishedAtLabel = new Label();
             stockLabel = new Label();
             productDescriptionLabel = new Label();
             priceTextBox = new TextBox();
-            publishedAtTextBox = new TextBox();
             stockTextBox = new TextBox();
             textBox4 = new TextBox();
             label1 = new Label();
@@ -47,6 +45,10 @@ namespace E_Commerce_Store
             categoryComboBox = new ComboBox();
             doneButton = new Button();
             productImageButton = new Button();
+            nameTextBox = new TextBox();
+            label3 = new Label();
+            descriptionTextBox = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // titleLabel
@@ -60,12 +62,6 @@ namespace E_Commerce_Store
             resources.ApplyResources(priceLabel, "priceLabel");
             priceLabel.ForeColor = Color.FromArgb(241, 250, 238);
             priceLabel.Name = "priceLabel";
-            // 
-            // publishedAtLabel
-            // 
-            resources.ApplyResources(publishedAtLabel, "publishedAtLabel");
-            publishedAtLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            publishedAtLabel.Name = "publishedAtLabel";
             // 
             // stockLabel
             // 
@@ -88,15 +84,6 @@ namespace E_Commerce_Store
             priceTextBox.Name = "priceTextBox";
             priceTextBox.ReadOnly = true;
             priceTextBox.TabStop = false;
-            // 
-            // publishedAtTextBox
-            // 
-            publishedAtTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(publishedAtTextBox, "publishedAtTextBox");
-            publishedAtTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            publishedAtTextBox.Name = "publishedAtTextBox";
-            publishedAtTextBox.ReadOnly = true;
-            publishedAtTextBox.TabStop = false;
             // 
             // stockTextBox
             // 
@@ -150,22 +137,53 @@ namespace E_Commerce_Store
             productImageButton.Name = "productImageButton";
             productImageButton.UseVisualStyleBackColor = true;
             // 
+            // nameTextBox
+            // 
+            nameTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(nameTextBox, "nameTextBox");
+            nameTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.ReadOnly = true;
+            nameTextBox.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.ForeColor = Color.FromArgb(241, 250, 238);
+            label3.Name = "label3";
+            // 
+            // descriptionTextBox
+            // 
+            descriptionTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(descriptionTextBox, "descriptionTextBox");
+            descriptionTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            descriptionTextBox.Name = "descriptionTextBox";
+            descriptionTextBox.TabStop = false;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(label4, "label4");
+            label4.ForeColor = Color.FromArgb(241, 250, 238);
+            label4.Name = "label4";
+            // 
             // AddProduct
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(label4);
+            Controls.Add(descriptionTextBox);
+            Controls.Add(nameTextBox);
+            Controls.Add(label3);
             Controls.Add(doneButton);
             Controls.Add(categoryComboBox);
             Controls.Add(label2);
             Controls.Add(textBox4);
             Controls.Add(label1);
             Controls.Add(stockTextBox);
-            Controls.Add(publishedAtTextBox);
             Controls.Add(priceTextBox);
             Controls.Add(productDescriptionLabel);
             Controls.Add(stockLabel);
-            Controls.Add(publishedAtLabel);
             Controls.Add(priceLabel);
             Controls.Add(productImageButton);
             Controls.Add(titleLabel);
@@ -179,11 +197,9 @@ namespace E_Commerce_Store
 
         private Label titleLabel;
         private Label priceLabel;
-        private Label publishedAtLabel;
         private Label stockLabel;
         private Label productDescriptionLabel;
         private TextBox priceTextBox;
-        private TextBox publishedAtTextBox;
         private TextBox stockTextBox;
         private TextBox textBox4;
         private Label label1;
@@ -191,5 +207,9 @@ namespace E_Commerce_Store
         private ComboBox categoryComboBox;
         private Button doneButton;
         private Button productImageButton;
+        private TextBox nameTextBox;
+        private Label label3;
+        private TextBox descriptionTextBox;
+        private Label label4;
     }
 }
