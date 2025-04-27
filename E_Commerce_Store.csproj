@@ -19,6 +19,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="SellerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>

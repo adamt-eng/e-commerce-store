@@ -4,7 +4,7 @@ using System;
 
 namespace E_Commerce_Store
 {
-    partial class AdminPage
+    partial class SellerPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,11 +32,11 @@ namespace E_Commerce_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerPage));
             titleLabel = new Label();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
-            loginButton = new Button();
+            DeleteButton = new Button();
+            AddButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,32 +53,31 @@ namespace E_Commerce_Store
             dataGridView1.Name = "dataGridView1";
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // comboBox1
+            // DeleteButton
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2"), resources.GetString("comboBox1.Items3"), resources.GetString("comboBox1.Items4") });
-            resources.ApplyResources(comboBox1, "comboBox1");
-            comboBox1.Name = "comboBox1";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            resources.ApplyResources(DeleteButton, "DeleteButton");
+            DeleteButton.ForeColor = Color.FromArgb(241, 250, 238);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click_1;
             // 
-            // loginButton
+            // AddButton
             // 
-            resources.ApplyResources(loginButton, "loginButton");
-            loginButton.ForeColor = Color.FromArgb(241, 250, 238);
-            loginButton.Name = "loginButton";
-            loginButton.UseVisualStyleBackColor = true;
-            loginButton.Click += loginButton_Click_1;
+            resources.ApplyResources(AddButton, "AddButton");
+            AddButton.ForeColor = Color.FromArgb(241, 250, 238);
+            AddButton.Name = "AddButton";
+            AddButton.UseVisualStyleBackColor = true;
             // 
-            // AdminPage
+            // SellerPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(loginButton);
-            Controls.Add(comboBox1);
+            Controls.Add(AddButton);
+            Controls.Add(DeleteButton);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
-            Name = "AdminPage";
+            Name = "SellerPage";
             Load += AdminPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -89,6 +88,7 @@ namespace E_Commerce_Store
         private Label titleLabel;
         private DataGridView dataGridView1;
         private ComboBox comboBox1;
-        private Button loginButton;
+        private Button DeleteButton;
+        private Button AddButton;
     }
 }
