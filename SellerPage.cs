@@ -22,10 +22,6 @@ internal partial class SellerPage : Form
         _products.Columns.Add("Price");
         _products.Columns.Add("Category_Name");  // Foreign Key
 
-        //populate-SQL
-        _products.Rows.Add("P001", "Gaming Laptop", "Available", "2024-01-01", "1500.00", "Electronics");
-        _products.Rows.Add("P002", "Smartphone", "Available", "2024-02-15", "800.00", "Electronics");
-
         //show
         dataGridView1.DataSource = _products;
     }

@@ -44,6 +44,10 @@ namespace E_Commerce_Store
             passwordLabel = new Label();
             passwordTextBox = new TextBox();
             registerButton = new Button();
+            userTypeLabel = new Label();
+            userTypeComboBox = new ComboBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // firstNameTextBox
@@ -130,11 +134,41 @@ namespace E_Commerce_Store
             registerButton.UseVisualStyleBackColor = true;
             registerButton.Click += registerButton_Click;
             // 
+            // userTypeLabel
+            // 
+            resources.ApplyResources(userTypeLabel, "userTypeLabel");
+            userTypeLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            userTypeLabel.Name = "userTypeLabel";
+            // 
+            // userTypeComboBox
+            // 
+            resources.ApplyResources(userTypeComboBox, "userTypeComboBox");
+            userTypeComboBox.FormattingEnabled = true;
+            userTypeComboBox.Items.AddRange(new object[] { resources.GetString("userTypeComboBox.Items"), resources.GetString("userTypeComboBox.Items1") });
+            userTypeComboBox.Name = "userTypeComboBox";
+            userTypeComboBox.SelectedIndexChanged += userTypeComboBox_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.ForeColor = Color.FromArgb(241, 250, 238);
+            label1.Name = "label1";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.ForeColor = Color.FromArgb(241, 250, 238);
+            textBox1.Name = "textBox1";
+            textBox1.TabStop = false;
+            // 
             // Register
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(userTypeLabel);
+            Controls.Add(userTypeComboBox);
             Controls.Add(registerButton);
             Controls.Add(passwordLabel);
             Controls.Add(passwordTextBox);
@@ -147,8 +181,11 @@ namespace E_Commerce_Store
             Controls.Add(dateTimePicker1);
             Controls.Add(lastNameTextBox);
             Controls.Add(firstNameTextBox);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
             MaximizeBox = false;
             Name = "Register";
+            Load += Register_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -167,5 +204,9 @@ namespace E_Commerce_Store
         private TextBox phoneNumberTextBox;
         private Label passwordLabel;
         private Button registerButton;
+        private Label userTypeLabel;
+        private ComboBox userTypeComboBox;
+        private Label label1;
+        private TextBox textBox1;
     }
 }
