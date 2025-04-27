@@ -67,6 +67,7 @@ namespace E_Commerce_Store
             AddButton.ForeColor = Color.FromArgb(241, 250, 238);
             AddButton.Name = "AddButton";
             AddButton.UseVisualStyleBackColor = true;
+            AddButton.Click += AddButton_Click_1;
             // 
             // SellerPage
             // 

@@ -6,32 +6,33 @@ namespace E_Commerce_Store;
 
 internal partial class SellerPage : Form
 {
-    private DataTable _products = new();
-   
+
+    DataTable products = new DataTable();
+
     internal SellerPage() => InitializeComponent();
 
     private void AdminPage_Load(object sender, EventArgs e)
     {
-     
+
 
         // Define Products table
-        _products.Columns.Add("Product_ID");
-        _products.Columns.Add("Description");
-        _products.Columns.Add("Status");
-        _products.Columns.Add("Published_At");
-        _products.Columns.Add("Price");
-        _products.Columns.Add("Category_Name");  // Foreign Key
+        products.Columns.Add("Product_ID");
+        products.Columns.Add("Description");
+        products.Columns.Add("Status");
+        products.Columns.Add("Published_At");
+        products.Columns.Add("Price");
+        products.Columns.Add("Category_Name");  // Foreign Key
 
         //populate-SQL
-        _products.Rows.Add("P001", "Gaming Laptop", "Available", "2024-01-01", "1500.00",  "Electronics");
-        _products.Rows.Add("P002", "Smartphone", "Available", "2024-02-15", "800.00", "Electronics");
+        products.Rows.Add("P001", "Gaming Laptop", "Available", "2024-01-01", "1500.00", "Electronics");
+        products.Rows.Add("P002", "Smartphone", "Available", "2024-02-15", "800.00", "Electronics");
 
         //show
-        dataGridView1.DataSource = _products;
+        dataGridView1.DataSource = products;
     }
 
 
-    
+
 
     private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
@@ -41,9 +42,10 @@ internal partial class SellerPage : Form
 
     private void DeleteButton_Click_1(object sender, EventArgs e)
     {
-        if(!(dataGridView1.SelectedRows.Count == 0)) {
+        if (!(dataGridView1.SelectedRows.Count == 0))
+        {
             int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
-            _products.Rows.RemoveAt(selectedRowIndex);
+            products.Rows.RemoveAt(selectedRowIndex);
 
             //delete-SQL
 
@@ -58,7 +60,13 @@ internal partial class SellerPage : Form
 
     private void AddButton_Click(object sender, EventArgs e)
     {
-       //show dialogue box
+        //show dialogue box
+    }
+
+    private void AddButton_Click_1(object sender, EventArgs e)
+    {
+        AddProduct addProduct = new AddProduct();
+        addProduct.ShowDialog();
     }
 }
 
