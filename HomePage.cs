@@ -25,6 +25,8 @@ internal partial class HomePage : Form
         _products.Columns.Add("Category_Name");  // Foreign Key
 
         // Load all products with SQL
+
+        var products = Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Products");
     }
 
     private void myProfileButton_Click(object sender, EventArgs e)
