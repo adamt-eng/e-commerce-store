@@ -4,7 +4,7 @@ using System;
 
 namespace E_Commerce_Store
 {
-    partial class HomePage
+    partial class AdminPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,31 +32,12 @@ namespace E_Commerce_Store
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            searchForProductsTextBox = new TextBox();
-            cartButton = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             titleLabel = new Label();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // searchForProductsTextBox
-            // 
-            searchForProductsTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(searchForProductsTextBox, "searchForProductsTextBox");
-            searchForProductsTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            searchForProductsTextBox.Name = "searchForProductsTextBox";
-            searchForProductsTextBox.TabStop = false;
-            searchForProductsTextBox.TextChanged += searchForProductsTextBox_TextChanged;
-            // 
-            // cartButton
-            // 
-            cartButton.BackgroundImage = Properties.Resources.cart;
-            resources.ApplyResources(cartButton, "cartButton");
-            cartButton.ForeColor = Color.FromArgb(241, 250, 238);
-            cartButton.Name = "cartButton";
-            cartButton.UseVisualStyleBackColor = true;
             // 
             // titleLabel
             // 
@@ -69,41 +50,36 @@ namespace E_Commerce_Store
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // button1
+            // comboBox1
             // 
-            resources.ApplyResources(button1, "button1");
-            button1.FlatAppearance.BorderSize = 0;
-            button1.ForeColor = Color.FromArgb(241, 250, 238);
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2"), resources.GetString("comboBox1.Items3"), resources.GetString("comboBox1.Items4") });
+            resources.ApplyResources(comboBox1, "comboBox1");
+            comboBox1.Name = "comboBox1";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // HomePage
+            // AdminPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
-            Controls.Add(cartButton);
-            Controls.Add(searchForProductsTextBox);
-            Name = "HomePage";
-            Load += HomePage_Load;
+            Name = "AdminPage";
+            Load += AdminPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button loginButton;
-        private TextBox searchForProductsTextBox;
         private TextBox passwordTextBox;
-        private Button cartButton;
         private Label titleLabel;
         private DataGridView dataGridView1;
-        private Button button1;
+        private ComboBox comboBox1;
     }
 }

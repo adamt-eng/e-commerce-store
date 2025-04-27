@@ -36,8 +36,7 @@ namespace E_Commerce_Store
             loginButton = new Button();
             usernameTextBox = new TextBox();
             passwordTextBox = new TextBox();
-            titleLabel = new Label();
-            forgotPasswordLabel = new Label();
+            registerLabel = new Label();
             progressBarPanel = new Panel();
             progressBarTimer = new Timer(components);
             SuspendLayout();
@@ -64,19 +63,13 @@ namespace E_Commerce_Store
             passwordTextBox.ForeColor = Color.FromArgb(241, 250, 238);
             passwordTextBox.Name = "passwordTextBox";
             // 
-            // titleLabel
+            // registerLabel
             // 
-            resources.ApplyResources(titleLabel, "titleLabel");
-            titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            titleLabel.Name = "titleLabel";
-            // 
-            // forgotPasswordLabel
-            // 
-            forgotPasswordLabel.Cursor = Cursors.Hand;
-            resources.ApplyResources(forgotPasswordLabel, "forgotPasswordLabel");
-            forgotPasswordLabel.ForeColor = Color.FromArgb(230, 57, 70);
-            forgotPasswordLabel.Name = "forgotPasswordLabel";
-            forgotPasswordLabel.Click += forgotPasswordLabel_Click;
+            registerLabel.Cursor = Cursors.Hand;
+            resources.ApplyResources(registerLabel, "registerLabel");
+            registerLabel.ForeColor = Color.FromArgb(230, 57, 70);
+            registerLabel.Name = "registerLabel";
+            registerLabel.Click += registerLabel_Click;
             // 
             // progressBarPanel
             // 
@@ -86,7 +79,7 @@ namespace E_Commerce_Store
             // 
             // progressBarTimer
             // 
-            progressBarTimer.Interval = 40;
+            progressBarTimer.Interval = 1;
             progressBarTimer.Tick += progressBarTimer_Tick;
             // 
             // Login
@@ -95,11 +88,11 @@ namespace E_Commerce_Store
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(progressBarPanel);
-            Controls.Add(forgotPasswordLabel);
-            Controls.Add(titleLabel);
+            Controls.Add(registerLabel);
             Controls.Add(passwordTextBox);
             Controls.Add(usernameTextBox);
             Controls.Add(loginButton);
+            MaximizeBox = false;
             Name = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -110,8 +103,7 @@ namespace E_Commerce_Store
         private Button loginButton;
         private TextBox usernameTextBox;
         private TextBox passwordTextBox;
-        private Label titleLabel;
-        private Label forgotPasswordLabel;
+        private Label registerLabel;
         private Panel progressBarPanel;
         private System.Windows.Forms.Timer progressBarTimer;
     }
