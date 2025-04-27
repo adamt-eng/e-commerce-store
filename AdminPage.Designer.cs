@@ -36,7 +36,7 @@ namespace E_Commerce_Store
             titleLabel = new Label();
             dataGridView1 = new DataGridView();
             comboBox1 = new ComboBox();
-            loginButton = new Button();
+            deleteButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +51,6 @@ namespace E_Commerce_Store
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // comboBox1
             // 
@@ -61,20 +60,20 @@ namespace E_Commerce_Store
             comboBox1.Name = "comboBox1";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // loginButton
+            // deleteButton
             // 
-            resources.ApplyResources(loginButton, "loginButton");
-            loginButton.ForeColor = Color.FromArgb(241, 250, 238);
-            loginButton.Name = "loginButton";
-            loginButton.UseVisualStyleBackColor = true;
-            loginButton.Click += loginButton_Click_1;
+            resources.ApplyResources(deleteButton, "deleteButton");
+            deleteButton.ForeColor = Color.FromArgb(241, 250, 238);
+            deleteButton.Name = "deleteButton";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // AdminPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(loginButton);
+            Controls.Add(deleteButton);
             Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
@@ -89,6 +88,6 @@ namespace E_Commerce_Store
         private Label titleLabel;
         private DataGridView dataGridView1;
         private ComboBox comboBox1;
-        private Button loginButton;
+        private Button deleteButton;
     }
 }

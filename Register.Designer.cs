@@ -53,7 +53,6 @@ namespace E_Commerce_Store
             firstNameTextBox.ForeColor = Color.FromArgb(241, 250, 238);
             firstNameTextBox.Name = "firstNameTextBox";
             firstNameTextBox.TabStop = false;
-            firstNameTextBox.TextChanged += searchForProductsTextBox_TextChanged;
             // 
             // lastNameTextBox
             // 
@@ -150,7 +149,6 @@ namespace E_Commerce_Store
             Controls.Add(firstNameTextBox);
             MaximizeBox = false;
             Name = "Register";
-            Load += Register_Load;
             ResumeLayout(false);
             PerformLayout();
         }

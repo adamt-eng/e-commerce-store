@@ -7,27 +7,15 @@ internal partial class Register : Form
 {
     internal Register() => InitializeComponent();
 
-    private void Register_Load(object sender, EventArgs e)
-    {
-
-    }
-
-    private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
-    {
-        // No need to implement anything here for the Register form
-    }
-
     private void registerButton_Click(object sender, EventArgs e)
     {
-        // Get the entered values
         var firstName = firstNameTextBox.Text.Trim();
         var lastName = lastNameTextBox.Text.Trim();
         var dateOfBirth = dateTimePicker1.Value.ToString("yyyy-MM-dd");
         var email = emailTextBox.Text.Trim();
-        var password = passwordTextBox.Text.Trim(); // Ideally should hash password before saving
+        var password = passwordTextBox.Text.Trim();
         var phoneNumber = phoneNumberTextBox.Text.Trim();
 
-        // Check if all fields are filled
         if (string.IsNullOrWhiteSpace(firstName) ||
             string.IsNullOrWhiteSpace(lastName) ||
             string.IsNullOrWhiteSpace(email) ||
@@ -40,10 +28,9 @@ internal partial class Register : Form
 
         try
         {
-            // Insert into the database
             var query = $"""
                          
-                                         INSERT INTO Customer (FirstName, LastName, DateOfBirth, Email, Pass_Hashed, PhoneNumber)
+                                         INSERT INTO Customer (First_Name, Last_Name, Date_Of_Birth, Email, Pass_Hashed, Phone_Number)
                                          VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
                                      
                          """;
@@ -52,9 +39,8 @@ internal partial class Register : Form
 
             MessageBox.Show("Registration successful! You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // After successful registration, redirect back to Login
             Hide();
-            new Login().ShowDialog();
+            Program.LoginFormInstance.ShowDialog();
         }
         catch (Exception ex)
         {

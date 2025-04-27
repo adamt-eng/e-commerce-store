@@ -226,40 +226,40 @@
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="loginButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="deleteButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="loginButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="deleteButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
   </data>
-  <data name="loginButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="deleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="loginButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="deleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1219, 124</value>
   </data>
-  <data name="loginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="deleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="loginButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="deleteButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 48</value>
   </data>
-  <data name="loginButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="deleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="loginButton.Text" xml:space="preserve">
+  <data name="deleteButton.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="&gt;&gt;loginButton.Name" xml:space="preserve">
-    <value>loginButton</value>
+  <data name="&gt;&gt;deleteButton.Name" xml:space="preserve">
+    <value>deleteButton</value>
   </data>
-  <data name="&gt;&gt;loginButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;deleteButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;loginButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;deleteButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;loginButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;deleteButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
@@ -12,6 +13,7 @@ internal static class Program
             "Data Source=ADAM;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
 
     internal static DatabaseHandler DatabaseHandler;
+    internal static Form LoginFormInstance;
 
     [STAThread]
     private static void Main()
@@ -33,8 +35,9 @@ internal static class Program
         LoadAddedToTable();
 
         DatabaseHandler = new DatabaseHandler("Data Source=ADAM;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
+        LoginFormInstance = new AdminPage();
 
-        Application.Run(new Login());
+        Application.Run(LoginFormInstance);
     }
 
     private static void LoadAdminTable()

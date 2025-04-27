@@ -6,161 +6,104 @@ namespace E_Commerce_Store;
 
 internal partial class AdminPage : Form
 {
-    private DataTable _users = new();
-    private DataTable _sellers = new();
-    private DataTable _products = new();
-    private DataTable _categories = new();
-    private DataTable _orders = new();
+    private DataTable _users;
+    private DataTable _sellers;
+    private DataTable _products;
+    private DataTable _categories;
+    private DataTable _orders;
+
     internal AdminPage() => InitializeComponent();
 
     private void AdminPage_Load(object sender, EventArgs e)
     {
+        RefreshTables();
         comboBox1.SelectedIndex = 0;
-        // Users table (based on "Customer")
-        _users.Columns.Add("Customer_ID");
-        _users.Columns.Add("FName");
-        _users.Columns.Add("LName");
-        _users.Columns.Add("Phone_Number");
-        _users.Columns.Add("DOB");
-        _users.Columns.Add("Email");
-
-        // Sellers table
-        _sellers.Columns.Add("Seller_ID");
-        _sellers.Columns.Add("FName");
-        _sellers.Columns.Add("LName");
-        _sellers.Columns.Add("Phone_Number");
-        _sellers.Columns.Add("Email");
-        _sellers.Columns.Add("Address");
-
-        // Products table
-        _products.Columns.Add("Product_ID");
-        _products.Columns.Add("Description");
-        _products.Columns.Add("Status");
-        _products.Columns.Add("Published_At");
-        _products.Columns.Add("Price");
-        _products.Columns.Add("Seller_ID");    // Foreign Key
-        _products.Columns.Add("Category_Name");  // Foreign Key
-
-        // Orders table
-        _orders.Columns.Add("Order_ID");
-        _orders.Columns.Add("Date");
-        _orders.Columns.Add("Shipping_Address");
-        _orders.Columns.Add("Status");
-        _orders.Columns.Add("Customer_ID"); // Foreign Key
-        _orders.Columns.Add("Billing_Address");
-
-        // Categories table
-        _categories.Columns.Add("Category_ID");
-        _categories.Columns.Add("Name");
-        _categories.Columns.Add("Description");
-
-
-        // Dummy data for Users
-        _users.Rows.Add("U001", "John", "Doe", "1234567890", "1990-01-01", "john@example.com");
-        _users.Rows.Add("U002", "Jane", "Smith", "0987654321", "1992-03-15", "jane@example.com");
-
-        // Dummy data for Sellers
-        _sellers.Rows.Add("S001", "Alice", "Johnson", "1112223333", "alice@example.com", "123 Main St");
-        _sellers.Rows.Add("S002", "Bob", "Williams", "4445556666", "bob@example.com", "456 Oak Ave");
-
-        // Dummy data for Products
-        _products.Rows.Add("P001", "Gaming Laptop", "Available", "2024-01-01", "1500.00", "S001", "Electronics");
-        _products.Rows.Add("P002", "Smartphone", "Available", "2024-02-15", "800.00", "S002", "Electronics");
-
-        // Dummy data for Orders
-        _orders.Rows.Add("O001", "2025-04-01", "789 Pine St", "Shipped", "U001", "101 Cedar Blvd");
-        _orders.Rows.Add("O002", "2025-04-02", "654 Maple Ave", "Processing", "U002", "202 Elm St");
-
-        // Dummy data for Categories
-        _categories.Rows.Add("C001", "Electronics", "Devices like phones, laptops, etc.");
-        _categories.Rows.Add("C002", "Clothing", "Apparel and accessories.");
-
     }
-
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (comboBox1.SelectedIndex == 0)
+        switch (comboBox1.SelectedIndex)
         {
-            //users sellers products orders categs
-            loginButton.Show();
-            dataGridView1.DataSource = _users;
-            loginButton.Text = "Ban";
-        }
-        else if (comboBox1.SelectedIndex == 1)
-        {
-            loginButton.Show();
-            dataGridView1.DataSource = _sellers;
-            loginButton.Text = "Ban";
-        }
-        else if (comboBox1.SelectedIndex == 2)
-        {
-            loginButton.Show();
-            dataGridView1.DataSource = _products;
-            loginButton.Text = "Delete";
-        }
-        else if (comboBox1.SelectedIndex == 3)
-        {
-            dataGridView1.DataSource = _orders;
-            loginButton.Hide();
-        }
-        else if (comboBox1.SelectedIndex == 4)
-        {
-            loginButton.Show();
-            dataGridView1.DataSource = _categories;
-            loginButton.Text = "Delete";
+            case 0:
+                dataGridView1.DataSource = _users;
+                deleteButton.Show();
+                deleteButton.Text = "Ban";
+                break;
+            case 1:
+                dataGridView1.DataSource = _sellers;
+                deleteButton.Show();
+                deleteButton.Text = "Ban";
+                break;
+            case 2:
+                dataGridView1.DataSource = _products;
+                deleteButton.Show();
+                deleteButton.Text = "Delete";
+                break;
+            case 3:
+                dataGridView1.DataSource = _orders;
+                deleteButton.Hide();
+                break;
+            case 4:
+                dataGridView1.DataSource = _categories;
+                deleteButton.Show();
+                deleteButton.Text = "Delete";
+                break;
         }
 
         dataGridView1.Update();
     }
 
-    private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    private void deleteButton_Click(object sender, EventArgs e)
     {
+        if (dataGridView1.SelectedRows.Count > 0)
+        {
+            var selectedRow = dataGridView1.SelectedRows[0];
+            var selectedRowIndex = selectedRow.Index;
 
-    }
+            if (selectedRowIndex < 0) return;
 
-
-    private void loginButton_Click_1(object sender, EventArgs e)
-    {
-        if(!(dataGridView1.SelectedRows.Count == 0)) {
-        int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
-
-        
-        
-            // Now determine which DataTable is currently shown
             if (dataGridView1.DataSource == _users)
             {
-                _users.Rows.RemoveAt(selectedRowIndex);
-                //SQL
+                var customerId = _users.Rows[selectedRowIndex]["Customer_ID"];
+                Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Customer WHERE Customer_ID = {customerId}");
             }
             else if (dataGridView1.DataSource == _sellers)
             {
-                _sellers.Rows.RemoveAt(selectedRowIndex);
-                //SQL
+                var sellerId = _sellers.Rows[selectedRowIndex]["Seller_ID"];
+                Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Seller WHERE Seller_ID = {sellerId}");
             }
             else if (dataGridView1.DataSource == _products)
             {
-                _products.Rows.RemoveAt(selectedRowIndex);
-            }
-            else if (dataGridView1.DataSource == _orders)
-            {
-                _orders.Rows.RemoveAt(selectedRowIndex);
-                //SQL
+                var productId = _products.Rows[selectedRowIndex]["Product_ID"];
+                Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Product WHERE Product_ID = {productId}");
             }
             else if (dataGridView1.DataSource == _categories)
             {
-                _categories.Rows.RemoveAt(selectedRowIndex);
-                //SQL
+                var categoryId = _categories.Rows[selectedRowIndex]["Category_ID"];
+                Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Category WHERE Category_ID = {categoryId}");
             }
             else
             {
                 MessageBox.Show("Unknown table selected.");
+                return;
             }
-        }
 
+            MessageBox.Show("Deleted successfully.");
+            RefreshTables();
+            comboBox1_SelectedIndexChanged(null, null); // Reload current view
+        }
         else
         {
             MessageBox.Show("Please select a full row to delete.");
         }
+    }
+
+    private void RefreshTables()
+    {
+        _users = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Customer");
+        _sellers = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Seller");
+        _products = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Product");
+        _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]"); // [Order] because it's a reserved word
+        _categories = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Category");
     }
 }
