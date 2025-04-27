@@ -16,4 +16,9 @@ internal partial class Register : Form
     {
 
     }
+
+    private void registerButton_Click(object sender, EventArgs e)
+    {
+
+    }
 }

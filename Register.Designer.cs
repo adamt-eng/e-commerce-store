@@ -129,6 +129,7 @@ namespace E_Commerce_Store
             registerButton.ForeColor = Color.FromArgb(241, 250, 238);
             registerButton.Name = "registerButton";
             registerButton.UseVisualStyleBackColor = true;
+            registerButton.Click += registerButton_Click;
             // 
             // Register
             // 
