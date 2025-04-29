@@ -42,10 +42,6 @@ namespace E_Commerce_Store
             stockLabel = new Label();
             productDescriptionLabel = new Label();
             sellerLabel = new Label();
-            emailTextBox = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)inCartNumericUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -67,6 +63,7 @@ namespace E_Commerce_Store
             // 
             resources.ApplyResources(inCartNumericUpDown, "inCartNumericUpDown");
             inCartNumericUpDown.Name = "inCartNumericUpDown";
+            inCartNumericUpDown.ValueChanged += inCartNumericUpDown_ValueChanged;
             // 
             // cartLabel
             // 
@@ -105,51 +102,11 @@ namespace E_Commerce_Store
             sellerLabel.ForeColor = Color.FromArgb(241, 250, 238);
             sellerLabel.Name = "sellerLabel";
             // 
-            // emailTextBox
-            // 
-            emailTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(emailTextBox, "emailTextBox");
-            emailTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.ReadOnly = true;
-            emailTextBox.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.TabStop = false;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.TabStop = false;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox3, "textBox3");
-            textBox3.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.TabStop = false;
-            // 
             // ProductView
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(emailTextBox);
             Controls.Add(sellerLabel);
             Controls.Add(productDescriptionLabel);
             Controls.Add(stockLabel);
@@ -159,11 +116,11 @@ namespace E_Commerce_Store
             Controls.Add(productImageButton);
             Controls.Add(titleLabel);
             Controls.Add(cartLabel);
+            MaximizeBox = false;
             Name = "ProductView";
             Load += ProductView_Load;
             ((System.ComponentModel.ISupportInitialize)inCartNumericUpDown).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -177,9 +134,5 @@ namespace E_Commerce_Store
         private Label stockLabel;
         private Label productDescriptionLabel;
         private Label sellerLabel;
-        private TextBox emailTextBox;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
     }
 }
