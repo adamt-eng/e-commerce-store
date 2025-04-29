@@ -203,7 +203,7 @@
     <value>Categories</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1348, 129</value>
+    <value>1348, 134</value>
   </data>
   <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
@@ -236,13 +236,13 @@
     <value>NoControl</value>
   </data>
   <data name="deleteButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1219, 129</value>
+    <value>1219, 134</value>
   </data>
   <data name="deleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="deleteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 43</value>
+    <value>122, 38</value>
   </data>
   <data name="deleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -272,13 +272,13 @@
     <value>NoControl</value>
   </data>
   <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1091, 129</value>
+    <value>1091, 134</value>
   </data>
   <data name="addButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 43</value>
+    <value>122, 38</value>
   </data>
   <data name="addButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -311,7 +311,7 @@
     <value>1091, 75</value>
   </data>
   <data name="registerButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 47</value>
+    <value>462, 52</value>
   </data>
   <data name="registerButton.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>

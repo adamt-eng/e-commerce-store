@@ -99,7 +99,7 @@ internal partial class AdminPage : Form
 
             MessageBox.Show("Deleted successfully.");
             RefreshTables();
-            comboBox1_SelectedIndexChanged(null, null); // Reload current view
+            comboBox1_SelectedIndexChanged(null, null); 
         }
         else
         {
@@ -112,9 +112,10 @@ internal partial class AdminPage : Form
         _users = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Customer");
         _sellers = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Seller");
         _products = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Product");
-        _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]"); // [Order] because it's a reserved word
+        _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]"); 
         _categories = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Category");
     }
+
     private void addButton_Click(object sender, EventArgs e)
     {
         var addCat = new AddCategory();
