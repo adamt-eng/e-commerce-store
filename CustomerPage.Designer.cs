@@ -70,6 +70,8 @@ namespace E_Commerce_Store
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // myProfileButton
             // 
@@ -90,6 +92,7 @@ namespace E_Commerce_Store
             Controls.Add(titleLabel);
             Controls.Add(cartButton);
             Controls.Add(searchForProductsTextBox);
+            MinimizeBox = false;
             Name = "CustomerPage";
             Load += CustomerPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
