@@ -1,5 +1,4 @@
 using System;
-using System.Net;
 using System.Windows.Forms;
 
 namespace E_Commerce_Store;
@@ -17,20 +16,23 @@ internal partial class Register : Form
         var email = emailTextBox.Text.Trim();
         var password = passwordTextBox.Text.Trim();
         var phoneNumber = phoneNumberTextBox.Text.Trim();
+        var address = addressTextBox.Text.Trim();
 
-        if (string.IsNullOrWhiteSpace(firstName) ||
-            string.IsNullOrWhiteSpace(lastName) ||
-            string.IsNullOrWhiteSpace(email) ||
-            string.IsNullOrWhiteSpace(password) ||
-            string.IsNullOrWhiteSpace(phoneNumber))
+        if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
             MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
 
+        if (userTypeComboBox.SelectedIndex == 1 && string.IsNullOrWhiteSpace(address))
+        {
+            MessageBox.Show("Please fill in the address field.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
+
         try
         {
-            var query = string.Empty;
+            string query;
 
             if (RegisterAsAdmin)
             {
@@ -44,45 +46,34 @@ internal partial class Register : Form
             }
             else
             {
-                if (userTypeComboBox.SelectedIndex == 0)
-                {
-                    query = $"""
-                             
-                                             INSERT INTO Customer (First_Name, Last_Name, Date_Of_Birth, Email, Pass_Hashed, Phone_Number)
-                                             VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
-                                         
-                             """;
-                }
-                else
-                {
-                     query = $@"
-    INSERT INTO Seller (Seller_Name, Seller_Email, Pass_Hashed, Phone_Number, Seller_Address)
-    VALUES ('{firstName} {lastName}', '{email}', '{password}', '{phoneNumber}', '{textBox1.Text.Trim()}')
-";
+                query = userTypeComboBox.SelectedIndex == 0 ? $"""
+                                                               
+                                                                               INSERT INTO Customer (First_Name, Last_Name, Date_Of_Birth, Email, Pass_Hashed, Phone_Number)
+                                                                               VALUES ('{firstName}', '{lastName}', '{dateOfBirth}', '{email}', '{password}', '{phoneNumber}')
+                                                                           
+                                                               """ : $"""
+                                                                      
+                                                                          INSERT INTO Seller (Seller_Name, Seller_Email, Pass_Hashed, Phone_Number, Seller_Address)
+                                                                          VALUES ('{firstName} {lastName}', '{email}', '{password}', '{phoneNumber}', '{addressTextBox.Text.Trim()}')
 
-                }
+                                                                      """;
             }
 
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Registration successful! You can now log in.", "Success", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            MessageBox.Show("Registration successful! You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Hide();
             Program.LoginFormInstance.ShowDialog();
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Registration failed. Error: {ex.Message}", "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
+            MessageBox.Show($"Registration failed. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
-    private void Register_Load(object sender, EventArgs e)
-    {
-        userTypeComboBox.SelectedIndex = 0;
-    }
+    private void Register_Load(object sender, EventArgs e) => userTypeComboBox.SelectedIndex = 0;
 
     private void userTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -91,7 +82,7 @@ internal partial class Register : Form
             // Show the date of birth field and hide the address field
             dateTimePicker1.Visible = true;
             dateOfBirthLabel.Visible = true;
-            textBox1.Visible = false;
+            addressTextBox.Visible = false;
             label1.Visible = false;
         }
         else
@@ -99,8 +90,13 @@ internal partial class Register : Form
             // Show the address text field and hide the date of birth field
             dateTimePicker1.Visible = false;
             dateOfBirthLabel.Visible = false;
-            textBox1.Visible = true;
+            addressTextBox.Visible = true;
             label1.Visible = true;
         }
+    }
+
+    private void Register_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        Program.LoginFormInstance.Show();
     }
 }
