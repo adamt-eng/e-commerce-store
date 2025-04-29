@@ -34,34 +34,49 @@ namespace E_Commerce_Store
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThankYou));
             OrderPlacedLabel = new Label();
             label1 = new Label();
+            successIcon = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)successIcon).BeginInit();
             SuspendLayout();
             // 
             // OrderPlacedLabel
             // 
             resources.ApplyResources(OrderPlacedLabel, "OrderPlacedLabel");
+            OrderPlacedLabel.ForeColor = Color.White;
             OrderPlacedLabel.Name = "OrderPlacedLabel";
-            OrderPlacedLabel.Click += OrderPlacedLabel_Click;
             // 
             // label1
             // 
             resources.ApplyResources(label1, "label1");
+            label1.ForeColor = Color.LightGray;
             label1.Name = "label1";
+            // 
+            // successIcon
+            // 
+            resources.ApplyResources(successIcon, "successIcon");
+            successIcon.Image = Properties.Resources.checkmark;
+            successIcon.Name = "successIcon";
+            successIcon.TabStop = false;
             // 
             // ThankYou
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(successIcon);
             Controls.Add(label1);
             Controls.Add(OrderPlacedLabel);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ThankYou";
+            FormClosing += ThankYou_FormClosing;
+            ((System.ComponentModel.ISupportInitialize)successIcon).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private Label OrderPlacedLabel;
         private Label label1;
+        private PictureBox successIcon;
     }
 }
