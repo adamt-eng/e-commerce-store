@@ -103,7 +103,6 @@ internal partial class MyProfile : Form
 
     private void saveButton_Click(object sender, EventArgs e)
     {
-        // Collect updated values
         var firstName = firstNameTextBox.Text.Trim().Replace("'", "''");
         var lastName = lastNameTextBox.Text.Trim().Replace("'", "''");
         var email = emailTextBox.Text.Trim().Replace("'", "''");
@@ -111,10 +110,8 @@ internal partial class MyProfile : Form
         var phoneNumber = phoneNumberTextBox.Text.Trim().Replace("'", "''");
         var dateOfBirth = dobDateTimePicker.Value.ToString("yyyy-MM-dd");
 
-        // Handle NULL phone number
         var phoneNumberValue = string.IsNullOrWhiteSpace(phoneNumber) ? "NULL" : $"'{phoneNumber}'";
 
-        // Build the UPDATE query manually
         var query = $"""
                      
                              UPDATE [{Login.User.Key}]
@@ -148,21 +145,16 @@ internal partial class MyProfile : Form
     {
         if (addressListBox.SelectedIndex != -1)
         {
-            // Get the selected item text
             var selectedItem = addressListBox.SelectedItem.ToString();
 
             try
             {
-                // Split the string to extract the Label and Customer ID
-                var labelPart = selectedItem.Split(":")[0].Trim(); // Label before the colon
+                var labelPart = selectedItem.Split(":")[0].Trim();
 
-                // Construct the DELETE query for the address
                 var query = $"DELETE FROM Customer_Address WHERE Customer_ID = {Login.User.Value} AND Label = '{labelPart}'";
 
-                // Execute the query to delete the address from the database
                 Program.DatabaseHandler.ExecuteQuery(query);
 
-                // Remove the item from the ListBox
                 addressListBox.Items.RemoveAt(addressListBox.SelectedIndex);
 
                 MessageBox.Show("Address deleted successfully.");
@@ -183,21 +175,16 @@ internal partial class MyProfile : Form
     {
         if (paymentMethodsListBox.SelectedIndex != -1)
         {
-            // Get the selected item text
             var selectedItem = paymentMethodsListBox.SelectedItem.ToString();
 
             try
             {
-                // Extract the Card Number
-                var cardNumber = selectedItem.Split(":")[1].Split("-")[0].Trim(); // Get the Card Number part
+                var cardNumber = selectedItem.Split(":")[1].Split("-")[0].Trim();
 
-                // Construct the DELETE query for the payment method
                 var query = $"DELETE FROM Payment WHERE Customer_ID = {Login.User.Value} AND Card_Number = '{cardNumber}'";
 
-                // Execute the query to delete the payment method from the database
                 Program.DatabaseHandler.ExecuteQuery(query);
 
-                // Remove the item from the ListBox
                 paymentMethodsListBox.Items.RemoveAt(paymentMethodsListBox.SelectedIndex);
 
                 MessageBox.Show("Payment method deleted successfully.");
