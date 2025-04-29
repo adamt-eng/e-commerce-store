@@ -34,9 +34,11 @@ namespace E_Commerce_Store
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviousOrders));
             titleLabel = new Label();
-            dataGridView1 = new DataGridView();
+            ordersGridView = new DataGridView();
             myProfileButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            detailsGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)ordersGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)detailsGridView).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
@@ -45,11 +47,11 @@ namespace E_Commerce_Store
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
             // 
-            // dataGridView1
+            // ordersGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView1, "dataGridView1");
-            dataGridView1.Name = "dataGridView1";
+            ordersGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(ordersGridView, "ordersGridView");
+            ordersGridView.Name = "ordersGridView";
             // 
             // myProfileButton
             // 
@@ -60,23 +62,33 @@ namespace E_Commerce_Store
             myProfileButton.UseVisualStyleBackColor = true;
             myProfileButton.Click += myProfileButton_Click;
             // 
+            // detailsGridView
+            // 
+            detailsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(detailsGridView, "detailsGridView");
+            detailsGridView.Name = "detailsGridView";
+            // 
             // PreviousOrders
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(detailsGridView);
             Controls.Add(myProfileButton);
-            Controls.Add(dataGridView1);
+            Controls.Add(ordersGridView);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "PreviousOrders";
-            Load += HomePage_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += PreviousOrders_Load;
+            ((System.ComponentModel.ISupportInitialize)ordersGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)detailsGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Label titleLabel;
-        private DataGridView dataGridView1;
+        private DataGridView ordersGridView;
         private Button myProfileButton;
+        private DataGridView detailsGridView;
     }
 }
