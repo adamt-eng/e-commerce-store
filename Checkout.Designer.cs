@@ -32,58 +32,46 @@ namespace E_Commerce_Store
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checkout));
-            PlaceOrderButton = new Button();
-            TotalLabel = new Label();
-            TotalPriceTextBox = new TextBox();
-            PaymentMethodComboBox = new ComboBox();
-            ChoosePaymentMethodLabel = new Label();
-            ChooseShippingAddressLabel = new Label();
+            placeOrderButton = new Button();
+            totalPriceLabel = new Label();
+            paymentMethodComboBox = new ComboBox();
+            choosePaymentMethodLabel = new Label();
+            chooseShippingAddressLabel = new Label();
             ShippingAddressComboBox = new ComboBox();
+            backButton = new Button();
             SuspendLayout();
             // 
-            // PlaceOrderButton
+            // placeOrderButton
             // 
-            resources.ApplyResources(PlaceOrderButton, "PlaceOrderButton");
-            PlaceOrderButton.ForeColor = Color.FromArgb(241, 250, 238);
-            PlaceOrderButton.Name = "PlaceOrderButton";
-            PlaceOrderButton.UseVisualStyleBackColor = true;
-            PlaceOrderButton.Click += PlaceOrderButton_Click;
+            resources.ApplyResources(placeOrderButton, "placeOrderButton");
+            placeOrderButton.ForeColor = Color.FromArgb(241, 250, 238);
+            placeOrderButton.Name = "placeOrderButton";
+            placeOrderButton.UseVisualStyleBackColor = true;
+            placeOrderButton.Click += PlaceOrderButton_Click;
             // 
-            // TotalLabel
+            // totalPriceLabel
             // 
-            resources.ApplyResources(TotalLabel, "TotalLabel");
-            TotalLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            TotalLabel.Name = "TotalLabel";
-            TotalLabel.Click += nameLabel_Click;
+            resources.ApplyResources(totalPriceLabel, "totalPriceLabel");
+            totalPriceLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            totalPriceLabel.Name = "totalPriceLabel";
             // 
-            // TotalPriceTextBox
+            // paymentMethodComboBox
             // 
-            TotalPriceTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(TotalPriceTextBox, "TotalPriceTextBox");
-            TotalPriceTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            TotalPriceTextBox.Name = "TotalPriceTextBox";
-            TotalPriceTextBox.ReadOnly = true;
-            TotalPriceTextBox.TabStop = false;
-            TotalPriceTextBox.TextChanged += textBox1_TextChanged;
+            paymentMethodComboBox.FormattingEnabled = true;
+            resources.ApplyResources(paymentMethodComboBox, "paymentMethodComboBox");
+            paymentMethodComboBox.Name = "paymentMethodComboBox";
             // 
-            // PaymentMethodComboBox
+            // choosePaymentMethodLabel
             // 
-            PaymentMethodComboBox.FormattingEnabled = true;
-            resources.ApplyResources(PaymentMethodComboBox, "PaymentMethodComboBox");
-            PaymentMethodComboBox.Name = "PaymentMethodComboBox";
+            resources.ApplyResources(choosePaymentMethodLabel, "choosePaymentMethodLabel");
+            choosePaymentMethodLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            choosePaymentMethodLabel.Name = "choosePaymentMethodLabel";
             // 
-            // ChoosePaymentMethodLabel
+            // chooseShippingAddressLabel
             // 
-            resources.ApplyResources(ChoosePaymentMethodLabel, "ChoosePaymentMethodLabel");
-            ChoosePaymentMethodLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            ChoosePaymentMethodLabel.Name = "ChoosePaymentMethodLabel";
-            // 
-            // ChooseShippingAddressLabel
-            // 
-            resources.ApplyResources(ChooseShippingAddressLabel, "ChooseShippingAddressLabel");
-            ChooseShippingAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            ChooseShippingAddressLabel.Name = "ChooseShippingAddressLabel";
-            ChooseShippingAddressLabel.Click += label1_Click;
+            resources.ApplyResources(chooseShippingAddressLabel, "chooseShippingAddressLabel");
+            chooseShippingAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            chooseShippingAddressLabel.Name = "chooseShippingAddressLabel";
             // 
             // ShippingAddressComboBox
             // 
@@ -91,32 +79,39 @@ namespace E_Commerce_Store
             resources.ApplyResources(ShippingAddressComboBox, "ShippingAddressComboBox");
             ShippingAddressComboBox.Name = "ShippingAddressComboBox";
             // 
+            // backButton
+            // 
+            resources.ApplyResources(backButton, "backButton");
+            backButton.ForeColor = Color.FromArgb(241, 250, 238);
+            backButton.Name = "backButton";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click_1;
+            // 
             // Checkout
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(backButton);
             Controls.Add(ShippingAddressComboBox);
-            Controls.Add(ChooseShippingAddressLabel);
-            Controls.Add(ChoosePaymentMethodLabel);
-            Controls.Add(PaymentMethodComboBox);
-            Controls.Add(TotalPriceTextBox);
-            Controls.Add(PlaceOrderButton);
-            Controls.Add(TotalLabel);
+            Controls.Add(chooseShippingAddressLabel);
+            Controls.Add(choosePaymentMethodLabel);
+            Controls.Add(paymentMethodComboBox);
+            Controls.Add(placeOrderButton);
+            Controls.Add(totalPriceLabel);
             MaximizeBox = false;
             Name = "Checkout";
-            Load += MyProfile_Load;
+            Load += Checkout_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Button PlaceOrderButton;
-        private Label TotalLabel;
-        private TextBox TotalPriceTextBox;
-        private ComboBox PaymentMethodComboBox;
-        private Label ChoosePaymentMethodLabel;
-        private Label ChooseShippingAddressLabel;
+        private Button placeOrderButton;
+        private Label totalPriceLabel;
+        private ComboBox paymentMethodComboBox;
+        private Label choosePaymentMethodLabel;
+        private Label chooseShippingAddressLabel;
         private ComboBox ShippingAddressComboBox;
+        private Button backButton;
     }
 }
