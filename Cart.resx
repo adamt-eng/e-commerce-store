@@ -117,31 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CartTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 142</value>
+    <value>14, 99</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CartTable.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
   <data name="CartTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1243, 572</value>
+    <value>1243, 615</value>
   </data>
   <data name="CartTable.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -156,67 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CartTable.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Item.HeaderText" xml:space="preserve">
-    <value>Item</value>
-  </data>
-  <data name="Item.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Item.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Price.HeaderText" xml:space="preserve">
-    <value>Price in $</value>
-  </data>
-  <data name="Price.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Price.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Quantity.HeaderText" xml:space="preserve">
-    <value>Quantity</value>
-  </data>
-  <data name="Quantity.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Quantity.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Total.HeaderText" xml:space="preserve">
-    <value>Total</value>
-  </data>
-  <data name="Total.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Total.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Delete.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="Delete.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Delete.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>4</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="proceedToCheckoutButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -229,10 +154,10 @@
     <value>NoControl</value>
   </data>
   <data name="proceedToCheckoutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 926</value>
+    <value>461, 799</value>
   </data>
   <data name="proceedToCheckoutButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1245, 78</value>
+    <value>798, 92</value>
   </data>
   <data name="proceedToCheckoutButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -250,26 +175,26 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;proceedToCheckoutButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="TotalPriceLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14pt</value>
   </data>
   <data name="TotalPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 717</value>
+    <value>13, 726</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TotalPriceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="TotalPriceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1245, 206</value>
+    <value>1245, 59</value>
   </data>
   <data name="TotalPriceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="TotalPriceLabel.Text" xml:space="preserve">
-    <value>Total Price=</value>
+    <value>Total Price =</value>
   </data>
   <data name="TotalPriceLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -284,7 +209,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TotalPriceLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="CartLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15pt</value>
@@ -299,7 +224,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="CartLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1245, 78</value>
+    <value>1245, 79</value>
   </data>
   <data name="CartLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -320,6 +245,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CartLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="backToHomePageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="backToHomePageButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13pt</value>
+  </data>
+  <data name="backToHomePageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="backToHomePageButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 799</value>
+  </data>
+  <data name="backToHomePageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 92</value>
+  </data>
+  <data name="backToHomePageButton.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="backToHomePageButton.Text" xml:space="preserve">
+    <value>Back to Home Page</value>
+  </data>
+  <data name="&gt;&gt;backToHomePageButton.Name" xml:space="preserve">
+    <value>backToHomePageButton</value>
+  </data>
+  <data name="&gt;&gt;backToHomePageButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backToHomePageButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;backToHomePageButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -332,43 +290,13 @@
     <value>12, 30</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1269, 1016</value>
+    <value>1269, 903</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>E-Commerce Store Home Page</value>
-  </data>
-  <data name="&gt;&gt;Item.Name" xml:space="preserve">
-    <value>Item</value>
-  </data>
-  <data name="&gt;&gt;Item.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Price.Name" xml:space="preserve">
-    <value>Price</value>
-  </data>
-  <data name="&gt;&gt;Price.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Quantity.Name" xml:space="preserve">
-    <value>Quantity</value>
-  </data>
-  <data name="&gt;&gt;Quantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Total.Name" xml:space="preserve">
-    <value>Total</value>
-  </data>
-  <data name="&gt;&gt;Total.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Cart</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Cart</value>
