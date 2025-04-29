@@ -47,7 +47,7 @@ namespace E_Commerce_Store
             userTypeLabel = new Label();
             userTypeComboBox = new ComboBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            addressTextBox = new TextBox();
             SuspendLayout();
             // 
             // firstNameTextBox
@@ -154,13 +154,13 @@ namespace E_Commerce_Store
             label1.ForeColor = Color.FromArgb(241, 250, 238);
             label1.Name = "label1";
             // 
-            // textBox1
+            // addressTextBox
             // 
-            textBox1.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox1.Name = "textBox1";
-            textBox1.TabStop = false;
+            addressTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(addressTextBox, "addressTextBox");
+            addressTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            addressTextBox.Name = "addressTextBox";
+            addressTextBox.TabStop = false;
             // 
             // Register
             // 
@@ -181,10 +181,11 @@ namespace E_Commerce_Store
             Controls.Add(dateTimePicker1);
             Controls.Add(lastNameTextBox);
             Controls.Add(firstNameTextBox);
-            Controls.Add(textBox1);
+            Controls.Add(addressTextBox);
             Controls.Add(label1);
             MaximizeBox = false;
             Name = "Register";
+            FormClosing += Register_FormClosing;
             Load += Register_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -207,6 +208,6 @@ namespace E_Commerce_Store
         private Label userTypeLabel;
         private ComboBox userTypeComboBox;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox addressTextBox;
     }
 }
