@@ -84,6 +84,7 @@ namespace E_Commerce_Store
             Controls.Add(cardholderNameTextBox);
             Controls.Add(cardNumberTextBox);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "AddPayment";
             ResumeLayout(false);
             PerformLayout();

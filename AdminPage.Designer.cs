@@ -97,6 +97,7 @@ namespace E_Commerce_Store
             Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "AdminPage";
             Load += AdminPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

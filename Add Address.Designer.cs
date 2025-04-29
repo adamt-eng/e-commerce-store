@@ -121,6 +121,7 @@ namespace E_Commerce_Store
             Controls.Add(productDescriptionLabel);
             Controls.Add(publishedAtLabel);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "AddAddress";
             ResumeLayout(false);
             PerformLayout();
