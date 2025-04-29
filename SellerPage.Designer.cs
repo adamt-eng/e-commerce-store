@@ -51,7 +51,6 @@ namespace E_Commerce_Store
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // DeleteButton
             // 
@@ -78,6 +77,7 @@ namespace E_Commerce_Store
             Controls.Add(DeleteButton);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "SellerPage";
             Load += SellerPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -88,7 +88,6 @@ namespace E_Commerce_Store
 
         private Label titleLabel;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
         private Button DeleteButton;
         private Button AddButton;
     }
