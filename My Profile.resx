@@ -605,7 +605,7 @@
     <value>6, 34</value>
   </data>
   <data name="addressListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 124</value>
+    <value>306, 94</value>
   </data>
   <data name="addressListBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -626,7 +626,7 @@
     <value>12, 330</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 174</value>
+    <value>318, 158</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -650,7 +650,7 @@
     <value>6, 34</value>
   </data>
   <data name="paymentMethodsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 124</value>
+    <value>306, 94</value>
   </data>
   <data name="paymentMethodsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -671,7 +671,7 @@
     <value>337, 330</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 174</value>
+    <value>318, 158</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -767,10 +767,10 @@
     <value>NoControl</value>
   </data>
   <data name="deleteInPaymentButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 510</value>
+    <value>337, 494</value>
   </data>
   <data name="deleteInPaymentButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 36</value>
+    <value>317, 52</value>
   </data>
   <data name="deleteInPaymentButton.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -800,10 +800,10 @@
     <value>NoControl</value>
   </data>
   <data name="deleteInAddressButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 510</value>
+    <value>12, 494</value>
   </data>
   <data name="deleteInAddressButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 36</value>
+    <value>317, 52</value>
   </data>
   <data name="deleteInAddressButton.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
