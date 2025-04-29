@@ -61,7 +61,12 @@ internal partial class Login : Form
     private string Authenticate(string email, string password)
     {
         var loginType = loginTypeComboBox.SelectedItem.ToString();
-        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{loginType}] WHERE {(loginType == "Seller" ? "Seller_" : string.Empty)}Email = '{email}' AND Pass_Hashed = '{password}'");
+        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{loginType}] WHERE {(loginType switch
+        {
+            "Seller" => "Seller_",
+            "Admin" => "Admin_",
+            _ => string.Empty
+        })}Email = '{email}' AND Pass_Hashed = '{password}'");
         return result is DataTable { Rows.Count: > 0 } table ? table.Rows[0][0].ToString() : null;
     }
 
