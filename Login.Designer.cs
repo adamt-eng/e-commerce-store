@@ -41,6 +41,8 @@ namespace E_Commerce_Store
             progressBarTimer = new Timer(components);
             loginTypeComboBox = new ComboBox();
             loginTypeLabel = new Label();
+            successIcon = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)successIcon).BeginInit();
             SuspendLayout();
             // 
             // loginButton
@@ -98,11 +100,18 @@ namespace E_Commerce_Store
             loginTypeLabel.ForeColor = Color.FromArgb(241, 250, 238);
             loginTypeLabel.Name = "loginTypeLabel";
             // 
+            // successIcon
+            // 
+            resources.ApplyResources(successIcon, "successIcon");
+            successIcon.Name = "successIcon";
+            successIcon.TabStop = false;
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(successIcon);
             Controls.Add(loginTypeLabel);
             Controls.Add(loginTypeComboBox);
             Controls.Add(progressBarPanel);
@@ -113,6 +122,7 @@ namespace E_Commerce_Store
             MaximizeBox = false;
             Name = "Login";
             Load += Login_Load;
+            ((System.ComponentModel.ISupportInitialize)successIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +137,6 @@ namespace E_Commerce_Store
         private System.Windows.Forms.Timer progressBarTimer;
         private ComboBox loginTypeComboBox;
         private Label loginTypeLabel;
+        private PictureBox successIcon;
     }
 }
