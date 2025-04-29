@@ -36,19 +36,18 @@ namespace E_Commerce_Store
             titleLabel = new Label();
             priceLabel = new Label();
             stockLabel = new Label();
-            productDescriptionLabel = new Label();
             priceTextBox = new TextBox();
             stockTextBox = new TextBox();
-            textBox4 = new TextBox();
+            imageLinkTextBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
             categoryComboBox = new ComboBox();
             doneButton = new Button();
-            productImageButton = new Button();
             nameTextBox = new TextBox();
             label3 = new Label();
+            categoryDescriptionlabel = new Label();
+            label5 = new Label();
             descriptionTextBox = new TextBox();
-            label4 = new Label();
             SuspendLayout();
             // 
             // titleLabel
@@ -69,13 +68,6 @@ namespace E_Commerce_Store
             stockLabel.ForeColor = Color.FromArgb(241, 250, 238);
             stockLabel.Name = "stockLabel";
             // 
-            // productDescriptionLabel
-            // 
-            productDescriptionLabel.BorderStyle = BorderStyle.FixedSingle;
-            resources.ApplyResources(productDescriptionLabel, "productDescriptionLabel");
-            productDescriptionLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            productDescriptionLabel.Name = "productDescriptionLabel";
-            // 
             // priceTextBox
             // 
             priceTextBox.BackColor = Color.FromArgb(49, 73, 107);
@@ -94,14 +86,14 @@ namespace E_Commerce_Store
             stockTextBox.ReadOnly = true;
             stockTextBox.TabStop = false;
             // 
-            // textBox4
+            // imageLinkTextBox
             // 
-            textBox4.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox4, "textBox4");
-            textBox4.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.TabStop = false;
+            imageLinkTextBox.BackColor = Color.FromArgb(49, 73, 107);
+            resources.ApplyResources(imageLinkTextBox, "imageLinkTextBox");
+            imageLinkTextBox.ForeColor = Color.FromArgb(241, 250, 238);
+            imageLinkTextBox.Name = "imageLinkTextBox";
+            imageLinkTextBox.ReadOnly = true;
+            imageLinkTextBox.TabStop = false;
             // 
             // label1
             // 
@@ -120,6 +112,7 @@ namespace E_Commerce_Store
             categoryComboBox.FormattingEnabled = true;
             resources.ApplyResources(categoryComboBox, "categoryComboBox");
             categoryComboBox.Name = "categoryComboBox";
+            categoryComboBox.SelectedIndexChanged += categoryComboBox_SelectedIndexChanged;
             // 
             // doneButton
             // 
@@ -128,14 +121,6 @@ namespace E_Commerce_Store
             doneButton.Name = "doneButton";
             doneButton.UseVisualStyleBackColor = true;
             doneButton.Click += loginButton_Click;
-            // 
-            // productImageButton
-            // 
-            productImageButton.BackgroundImage = Properties.Resources.cart;
-            resources.ApplyResources(productImageButton, "productImageButton");
-            productImageButton.ForeColor = Color.FromArgb(241, 250, 238);
-            productImageButton.Name = "productImageButton";
-            productImageButton.UseVisualStyleBackColor = true;
             // 
             // nameTextBox
             // 
@@ -152,6 +137,18 @@ namespace E_Commerce_Store
             label3.ForeColor = Color.FromArgb(241, 250, 238);
             label3.Name = "label3";
             // 
+            // categoryDescriptionlabel
+            // 
+            resources.ApplyResources(categoryDescriptionlabel, "categoryDescriptionlabel");
+            categoryDescriptionlabel.ForeColor = Color.FromArgb(241, 250, 238);
+            categoryDescriptionlabel.Name = "categoryDescriptionlabel";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(label5, "label5");
+            label5.ForeColor = Color.FromArgb(241, 250, 238);
+            label5.Name = "label5";
+            // 
             // descriptionTextBox
             // 
             descriptionTextBox.BackColor = Color.FromArgb(49, 73, 107);
@@ -160,33 +157,27 @@ namespace E_Commerce_Store
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.TabStop = false;
             // 
-            // label4
-            // 
-            resources.ApplyResources(label4, "label4");
-            label4.ForeColor = Color.FromArgb(241, 250, 238);
-            label4.Name = "label4";
-            // 
             // AddProduct
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(label4);
+            Controls.Add(label5);
             Controls.Add(descriptionTextBox);
+            Controls.Add(categoryDescriptionlabel);
             Controls.Add(nameTextBox);
             Controls.Add(label3);
             Controls.Add(doneButton);
             Controls.Add(categoryComboBox);
             Controls.Add(label2);
-            Controls.Add(textBox4);
+            Controls.Add(imageLinkTextBox);
             Controls.Add(label1);
             Controls.Add(stockTextBox);
             Controls.Add(priceTextBox);
-            Controls.Add(productDescriptionLabel);
             Controls.Add(stockLabel);
             Controls.Add(priceLabel);
-            Controls.Add(productImageButton);
             Controls.Add(titleLabel);
+            MaximizeBox = false;
             Name = "AddProduct";
             Load += ProductAdd_Load;
             ResumeLayout(false);
@@ -198,18 +189,17 @@ namespace E_Commerce_Store
         private Label titleLabel;
         private Label priceLabel;
         private Label stockLabel;
-        private Label productDescriptionLabel;
         private TextBox priceTextBox;
         private TextBox stockTextBox;
-        private TextBox textBox4;
+        private TextBox imageLinkTextBox;
         private Label label1;
         private Label label2;
         private ComboBox categoryComboBox;
         private Button doneButton;
-        private Button productImageButton;
         private TextBox nameTextBox;
         private Label label3;
+        private Label categoryDescriptionlabel;
+        private Label label5;
         private TextBox descriptionTextBox;
-        private Label label4;
     }
 }
