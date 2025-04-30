@@ -11,7 +11,7 @@ internal partial class MyProfile : Form
 
     private void MyProfile_Load(object sender, EventArgs e)
     {
-        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{Login.User.Key}] WHERE {Login.User.Key}_ID = {Login.User.Value}");
+        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Customer WHERE Customer_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table)
         {
@@ -19,8 +19,6 @@ internal partial class MyProfile : Form
 
             firstNameTextBox.Text = row["First_Name"].ToString();
             lastNameTextBox.Text = row["Last_Name"].ToString();
-            emailTextBox.Text = row["Email"].ToString();
-            passwordTextBox.Text = row["Pass_Hashed"].ToString();
             phoneNumberTextBox.Text = row["Phone_Number"].ToString();
             dobDateTimePicker.Value = row["Date_Of_Birth"] == DBNull.Value ? DateTime.Today : Convert.ToDateTime(row["Date_Of_Birth"]);
         }
@@ -80,79 +78,32 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void showPreviousOrdersButton_Click(object sender, EventArgs e) => new PreviousOrders().ShowDialog();
-
     private void saveButton_Click(object sender, EventArgs e)
     {
-        var firstName = firstNameTextBox.Text.Trim().Replace("'", "''");
-        var lastName = lastNameTextBox.Text.Trim().Replace("'", "''");
-        var email = emailTextBox.Text.Trim().Replace("'", "''");
-        var password = passwordTextBox.Text.Trim().Replace("'", "''");
-        var phoneNumber = phoneNumberTextBox.Text.Trim().Replace("'", "''");
+        var firstName = firstNameTextBox.Text.Trim();
+        var lastName = lastNameTextBox.Text.Trim();
+        var phoneNumber = phoneNumberTextBox.Text.Trim();
         var dateOfBirth = dobDateTimePicker.Value.ToString("yyyy-MM-dd");
-
-        var phoneNumberValue = string.IsNullOrWhiteSpace(phoneNumber) ? "NULL" : $"'{phoneNumber}'";
 
         var query = $"""
                      
-                             UPDATE [{Login.User.Key}]
+                             UPDATE Customer
                              SET 
                                  First_Name = '{firstName}',
                                  Last_Name = '{lastName}',
-                                 Email = '{email}',
-                                 Pass_Hashed = '{password}',
-                                 Phone_Number = {phoneNumberValue},
+                                 Phone_Number = '{phoneNumber}',
                                  Date_Of_Birth = '{dateOfBirth}'
-                             WHERE {Login.User.Key}_ID = {Login.User.Value}
+                             WHERE Customer_ID = {Login.User.Value}
                          
                      """;
 
         Program.DatabaseHandler.ExecuteQuery(query);
     }
 
-    private void addressListBox_DoubleClick(object sender, EventArgs e)
-    {
-        new AddAddress().Show();
-        Close();
-    }
+    private void showPreviousOrdersButton_Click(object sender, EventArgs e) => new MyOrders().ShowDialog();
 
-    private void paymentMethodsListBox_DoubleClick(object sender, EventArgs e)
-    {
-        new AddPayment().Show();
-        Close();
-    }
-
-    private void deleteInAddressButton_Click(object sender, EventArgs e)
-    {
-        if (addressListBox.SelectedIndex != -1)
-        {
-            var selectedItem = addressListBox.SelectedItem.ToString();
-
-            try
-            {
-                var labelPart = selectedItem.Split(":")[0].Trim();
-
-                var query = $"DELETE FROM Customer_Address WHERE Customer_ID = {Login.User.Value} AND Label = '{labelPart}'";
-
-                Program.DatabaseHandler.ExecuteQuery(query);
-
-                addressListBox.Items.RemoveAt(addressListBox.SelectedIndex);
-
-                MessageBox.Show("Address deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred while deleting the address: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        else
-        {
-            MessageBox.Show("Please select an address to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-    }
-
-
-    private void deleteInPaymentButton_Click(object sender, EventArgs e)
+    private void addPaymentLabel_Click(object sender, EventArgs e) => new AddPayment().Show();
+    private void deletePaymentLabel_Click(object sender, EventArgs e)
     {
         if (paymentMethodsListBox.SelectedIndex != -1)
         {
@@ -178,6 +129,36 @@ internal partial class MyProfile : Form
         else
         {
             MessageBox.Show("Please select an payment method to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+    }
+
+    private void addAddressLabel_Click(object sender, EventArgs e) => new AddAddress().Show();
+    private void deleteAddressLabel_Click(object sender, EventArgs e)
+    {
+        if (addressListBox.SelectedIndex != -1)
+        {
+            var selectedItem = addressListBox.SelectedItem.ToString();
+
+            try
+            {
+                var labelPart = selectedItem.Split(":")[0].Trim();
+
+                var query = $"DELETE FROM Customer_Address WHERE Customer_ID = {Login.User.Value} AND Label = '{labelPart}'";
+
+                Program.DatabaseHandler.ExecuteQuery(query);
+
+                addressListBox.Items.RemoveAt(addressListBox.SelectedIndex);
+
+                MessageBox.Show("Address deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while deleting the address: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        else
+        {
+            MessageBox.Show("Please select an address to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 

@@ -33,29 +33,26 @@ namespace E_Commerce_Store.Customer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyProfile));
             saveButton = new Button();
-            passwordLabel = new Label();
-            passwordTextBox = new TextBox();
             phoneNumberLabel = new Label();
             phoneNumberTextBox = new TextBox();
-            emailLabel = new Label();
-            emailTextBox = new TextBox();
             nameLabel = new Label();
             dateOfBirthLabel = new Label();
             dobDateTimePicker = new DateTimePicker();
             lastNameTextBox = new TextBox();
             firstNameTextBox = new TextBox();
             enableEditingCheckBox = new CheckBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            groupBox1 = new GroupBox();
+            addressesGroupBox = new GroupBox();
+            deleteAddressLabel = new Label();
+            addAddressLabel = new Label();
             addressListBox = new ListBox();
-            groupBox2 = new GroupBox();
+            paymentMethodGroupBox = new GroupBox();
+            deletePaymentLabel = new Label();
             paymentMethodsListBox = new ListBox();
-            showPreviousOrdersButton = new Button();
-            deleteInPaymentButton = new Button();
-            deleteInAddressButton = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            addPaymentLabel = new Label();
+            myOrdersButton = new Button();
+            changePasswordButton = new Button();
+            addressesGroupBox.SuspendLayout();
+            paymentMethodGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // saveButton
@@ -65,21 +62,6 @@ namespace E_Commerce_Store.Customer
             saveButton.Name = "saveButton";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
-            // 
-            // passwordLabel
-            // 
-            resources.ApplyResources(passwordLabel, "passwordLabel");
-            passwordLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            passwordLabel.Name = "passwordLabel";
-            // 
-            // passwordTextBox
-            // 
-            passwordTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(passwordTextBox, "passwordTextBox");
-            passwordTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.ReadOnly = true;
-            passwordTextBox.TabStop = false;
             // 
             // phoneNumberLabel
             // 
@@ -95,21 +77,6 @@ namespace E_Commerce_Store.Customer
             phoneNumberTextBox.Name = "phoneNumberTextBox";
             phoneNumberTextBox.ReadOnly = true;
             phoneNumberTextBox.TabStop = false;
-            // 
-            // emailLabel
-            // 
-            resources.ApplyResources(emailLabel, "emailLabel");
-            emailLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            emailLabel.Name = "emailLabel";
-            // 
-            // emailTextBox
-            // 
-            emailTextBox.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(emailTextBox, "emailTextBox");
-            emailTextBox.ForeColor = Color.FromArgb(241, 250, 238);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.ReadOnly = true;
-            emailTextBox.TabStop = false;
             // 
             // nameLabel
             // 
@@ -155,95 +122,98 @@ namespace E_Commerce_Store.Customer
             enableEditingCheckBox.UseVisualStyleBackColor = true;
             enableEditingCheckBox.CheckedChanged += enableEditingCheckBox_CheckedChanged;
             // 
-            // label1
+            // addressesGroupBox
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.ForeColor = Color.FromArgb(241, 250, 238);
-            label1.Name = "label1";
+            addressesGroupBox.Controls.Add(deleteAddressLabel);
+            addressesGroupBox.Controls.Add(addAddressLabel);
+            addressesGroupBox.Controls.Add(addressListBox);
+            addressesGroupBox.ForeColor = Color.White;
+            resources.ApplyResources(addressesGroupBox, "addressesGroupBox");
+            addressesGroupBox.Name = "addressesGroupBox";
+            addressesGroupBox.TabStop = false;
             // 
-            // textBox1
+            // deleteAddressLabel
             // 
-            textBox1.BackColor = Color.FromArgb(49, 73, 107);
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.ForeColor = Color.FromArgb(241, 250, 238);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.TabStop = false;
+            deleteAddressLabel.Cursor = Cursors.Hand;
+            resources.ApplyResources(deleteAddressLabel, "deleteAddressLabel");
+            deleteAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            deleteAddressLabel.Name = "deleteAddressLabel";
+            deleteAddressLabel.Click += deleteAddressLabel_Click;
             // 
-            // groupBox1
+            // addAddressLabel
             // 
-            groupBox1.Controls.Add(addressListBox);
-            groupBox1.ForeColor = Color.White;
-            resources.ApplyResources(groupBox1, "groupBox1");
-            groupBox1.Name = "groupBox1";
-            groupBox1.TabStop = false;
+            addAddressLabel.Cursor = Cursors.Hand;
+            resources.ApplyResources(addAddressLabel, "addAddressLabel");
+            addAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            addAddressLabel.Name = "addAddressLabel";
+            addAddressLabel.Click += addAddressLabel_Click;
             // 
             // addressListBox
             // 
             addressListBox.FormattingEnabled = true;
             resources.ApplyResources(addressListBox, "addressListBox");
             addressListBox.Name = "addressListBox";
-            addressListBox.DoubleClick += addressListBox_DoubleClick;
             // 
-            // groupBox2
+            // paymentMethodGroupBox
             // 
-            groupBox2.Controls.Add(paymentMethodsListBox);
-            groupBox2.ForeColor = Color.White;
-            resources.ApplyResources(groupBox2, "groupBox2");
-            groupBox2.Name = "groupBox2";
-            groupBox2.TabStop = false;
+            paymentMethodGroupBox.Controls.Add(deletePaymentLabel);
+            paymentMethodGroupBox.Controls.Add(paymentMethodsListBox);
+            paymentMethodGroupBox.Controls.Add(addPaymentLabel);
+            paymentMethodGroupBox.ForeColor = Color.White;
+            resources.ApplyResources(paymentMethodGroupBox, "paymentMethodGroupBox");
+            paymentMethodGroupBox.Name = "paymentMethodGroupBox";
+            paymentMethodGroupBox.TabStop = false;
+            // 
+            // deletePaymentLabel
+            // 
+            deletePaymentLabel.Cursor = Cursors.Hand;
+            resources.ApplyResources(deletePaymentLabel, "deletePaymentLabel");
+            deletePaymentLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            deletePaymentLabel.Name = "deletePaymentLabel";
+            deletePaymentLabel.Click += deletePaymentLabel_Click;
             // 
             // paymentMethodsListBox
             // 
             paymentMethodsListBox.FormattingEnabled = true;
             resources.ApplyResources(paymentMethodsListBox, "paymentMethodsListBox");
             paymentMethodsListBox.Name = "paymentMethodsListBox";
-            paymentMethodsListBox.DoubleClick += paymentMethodsListBox_DoubleClick;
             // 
-            // showPreviousOrdersButton
+            // addPaymentLabel
             // 
-            resources.ApplyResources(showPreviousOrdersButton, "showPreviousOrdersButton");
-            showPreviousOrdersButton.ForeColor = Color.FromArgb(241, 250, 238);
-            showPreviousOrdersButton.Name = "showPreviousOrdersButton";
-            showPreviousOrdersButton.UseVisualStyleBackColor = true;
-            showPreviousOrdersButton.Click += showPreviousOrdersButton_Click;
+            addPaymentLabel.Cursor = Cursors.Hand;
+            resources.ApplyResources(addPaymentLabel, "addPaymentLabel");
+            addPaymentLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            addPaymentLabel.Name = "addPaymentLabel";
+            addPaymentLabel.Click += addPaymentLabel_Click;
             // 
-            // deleteInPaymentButton
+            // myOrdersButton
             // 
-            resources.ApplyResources(deleteInPaymentButton, "deleteInPaymentButton");
-            deleteInPaymentButton.ForeColor = Color.FromArgb(241, 250, 238);
-            deleteInPaymentButton.Name = "deleteInPaymentButton";
-            deleteInPaymentButton.UseVisualStyleBackColor = true;
-            deleteInPaymentButton.Click += deleteInPaymentButton_Click;
+            resources.ApplyResources(myOrdersButton, "myOrdersButton");
+            myOrdersButton.ForeColor = Color.FromArgb(241, 250, 238);
+            myOrdersButton.Name = "myOrdersButton";
+            myOrdersButton.UseVisualStyleBackColor = true;
+            myOrdersButton.Click += showPreviousOrdersButton_Click;
             // 
-            // deleteInAddressButton
+            // changePasswordButton
             // 
-            resources.ApplyResources(deleteInAddressButton, "deleteInAddressButton");
-            deleteInAddressButton.ForeColor = Color.FromArgb(241, 250, 238);
-            deleteInAddressButton.Name = "deleteInAddressButton";
-            deleteInAddressButton.UseVisualStyleBackColor = true;
-            deleteInAddressButton.Click += deleteInAddressButton_Click;
+            resources.ApplyResources(changePasswordButton, "changePasswordButton");
+            changePasswordButton.ForeColor = Color.FromArgb(241, 250, 238);
+            changePasswordButton.Name = "changePasswordButton";
+            changePasswordButton.UseVisualStyleBackColor = true;
             // 
             // MyProfile
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
-            Controls.Add(deleteInAddressButton);
-            Controls.Add(deleteInPaymentButton);
-            Controls.Add(showPreviousOrdersButton);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(changePasswordButton);
+            Controls.Add(myOrdersButton);
+            Controls.Add(paymentMethodGroupBox);
+            Controls.Add(addressesGroupBox);
             Controls.Add(enableEditingCheckBox);
             Controls.Add(saveButton);
-            Controls.Add(passwordLabel);
-            Controls.Add(passwordTextBox);
             Controls.Add(phoneNumberLabel);
             Controls.Add(phoneNumberTextBox);
-            Controls.Add(emailLabel);
-            Controls.Add(emailTextBox);
             Controls.Add(nameLabel);
             Controls.Add(dateOfBirthLabel);
             Controls.Add(dobDateTimePicker);
@@ -252,34 +222,31 @@ namespace E_Commerce_Store.Customer
             MaximizeBox = false;
             Name = "MyProfile";
             Load += MyProfile_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
+            addressesGroupBox.ResumeLayout(false);
+            paymentMethodGroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Button saveButton;
-        private Label passwordLabel;
-        private TextBox passwordTextBox;
         private Label phoneNumberLabel;
         private TextBox phoneNumberTextBox;
-        private Label emailLabel;
-        private TextBox emailTextBox;
         private Label nameLabel;
         private Label dateOfBirthLabel;
         private DateTimePicker dobDateTimePicker;
         private TextBox lastNameTextBox;
         private TextBox firstNameTextBox;
         private CheckBox enableEditingCheckBox;
-        private Label label1;
-        private TextBox textBox1;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
+        private GroupBox addressesGroupBox;
+        private GroupBox paymentMethodGroupBox;
         private ListBox paymentMethodsListBox;
         private ListBox addressListBox;
-        private Button showPreviousOrdersButton;
-        private Button deleteInPaymentButton;
-        private Button deleteInAddressButton;
+        private Button myOrdersButton;
+        private Label addAddressLabel;
+        private Label deleteAddressLabel;
+        private Label deletePaymentLabel;
+        private Label addPaymentLabel;
+        private Button changePasswordButton;
     }
 }
