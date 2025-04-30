@@ -91,7 +91,7 @@ namespace E_Commerce_Store.Customer
             Controls.Add(titleLabel);
             Controls.Add(cartButton);
             Controls.Add(searchForProductsTextBox);
-            MinimizeBox = false;
+            MaximizeBox = false;
             Name = "CustomerPage";
             FormClosed += CustomerPage_FormClosed;
             Load += CustomerPage_Load;
