@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using E_Commerce_Store.Admin;
+using E_Commerce_Store.Customer;
+using E_Commerce_Store.Seller;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Common;
 
 internal partial class Login : Form
 {

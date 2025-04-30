@@ -1,8 +1,9 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using E_Commerce_Store.Common;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Customer;
 
 internal partial class CustomerPage : Form
 {

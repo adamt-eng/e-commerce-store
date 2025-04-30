@@ -1,7 +1,6 @@
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Customer;
 
 internal partial class ThankYou : Form
 {

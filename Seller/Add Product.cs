@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using E_Commerce_Store.Common;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Seller;
 
 internal partial class AddProduct : Form
 {

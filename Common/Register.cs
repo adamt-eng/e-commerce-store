@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Common;
 
 internal partial class Register : Form
 {

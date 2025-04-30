@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace E_Commerce_Store
+namespace E_Commerce_Store.Common
 {
     partial class Login
     {

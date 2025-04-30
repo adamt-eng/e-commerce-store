@@ -1,8 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System;
 
-namespace E_Commerce_Store
+namespace E_Commerce_Store.Admin
 {
     partial class AdminPage
     {
