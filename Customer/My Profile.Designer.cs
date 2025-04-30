@@ -51,7 +51,6 @@ namespace E_Commerce_Store.Customer
             addressListBox = new ListBox();
             groupBox2 = new GroupBox();
             paymentMethodsListBox = new ListBox();
-            backButton = new Button();
             showPreviousOrdersButton = new Button();
             deleteInPaymentButton = new Button();
             deleteInAddressButton = new Button();
@@ -201,14 +200,6 @@ namespace E_Commerce_Store.Customer
             paymentMethodsListBox.Name = "paymentMethodsListBox";
             paymentMethodsListBox.DoubleClick += paymentMethodsListBox_DoubleClick;
             // 
-            // backButton
-            // 
-            resources.ApplyResources(backButton, "backButton");
-            backButton.ForeColor = Color.FromArgb(241, 250, 238);
-            backButton.Name = "backButton";
-            backButton.UseVisualStyleBackColor = true;
-            backButton.Click += backButton_Click;
-            // 
             // showPreviousOrdersButton
             // 
             resources.ApplyResources(showPreviousOrdersButton, "showPreviousOrdersButton");
@@ -241,7 +232,6 @@ namespace E_Commerce_Store.Customer
             Controls.Add(deleteInAddressButton);
             Controls.Add(deleteInPaymentButton);
             Controls.Add(showPreviousOrdersButton);
-            Controls.Add(backButton);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -288,7 +278,6 @@ namespace E_Commerce_Store.Customer
         private GroupBox groupBox2;
         private ListBox paymentMethodsListBox;
         private ListBox addressListBox;
-        private Button backButton;
         private Button showPreviousOrdersButton;
         private Button deleteInPaymentButton;
         private Button deleteInAddressButton;
