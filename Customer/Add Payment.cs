@@ -34,7 +34,6 @@ internal partial class AddPayment : Form
 
             MessageBox.Show("Payment added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            new MyProfile().Show();
             Close();
         }
         catch (Exception ex)
