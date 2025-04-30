@@ -57,6 +57,12 @@ internal partial class MyOrders : Form
                      """;
 
         var table = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
+        if (table.Rows.Count == 0)
+        {
+            MessageBox.Show("You have no orders.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+            return;
+        }
 
         var orderIds = _orders.AsEnumerable().Select(r => r["Order_ID"]).ToHashSet();
 
@@ -101,7 +107,7 @@ internal partial class MyOrders : Form
         {
             detailsGridView.DataSource = new DataView(_orderDetails)
             {
-                RowFilter = $"Order_ID = '{ordersGridView.SelectedRows[0].Cells["Order_ID"].Value.ToString()}'"
+                RowFilter = $"Order_ID = '{ordersGridView.SelectedRows[0].Cells["Order_ID"].Value}'"
             };
         }
     }
