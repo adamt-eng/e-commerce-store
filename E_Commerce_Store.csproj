@@ -44,7 +44,7 @@
     <Compile Update="Customer\Thank You.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Customer\Previous Orders.cs">
+    <Compile Update="Customer\My Orders.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Common\Register.cs">

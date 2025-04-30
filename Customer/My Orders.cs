@@ -6,14 +6,14 @@ using E_Commerce_Store.Common;
 
 namespace E_Commerce_Store.Customer;
 
-internal partial class PreviousOrders : Form
+internal partial class MyOrders : Form
 {
     private readonly DataTable _orders = new();
     private readonly DataTable _orderDetails = new();
 
-    internal PreviousOrders() => InitializeComponent();
+    internal MyOrders() => InitializeComponent();
 
-    private void PreviousOrders_Load(object sender, EventArgs e)
+    private void MyOrders_Load(object sender, EventArgs e)
     {
         _orders.Columns.Add("Order_ID");
         _orders.Columns.Add("Order_Date");

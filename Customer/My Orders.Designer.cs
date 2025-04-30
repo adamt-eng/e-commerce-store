@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace E_Commerce_Store.Customer
 {
-    partial class PreviousOrders
+    partial class MyOrders
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,7 +31,7 @@ namespace E_Commerce_Store.Customer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviousOrders));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyOrders));
             titleLabel = new Label();
             ordersGridView = new DataGridView();
             detailsGridView = new DataGridView();
@@ -57,7 +57,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(detailsGridView, "detailsGridView");
             detailsGridView.Name = "detailsGridView";
             // 
-            // PreviousOrders
+            // MyOrders
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
@@ -66,8 +66,8 @@ namespace E_Commerce_Store.Customer
             Controls.Add(ordersGridView);
             Controls.Add(titleLabel);
             MaximizeBox = false;
-            Name = "PreviousOrders";
-            Load += PreviousOrders_Load;
+            Name = "MyOrders";
+            Load += MyOrders_Load;
             ((System.ComponentModel.ISupportInitialize)ordersGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)detailsGridView).EndInit();
             ResumeLayout(false);
