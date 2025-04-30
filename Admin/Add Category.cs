@@ -24,8 +24,8 @@ internal partial class AddCategory : Form
            
             var query = $"""
                          
-                                         INSERT INTO Category (Category_ID,Category_Name, Category_Description)
-                                         VALUES (3,'{name}', '{description}')
+                                         INSERT INTO Category (Category_Name, Category_Description)
+                                         VALUES ('{name}', '{description}')
                                      
                          """;
 
