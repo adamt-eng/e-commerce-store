@@ -20,13 +20,13 @@ internal partial class Register : Form
 
         if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Please fill in all fields.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
         if (userTypeComboBox.SelectedIndex == 1 && string.IsNullOrWhiteSpace(address))
         {
-            MessageBox.Show("Please fill in the address field.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Please fill in address field.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
@@ -62,14 +62,14 @@ internal partial class Register : Form
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Registration successful! You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Registration successful! You can now log in.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Hide();
             Program.LoginFormInstance.ShowDialog();
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Registration failed. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Registration failed. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
@@ -95,8 +95,5 @@ internal partial class Register : Form
         }
     }
 
-    private void Register_FormClosing(object sender, FormClosingEventArgs e)
-    {
-        Program.LoginFormInstance.Show();
-    }
+    private void Register_FormClosing(object sender, FormClosingEventArgs e) => Program.LoginFormInstance.Show();
 }

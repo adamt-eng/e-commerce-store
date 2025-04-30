@@ -22,7 +22,7 @@ internal partial class Login : Form
     {
         if (progressBarPanel.Width == progressBarPanel.MaximumSize.Width) return;
 
-        progressBarPanel.Width += progressBarPanel.MaximumSize.Width / 50;
+        progressBarPanel.Width += progressBarPanel.MaximumSize.Width / 30;
 
         if (progressBarPanel.Width != progressBarPanel.MaximumSize.Width) return;
 
@@ -36,7 +36,7 @@ internal partial class Login : Form
             case "Admin": MainForm = new AdminPage(); break;
             case "Seller": MainForm = new SellerPage(); break;
             default: 
-                MessageBox.Show("Incorrect credentials, please check your info and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect credentials, please check your info and try again.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 progressBarPanel.Hide();
                 progressBarPanel.Size = new Size(6, 75);
                 return;
@@ -48,7 +48,7 @@ internal partial class Login : Form
         }
         catch
         {
-            MessageBox.Show("Incorrect credentials, please check your info and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Incorrect credentials, please check your info and try again.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             progressBarPanel.Hide();
             progressBarPanel.Size = new Size(6, 75);
             return;
@@ -61,12 +61,12 @@ internal partial class Login : Form
     private string Authenticate(string email, string password)
     {
         var loginType = loginTypeComboBox.SelectedItem.ToString();
-        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{loginType}] WHERE {(loginType switch
+        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{loginType}] WHERE {loginType switch
         {
             "Seller" => "Seller_",
             "Admin" => "Admin_",
             _ => string.Empty
-        })}Email = '{email}' AND Pass_Hashed = '{password}'");
+        }}Email = '{email}' AND Pass_Hashed = '{password}'");
         return result is DataTable { Rows.Count: > 0 } table ? table.Rows[0][0].ToString() : null;
     }
 
@@ -76,13 +76,5 @@ internal partial class Login : Form
         new Register().ShowDialog();
     }
 
-    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    private void Login_Load(object sender, EventArgs e)
-    {
-        loginTypeComboBox.SelectedIndex = 0;
-    }
+    private void Login_Load(object sender, EventArgs e) => loginTypeComboBox.SelectedIndex = 0;
 }

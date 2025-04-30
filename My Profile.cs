@@ -10,9 +10,7 @@ internal partial class MyProfile : Form
 
     private void MyProfile_Load(object sender, EventArgs e)
     {
-        var result = Program.DatabaseHandler.ExecuteQuery(
-            $"SELECT * FROM [{Login.User.Key}] WHERE {Login.User.Key}_ID = {Login.User.Value}"
-        );
+        var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM [{Login.User.Key}] WHERE {Login.User.Key}_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table)
         {
@@ -23,19 +21,14 @@ internal partial class MyProfile : Form
             emailTextBox.Text = row["Email"].ToString();
             passwordTextBox.Text = row["Pass_Hashed"].ToString();
             phoneNumberTextBox.Text = row["Phone_Number"].ToString();
-            dobDateTimePicker.Value = row["Date_Of_Birth"] == DBNull.Value
-                ? DateTime.Today
-                : Convert.ToDateTime(row["Date_Of_Birth"]);
-
+            dobDateTimePicker.Value = row["Date_Of_Birth"] == DBNull.Value ? DateTime.Today : Convert.ToDateTime(row["Date_Of_Birth"]);
         }
         else
         {
-            MessageBox.Show("Failed to load profile data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Failed to load profile data.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        result = Program.DatabaseHandler.ExecuteQuery(
-            $"SELECT * FROM Customer_Address WHERE Customer_ID = {Login.User.Value}"
-        );
+        result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Customer_Address WHERE Customer_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table2)
         {
@@ -53,9 +46,7 @@ internal partial class MyProfile : Form
             addressListBox.Items.Add("No addresses available.");
         }
 
-        result = Program.DatabaseHandler.ExecuteQuery(
-            $"SELECT * FROM Payment WHERE Customer_ID = {Login.User.Value}"
-        );
+        result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Payment WHERE Customer_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table3)
         {
@@ -73,7 +64,6 @@ internal partial class MyProfile : Form
             paymentMethodsListBox.Items.Add("No Payment Methods available.");
         }
     }
-
 
     private void enableEditingCheckBox_CheckedChanged(object sender, EventArgs e)
     {
@@ -157,16 +147,16 @@ internal partial class MyProfile : Form
 
                 addressListBox.Items.RemoveAt(addressListBox.SelectedIndex);
 
-                MessageBox.Show("Address deleted successfully.");
+                MessageBox.Show("Address deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while deleting the address: {ex.Message}");
+                MessageBox.Show($"An error occurred while deleting the address: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         else
         {
-            MessageBox.Show("Please select an address to delete.");
+            MessageBox.Show("Please select an address to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 
@@ -187,16 +177,16 @@ internal partial class MyProfile : Form
 
                 paymentMethodsListBox.Items.RemoveAt(paymentMethodsListBox.SelectedIndex);
 
-                MessageBox.Show("Payment method deleted successfully.");
+                MessageBox.Show("Payment method deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while deleting the payment method: {ex.Message}");
+                MessageBox.Show($"An error occurred while deleting the payment method: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         else
         {
-            MessageBox.Show("Please select a payment method to delete.");
+            MessageBox.Show("Please select an payment method to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 

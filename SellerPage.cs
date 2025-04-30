@@ -26,16 +26,12 @@ internal partial class SellerPage : Form
 
     internal void LoadSellerProducts()
     {
-        var sellerId = Login.User.Value;
-
         var query = "SELECT p.Product_ID, p.Product_Name, p.Price, p.Product_Description, p.Quantity_In_Stock, p.Published_At, c.Category_Name " +
                     "FROM Product p JOIN Category c ON p.Category_ID = c.Category_ID " +
-                    $"WHERE p.Seller_ID = {sellerId}";
-
-        var result = Program.DatabaseHandler.ExecuteQuery(query);
-
+                    $"WHERE p.Seller_ID = {Login.User.Value}"; 
+        
         _products.Clear();
-        _products = (DataTable)result;
+        _products = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
         dataGridView1.DataSource = _products;
     }
 
@@ -49,16 +45,13 @@ internal partial class SellerPage : Form
 
             _products.Rows.RemoveAt(selectedRowIndex);
 
-            MessageBox.Show("Product deleted successfully.");
+            MessageBox.Show("Product deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         else
         {
-            MessageBox.Show("Please select a full row to delete.");
+            MessageBox.Show("Please select a full row to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 
-    private void AddButton_Click_1(object sender, EventArgs e)
-    {
-        new AddProduct().ShowDialog();
-    }
+    private void addButton_Click(object sender, EventArgs e) => new AddProduct().ShowDialog();
 }
