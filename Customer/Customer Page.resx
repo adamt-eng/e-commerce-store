@@ -209,7 +209,7 @@
     <value>1</value>
   </data>
   <data name="titleLabel.Text" xml:space="preserve">
-    <value>E-Commerce Store</value>
+    <value>Products</value>
   </data>
   <data name="titleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -418,7 +418,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Home Page</value>
+    <value>E-Commerce Store</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CustomerPage</value>
