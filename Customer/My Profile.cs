@@ -162,4 +162,5 @@ internal partial class MyProfile : Form
         }
     }
 
+    private void changePasswordButton_Click(object sender, EventArgs e) => new ChangePassword().Show();
 }

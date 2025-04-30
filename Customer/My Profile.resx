@@ -403,66 +403,6 @@
   <data name="&gt;&gt;enableEditingCheckBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;deleteAddressLabel.Name" xml:space="preserve">
-    <value>deleteAddressLabel</value>
-  </data>
-  <data name="&gt;&gt;deleteAddressLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deleteAddressLabel.Parent" xml:space="preserve">
-    <value>addressesGroupBox</value>
-  </data>
-  <data name="&gt;&gt;deleteAddressLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;addAddressLabel.Name" xml:space="preserve">
-    <value>addAddressLabel</value>
-  </data>
-  <data name="&gt;&gt;addAddressLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addAddressLabel.Parent" xml:space="preserve">
-    <value>addressesGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addAddressLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;addressListBox.Name" xml:space="preserve">
-    <value>addressListBox</value>
-  </data>
-  <data name="&gt;&gt;addressListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addressListBox.Parent" xml:space="preserve">
-    <value>addressesGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addressListBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="addressesGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 210</value>
-  </data>
-  <data name="addressesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 187</value>
-  </data>
-  <data name="addressesGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="addressesGroupBox.Text" xml:space="preserve">
-    <value>Addresses</value>
-  </data>
-  <data name="&gt;&gt;addressesGroupBox.Name" xml:space="preserve">
-    <value>addressesGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addressesGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addressesGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;addressesGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="deleteAddressLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13pt</value>
   </data>
@@ -556,65 +496,29 @@
   <data name="&gt;&gt;addressListBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;deletePaymentLabel.Name" xml:space="preserve">
-    <value>deletePaymentLabel</value>
+  <data name="addressesGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 210</value>
   </data>
-  <data name="&gt;&gt;deletePaymentLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deletePaymentLabel.Parent" xml:space="preserve">
-    <value>paymentMethodGroupBox</value>
-  </data>
-  <data name="&gt;&gt;deletePaymentLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodsListBox.Name" xml:space="preserve">
-    <value>paymentMethodsListBox</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodsListBox.Parent" xml:space="preserve">
-    <value>paymentMethodGroupBox</value>
-  </data>
-  <data name="&gt;&gt;paymentMethodsListBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;addPaymentLabel.Name" xml:space="preserve">
-    <value>addPaymentLabel</value>
-  </data>
-  <data name="&gt;&gt;addPaymentLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addPaymentLabel.Parent" xml:space="preserve">
-    <value>paymentMethodGroupBox</value>
-  </data>
-  <data name="&gt;&gt;addPaymentLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="paymentMethodGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 210</value>
-  </data>
-  <data name="paymentMethodGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="addressesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 187</value>
   </data>
-  <data name="paymentMethodGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+  <data name="addressesGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
   </data>
-  <data name="paymentMethodGroupBox.Text" xml:space="preserve">
-    <value>Payment Methods</value>
+  <data name="addressesGroupBox.Text" xml:space="preserve">
+    <value>Addresses</value>
   </data>
-  <data name="&gt;&gt;paymentMethodGroupBox.Name" xml:space="preserve">
-    <value>paymentMethodGroupBox</value>
+  <data name="&gt;&gt;addressesGroupBox.Name" xml:space="preserve">
+    <value>addressesGroupBox</value>
   </data>
-  <data name="&gt;&gt;paymentMethodGroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;addressesGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;paymentMethodGroupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;addressesGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;paymentMethodGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;addressesGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="deletePaymentLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13pt</value>
@@ -707,6 +611,30 @@
     <value>paymentMethodGroupBox</value>
   </data>
   <data name="&gt;&gt;addPaymentLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="paymentMethodGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 210</value>
+  </data>
+  <data name="paymentMethodGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 187</value>
+  </data>
+  <data name="paymentMethodGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="paymentMethodGroupBox.Text" xml:space="preserve">
+    <value>Payment Methods</value>
+  </data>
+  <data name="&gt;&gt;paymentMethodGroupBox.Name" xml:space="preserve">
+    <value>paymentMethodGroupBox</value>
+  </data>
+  <data name="&gt;&gt;paymentMethodGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paymentMethodGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;paymentMethodGroupBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="myOrdersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">

@@ -200,6 +200,7 @@ namespace E_Commerce_Store.Customer
             changePasswordButton.ForeColor = Color.FromArgb(241, 250, 238);
             changePasswordButton.Name = "changePasswordButton";
             changePasswordButton.UseVisualStyleBackColor = true;
+            changePasswordButton.Click += changePasswordButton_Click;
             // 
             // MyProfile
             // 
