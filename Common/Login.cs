@@ -69,7 +69,7 @@ internal partial class Login : Form
             "Seller" => "Seller_",
             "Admin" => "Admin_",
             _ => string.Empty
-        }}Email = '{email}' AND Pass_Hashed = '{password}'");
+        }}Email = '{email}' AND Pass_Hashed = '{PasswordHasher.Hash(password)}'");
         return result is DataTable { Rows.Count: > 0 } table ? table.Rows[0][0].ToString() : null;
     }
 

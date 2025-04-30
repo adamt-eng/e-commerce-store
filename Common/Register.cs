@@ -30,6 +30,8 @@ internal partial class Register : Form
             return;
         }
 
+        password = PasswordHasher.Hash(password);
+
         try
         {
             string query;

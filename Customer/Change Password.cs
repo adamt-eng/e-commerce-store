@@ -18,6 +18,8 @@ internal partial class ChangePassword : Form
             return;
         }
 
+        newPassword = PasswordHasher.Hash(newPassword);
+
         Program.DatabaseHandler.ExecuteQuery($"UPDATE Customer SET Pass_Hashed = '{newPassword}' WHERE Customer_ID = {Login.User.Value}");
 
         MessageBox.Show("Password changed successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
