@@ -51,6 +51,24 @@ internal partial class ProductView : Form
         sellerLabel.Text = $"Seller: {product["Seller_Name"]}";
         _ = LoadImageFromUrlAsync(product["Image_Link"].ToString());
         inCartNumericUpDown.Maximum = Convert.ToDecimal(product["Quantity"]);
+
+        // Check if the product is already in the user's cart
+        var customerId = Login.User.Value;
+        var cartId = GetOrCreateCartId(customerId, false);
+
+        if (cartId == null) return;
+
+        var checkQuantityQuery = $"""
+                                      SELECT Quantity
+                                      FROM Added_To
+                                      WHERE Cart_ID = {cartId} AND Product_ID = {ProductId}
+                                  """;
+
+        var resultQuantity = (DataTable)Program.DatabaseHandler.ExecuteQuery(checkQuantityQuery);
+        if (resultQuantity.Rows.Count <= 0) return;
+        var currentQuantity = Convert.ToInt32(resultQuantity.Rows[0]["Quantity"]);
+        inCartNumericUpDown.Value = Math.Min(inCartNumericUpDown.Maximum, currentQuantity);
+
     }
 
     private async Task LoadImageFromUrlAsync(string url)
@@ -65,7 +83,7 @@ internal partial class ProductView : Form
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Error loading image: {ex.Message}");
+            MessageBox.Show($"Error loading image: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
@@ -75,11 +93,7 @@ internal partial class ProductView : Form
         var quantity = (int)inCartNumericUpDown.Value;
 
         var cartId = GetOrCreateCartId(customerId, quantity > 0);
-        if (cartId == null)
-        {
-            MessageBox.Show("No cart exists, and product quantity is 0. Nothing to do.");
-            return;
-        }
+        if (cartId == null) return;
 
         if (quantity <= 0)
         {
@@ -88,8 +102,6 @@ internal partial class ProductView : Form
                            WHERE Cart_ID = {cartId} AND Product_ID = {ProductId}
                            """;
             Program.DatabaseHandler.ExecuteQuery(removeQuery);
-            UpdateCartTotalPrice(cartId.Value);
-            MessageBox.Show("Product removed from cart.");
         }
         else
         {
@@ -108,7 +120,6 @@ internal partial class ProductView : Form
                                WHERE Cart_ID = {cartId} AND Product_ID = {ProductId}
                                """;
                 Program.DatabaseHandler.ExecuteQuery(updateQuery);
-                MessageBox.Show("Product quantity updated in cart.");
             }
             else
             {
@@ -117,11 +128,10 @@ internal partial class ProductView : Form
                                VALUES ({cartId}, {ProductId}, {quantity})
                                """;
                 Program.DatabaseHandler.ExecuteQuery(insertQuery);
-                MessageBox.Show("Product added to cart.");
             }
-
-            UpdateCartTotalPrice(cartId.Value);
         }
+
+        UpdateCartTotalPrice(cartId.Value);
     }
 
     private static int? GetOrCreateCartId(int customerId, bool shouldCreate)
