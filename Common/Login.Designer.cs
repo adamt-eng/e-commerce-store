@@ -31,14 +31,12 @@ namespace E_Commerce_Store.Common
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             loginButton = new Button();
             emailTextBox = new TextBox();
             passwordTextBox = new TextBox();
             registerLabel = new Label();
             progressBarPanel = new Panel();
-            progressBarTimer = new Timer(components);
             loginTypeComboBox = new ComboBox();
             loginTypeLabel = new Label();
             successIcon = new PictureBox();
@@ -80,11 +78,6 @@ namespace E_Commerce_Store.Common
             progressBarPanel.BackColor = Color.FromArgb(49, 73, 107);
             resources.ApplyResources(progressBarPanel, "progressBarPanel");
             progressBarPanel.Name = "progressBarPanel";
-            // 
-            // progressBarTimer
-            // 
-            progressBarTimer.Interval = 1;
-            progressBarTimer.Tick += progressBarTimer_Tick;
             // 
             // loginTypeComboBox
             // 
@@ -133,7 +126,6 @@ namespace E_Commerce_Store.Common
         private TextBox passwordTextBox;
         private Label registerLabel;
         private Panel progressBarPanel;
-        private System.Windows.Forms.Timer progressBarTimer;
         private ComboBox loginTypeComboBox;
         private Label loginTypeLabel;
         private PictureBox successIcon;

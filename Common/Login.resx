@@ -260,7 +260,7 @@
     <value>15, 441</value>
   </data>
   <data name="progressBarPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>640, 75</value>
+    <value>639, 75</value>
   </data>
   <data name="progressBarPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 75</value>
@@ -283,9 +283,6 @@
   <data name="&gt;&gt;progressBarPanel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="progressBarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="loginTypeComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -21289,12 +21286,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Login</value>
-  </data>
-  <data name="&gt;&gt;progressBarTimer.Name" xml:space="preserve">
-    <value>progressBarTimer</value>
-  </data>
-  <data name="&gt;&gt;progressBarTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Login</value>
