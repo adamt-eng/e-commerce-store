@@ -37,14 +37,12 @@ internal partial class AddProduct : Form
         var priceText = priceTextBox.Text.Trim();
         var stockText = stockTextBox.Text.Trim();
         var categoryComboBoxSelectedItem = categoryComboBox.SelectedItem;
+
         if (categoryComboBoxSelectedItem == null)
         {
             MessageBox.Show("Invalid category.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
-        var category = categoryComboBoxSelectedItem.ToString();
-        var sellerId = Login.User.Value;
-        var imageLink = imageLinkTextBox.Text.Trim();
 
         if (string.IsNullOrWhiteSpace(productName) || string.IsNullOrWhiteSpace(priceText) || string.IsNullOrWhiteSpace(stockText))
         {
@@ -64,14 +62,14 @@ internal partial class AddProduct : Form
             return;
         }
 
-        var categoryId = Categories.First(cat => cat.Item1 == category).Item2;
+        var categoryId = Categories.First(cat => cat.Item1 == categoryComboBoxSelectedItem.ToString()).Item2;
 
         try
         {
             var query = $"""
                          
                                              INSERT INTO Product (Product_Name, Price, Product_Description, Quantity_In_Stock, Published_At, Category_ID, Seller_ID, Image_Link)
-                                             VALUES ('{productName}', {price}, '{productDescription}', {stock}, '{DateTime.Now:yyyy-MM-dd}', {categoryId}, {sellerId}, '{imageLink}')
+                                             VALUES ('{productName}', {price}, '{productDescription}', {stock}, '{DateTime.Now:yyyy-MM-dd}', {categoryId}, {Login.User.Value}, '{imageLinkTextBox.Text.Trim()}')
                                          
                          """;
 
@@ -88,8 +86,5 @@ internal partial class AddProduct : Form
         }
     }
 
-    private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        categoryDescriptionlabel.Text = Categories.First(cat => cat.Item1 == categoryComboBox.SelectedItem.ToString()).Item3;
-    }
+    private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e) => categoryDescriptionlabel.Text = Categories.First(cat => cat.Item1 == categoryComboBox.SelectedItem.ToString()).Item3;
 }
