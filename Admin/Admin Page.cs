@@ -100,7 +100,7 @@ internal partial class AdminPage : Form
 
             MessageBox.Show("Deleted successfully.");
             RefreshTables();
-            comboBox1_SelectedIndexChanged(null, null); 
+            comboBox1_SelectedIndexChanged(null, null);
         }
         else
         {
@@ -113,14 +113,11 @@ internal partial class AdminPage : Form
         _users = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Customer");
         _sellers = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Seller");
         _products = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Product");
-        _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]"); 
+        _orders = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM [Order]");
         _categories = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Category");
     }
 
-    private void addButton_Click(object sender, EventArgs e)
-    {
-        new AddCategory().ShowDialog();
-    }
+    private void addButton_Click(object sender, EventArgs e) => new AddCategory().ShowDialog();
 
     private void registerButton_Click(object sender, EventArgs e)
     {
@@ -128,4 +125,6 @@ internal partial class AdminPage : Form
         register.RegisterAsAdmin = true;
         register.ShowDialog();
     }
+
+    private void AdminPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 }

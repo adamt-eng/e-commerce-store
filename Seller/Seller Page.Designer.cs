@@ -78,6 +78,7 @@ namespace E_Commerce_Store.Seller
             Controls.Add(titleLabel);
             MaximizeBox = false;
             Name = "SellerPage";
+            FormClosed += SellerPage_FormClosed;
             Load += SellerPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

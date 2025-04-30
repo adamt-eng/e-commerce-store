@@ -98,6 +98,7 @@ namespace E_Commerce_Store.Admin
             Controls.Add(titleLabel);
             MaximizeBox = false;
             Name = "AdminPage";
+            FormClosed += AdminPage_FormClosed;
             Load += AdminPage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

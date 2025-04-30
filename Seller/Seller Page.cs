@@ -29,8 +29,8 @@ internal partial class SellerPage : Form
     {
         var query = "SELECT p.Product_ID, p.Product_Name, p.Price, p.Product_Description, p.Quantity_In_Stock, p.Published_At, c.Category_Name " +
                     "FROM Product p JOIN Category c ON p.Category_ID = c.Category_ID " +
-                    $"WHERE p.Seller_ID = {Login.User.Value}"; 
-        
+                    $"WHERE p.Seller_ID = {Login.User.Value}";
+
         _products.Clear();
         _products = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
         dataGridView1.DataSource = _products;
@@ -55,4 +55,6 @@ internal partial class SellerPage : Form
     }
 
     private void addButton_Click(object sender, EventArgs e) => new AddProduct().ShowDialog();
+
+    private void SellerPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 }

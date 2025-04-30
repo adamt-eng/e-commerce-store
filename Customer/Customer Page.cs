@@ -13,7 +13,7 @@ internal partial class CustomerPage : Form
 
     private void CustomerPage_Load(object sender, EventArgs e)
     {
-        _products.Columns.Add("Product_ID"); 
+        _products.Columns.Add("Product_ID");
         _products.Columns.Add("Product_Name");
         _products.Columns.Add("Description");
         _products.Columns.Add("Quantity");
@@ -103,9 +103,11 @@ internal partial class CustomerPage : Form
         {
             new ProductView(int.Parse(productsDataGridView.Rows[e.RowIndex].Cells["Product_ID"].Value.ToString())).ShowDialog();
         }
-        catch
+        catch (Exception ex)
         {
-            // ignored
+            MessageBox.Show($"Failed to load product. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
+
+    private void CustomerPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 }

@@ -93,6 +93,7 @@ namespace E_Commerce_Store.Customer
             Controls.Add(searchForProductsTextBox);
             MinimizeBox = false;
             Name = "CustomerPage";
+            FormClosed += CustomerPage_FormClosed;
             Load += CustomerPage_Load;
             ((System.ComponentModel.ISupportInitialize)productsDataGridView).EndInit();
             ResumeLayout(false);
