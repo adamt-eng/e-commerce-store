@@ -1,13 +1,17 @@
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace E_Commerce_Store;
 
 internal partial class ThankYou : Form
 {
-    internal ThankYou() => InitializeComponent();
+    private readonly Cart _cart;
 
-    private void ThankYou_FormClosing(object sender, FormClosingEventArgs e)
+    internal ThankYou(Cart cart)
     {
-        Application.Restart();
+        _cart = cart;
+        InitializeComponent();
     }
+
+    private void ThankYou_FormClosing(object sender, FormClosingEventArgs e) => _cart.PurchaseDone = true;
 }
