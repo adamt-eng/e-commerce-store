@@ -116,19 +116,33 @@ internal partial class Checkout : Form
         var paymentQuery = $"SELECT Card_Number, CardHolder_Name FROM Payment WHERE Customer_ID = {Login.User.Value}";
         var paymentResult = Program.DatabaseHandler.ExecuteQuery(paymentQuery);
         var paymentTable = (DataTable)paymentResult;
+        var flag = false;
 
         foreach (DataRow row in paymentTable.Rows)
         {
             paymentMethodComboBox.Items.Add(row["CardHolder_Name"].ToString());
+            flag = true;
+        }
+
+        if (flag)
+        {
+            paymentMethodComboBox.SelectedIndex = 0;
         }
 
         var addressQuery = $"SELECT Address_ID, Label, City FROM Customer_Address WHERE Customer_ID = {Login.User.Value}";
         var addressResult = Program.DatabaseHandler.ExecuteQuery(addressQuery);
         var addressTable = (DataTable)addressResult;
+        flag = false;
 
         foreach (DataRow row in addressTable.Rows)
         {
             ShippingAddressComboBox.Items.Add($"{row["Label"]}, {row["City"]}");
+            flag = true;
+        }
+
+        if (flag)
+        {
+            ShippingAddressComboBox.SelectedIndex = 0;
         }
 
         var totalQuery = $"""
