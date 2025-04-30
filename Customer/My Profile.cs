@@ -80,17 +80,7 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void backButton_Click(object sender, EventArgs e)
-    {
-        Hide();
-        Login.MainForm.Show();
-    }
-
-    private void showPreviousOrdersButton_Click(object sender, EventArgs e)
-    {
-        Hide();
-        new PreviousOrders().ShowDialog();
-    }
+    private void showPreviousOrdersButton_Click(object sender, EventArgs e) => new PreviousOrders().ShowDialog();
 
     private void saveButton_Click(object sender, EventArgs e)
     {

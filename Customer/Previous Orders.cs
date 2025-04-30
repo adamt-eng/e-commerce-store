@@ -29,35 +29,34 @@ internal partial class PreviousOrders : Form
         _orderDetails.Columns.Add("Category_Name");
 
         var query = $"""
-            SELECT 
-                o.Order_ID,
-                o.Order_Date,
-                o.Order_Status,
-                o.Total_Price,
-                p.Product_ID,
-                p.Product_Description AS Description,
-                ocp.Quantity,
-                ocp.Unit_Price,
-                s.Seller_Name,
-                c.Category_Name
-            FROM 
-                [dbo].[Order] o
-            JOIN 
-                order_contains_product ocp ON o.Order_ID = ocp.Order_ID
-            JOIN 
-                Product p ON ocp.Product_ID = p.Product_ID
-            JOIN 
-                Seller s ON p.Seller_ID = s.Seller_ID
-            JOIN 
-                Category c ON p.Category_ID = c.Category_ID
-            WHERE 
-                o.Customer_ID = {Login.User.Value}
-            ORDER BY 
-                o.Order_Date DESC
-        """;
+                         SELECT 
+                             o.Order_ID,
+                             o.Order_Date,
+                             o.Order_Status,
+                             o.Total_Price,
+                             p.Product_ID,
+                             p.Product_Description AS Description,
+                             ocp.Quantity,
+                             ocp.Unit_Price,
+                             s.Seller_Name,
+                             c.Category_Name
+                         FROM 
+                             [dbo].[Order] o
+                         JOIN 
+                             order_contains_product ocp ON o.Order_ID = ocp.Order_ID
+                         JOIN 
+                             Product p ON ocp.Product_ID = p.Product_ID
+                         JOIN 
+                             Seller s ON p.Seller_ID = s.Seller_ID
+                         JOIN 
+                             Category c ON p.Category_ID = c.Category_ID
+                         WHERE 
+                             o.Customer_ID = {Login.User.Value}
+                         ORDER BY 
+                             o.Order_Date DESC
+                     """;
 
-        var result = Program.DatabaseHandler.ExecuteQuery(query);
-        var table = (DataTable)result;
+        var table = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
 
         var orderIds = _orders.AsEnumerable().Select(r => r["Order_ID"]).ToHashSet();
 
@@ -91,25 +90,19 @@ internal partial class PreviousOrders : Form
         ordersGridView.SelectionChanged += OrdersGridView_SelectionChanged;
 
         if (ordersGridView.Rows.Count > 0)
+        {
             ordersGridView.Rows[0].Selected = true;
+        }
     }
 
     private void OrdersGridView_SelectionChanged(object sender, EventArgs e)
     {
-        if (ordersGridView.SelectedRows.Count == 0)
-            return;
-
-        var selectedOrderId = ordersGridView.SelectedRows[0].Cells["Order_ID"].Value.ToString();
-        var view = new DataView(_orderDetails)
+        if (ordersGridView.SelectedRows.Count != 0)
         {
-            RowFilter = $"Order_ID = '{selectedOrderId}'"
-        };
-        detailsGridView.DataSource = view;
-    }
-
-    private void myProfileButton_Click(object sender, EventArgs e)
-    {
-        Hide();
-        new MyProfile().ShowDialog();
+            detailsGridView.DataSource = new DataView(_orderDetails)
+            {
+                RowFilter = $"Order_ID = '{ordersGridView.SelectedRows[0].Cells["Order_ID"].Value.ToString()}'"
+            };
+        }
     }
 }

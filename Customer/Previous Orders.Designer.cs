@@ -34,7 +34,6 @@ namespace E_Commerce_Store.Customer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviousOrders));
             titleLabel = new Label();
             ordersGridView = new DataGridView();
-            myProfileButton = new Button();
             detailsGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)ordersGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)detailsGridView).BeginInit();
@@ -52,15 +51,6 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(ordersGridView, "ordersGridView");
             ordersGridView.Name = "ordersGridView";
             // 
-            // myProfileButton
-            // 
-            resources.ApplyResources(myProfileButton, "myProfileButton");
-            myProfileButton.FlatAppearance.BorderSize = 0;
-            myProfileButton.ForeColor = Color.FromArgb(241, 250, 238);
-            myProfileButton.Name = "myProfileButton";
-            myProfileButton.UseVisualStyleBackColor = true;
-            myProfileButton.Click += myProfileButton_Click;
-            // 
             // detailsGridView
             // 
             detailsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,7 +63,6 @@ namespace E_Commerce_Store.Customer
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(detailsGridView);
-            Controls.Add(myProfileButton);
             Controls.Add(ordersGridView);
             Controls.Add(titleLabel);
             MaximizeBox = false;
@@ -87,7 +76,6 @@ namespace E_Commerce_Store.Customer
         #endregion
         private Label titleLabel;
         private DataGridView ordersGridView;
-        private Button myProfileButton;
         private DataGridView detailsGridView;
     }
 }
