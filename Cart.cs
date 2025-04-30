@@ -7,6 +7,7 @@ namespace E_Commerce_Store;
 internal partial class Cart : Form
 {
     internal int CartId;
+    internal bool PurchaseDone;
 
     internal Cart(int cartId)
     {
@@ -49,7 +50,10 @@ internal partial class Cart : Form
 
     private void proceedToCheckoutButton_Click(object sender, EventArgs e)
     {
-        Close();
-        new Checkout().ShowDialog();
+        new Checkout(this).ShowDialog();
+
+        if (!PurchaseDone) return;
+
+        backToHomePageButton_Click(null, null);
     }
 }

@@ -7,19 +7,24 @@ namespace E_Commerce_Store;
 
 internal partial class Checkout : Form
 {
-    internal Checkout() => InitializeComponent();
+    private readonly Cart _cart;
+    internal Checkout(Cart cart)
+    {
+        InitializeComponent();
+        _cart = cart;
+    }
 
     private void PlaceOrderButton_Click(object sender, EventArgs e)
     {
         if (paymentMethodComboBox.SelectedItem == null)
         {
-            MessageBox.Show("Please select a payment method.");
+            MessageBox.Show("Please select a payment method.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
 
         if (ShippingAddressComboBox.SelectedItem == null)
         {
-            MessageBox.Show("Please select a shipping address.");
+            MessageBox.Show("Please select a shipping address.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
 
@@ -81,7 +86,7 @@ internal partial class Checkout : Form
         Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Added_To WHERE Cart_ID = {cartId}");
         Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Cart WHERE Cart_ID = {cartId}");
 
-        new ThankYou().ShowDialog();
+        new ThankYou(_cart).ShowDialog();
         Close();
     }
 
@@ -103,25 +108,7 @@ internal partial class Checkout : Form
     }
 
 
-    private void backButton_Click_1(object sender, EventArgs e)
-    {
-        var query = $"SELECT Cart_ID FROM Cart WHERE Customer_ID = {Login.User.Value}";
-
-        var result = Program.DatabaseHandler.ExecuteQuery(query);
-        var cartTable = (DataTable)result;
-
-        if (cartTable.Rows.Count > 0)
-        {
-            var cartId = Convert.ToInt32(cartTable.Rows[0]["Cart_ID"]);
-            Close();
-            new Cart(cartId).ShowDialog();
-            Show();
-        }
-        else
-        {
-            MessageBox.Show("No cart found for the current user. Please add items to your cart.");
-        }
-    }
+    private void backButton_Click(object sender, EventArgs e) => Close();
 
     private void Checkout_Load(object sender, EventArgs e)
     {

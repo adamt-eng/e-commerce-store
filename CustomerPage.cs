@@ -8,7 +8,7 @@ internal partial class CustomerPage : Form
 {
     internal CustomerPage() => InitializeComponent();
 
-    private readonly DataTable _products = new();
+    private DataTable _products = new();
 
     private void CustomerPage_Load(object sender, EventArgs e)
     {
@@ -46,29 +46,23 @@ internal partial class CustomerPage : Form
                         p.Quantity_In_Stock > 0
                     """;
 
-        var result = Program.DatabaseHandler.ExecuteQuery(query);
+        foreach (DataRow row in ((DataTable)Program.DatabaseHandler.ExecuteQuery(query)).Rows)
+        {
+            _products.ImportRow(row);
+        }
 
-        foreach (DataRow row in ((DataTable)result).Rows) _products.ImportRow(row);
-
-        dataGridView1.DataSource = _products;
+        productsDataGridView.DataSource = _products;
     }
 
     private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
     {
-        var searchTerm = searchForProductsTextBox.Text.ToLower();
-
         var productView = _products.DefaultView;
-        productView.RowFilter = string.Format("Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchTerm);
+        productView.RowFilter = string.Format("Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchForProductsTextBox.Text.ToLower());
 
-        dataGridView1.DataSource = productView;
+        productsDataGridView.DataSource = productView;
     }
 
-    private void myProfileButton_Click(object sender, EventArgs e)
-    {
-        Hide();
-        new MyProfile().ShowDialog();
-        Show();
-    }
+    private void myProfileButton_Click(object sender, EventArgs e) => new MyProfile().ShowDialog();
 
     private void cartButton_Click(object sender, EventArgs e)
     {
@@ -81,30 +75,32 @@ internal partial class CustomerPage : Form
                          
                      """;
 
-        var result = Program.DatabaseHandler.ExecuteQuery(query);
-        var cartTable = (DataTable)result;
+        var cartTable = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
 
         if (cartTable.Rows.Count > 0)
         {
-            var cartId = Convert.ToInt32(cartTable.Rows[0]["Cart_ID"]);
-            Hide();
-            new Cart(cartId).ShowDialog();
-            Show();
+            var cart = new Cart(Convert.ToInt32(cartTable.Rows[0]["Cart_ID"]));
+            cart.ShowDialog();
+
+            if (!cart.PurchaseDone) return;
+
+            _products = new DataTable();
+            CustomerPage_Load(null, null);
         }
         else
         {
-            MessageBox.Show("Your cart is empty or doesn't exist. Please add products to your cart.");
+            MessageBox.Show("Your cart is empty.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 
 
-    private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    private void productsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex < 0) return;
 
         try
         {
-            new ProductView(int.Parse(dataGridView1.Rows[e.RowIndex].Cells["Product_ID"].Value.ToString())).ShowDialog();
+            new ProductView(int.Parse(productsDataGridView.Rows[e.RowIndex].Cells["Product_ID"].Value.ToString())).ShowDialog();
         }
         catch
         {
