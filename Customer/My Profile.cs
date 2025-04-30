@@ -85,6 +85,12 @@ internal partial class MyProfile : Form
         var phoneNumber = phoneNumberTextBox.Text.Trim();
         var dateOfBirth = dobDateTimePicker.Value.ToString("yyyy-MM-dd");
 
+        if (!Validation.IsValidPhoneNumber(phoneNumber))
+        {
+            MessageBox.Show("Invalid phone number.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
         var query = $"""
                      
                              UPDATE Customer

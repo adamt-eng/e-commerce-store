@@ -30,6 +30,18 @@ internal partial class Register : Form
             return;
         }
 
+        if (!Validation.IsValidEmail(email))
+        {
+            MessageBox.Show("Invalid email.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        if (!Validation.IsValidPhoneNumber(phoneNumber))
+        {
+            MessageBox.Show("Invalid phone number.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
         password = PasswordHasher.Hash(password);
 
         try

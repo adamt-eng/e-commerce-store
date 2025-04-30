@@ -40,6 +40,12 @@ internal partial class Login : Form
             try
             {
                 var email = emailTextBox.Text.Trim();
+                if (!Validation.IsValidEmail(email))
+                {
+                    MessageBox.Show("Invalid email.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 var password = PasswordHasher.Hash(passwordTextBox.Text.Trim());
 
                 var prefix = loginType switch { "Seller" => "Seller_", "Admin" => "Admin_", _ => string.Empty };
