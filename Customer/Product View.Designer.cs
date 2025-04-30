@@ -33,7 +33,6 @@ namespace E_Commerce_Store.Customer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductView));
             titleLabel = new Label();
-            productImageButton = new Button();
             inCartNumericUpDown = new NumericUpDown();
             cartLabel = new Label();
             priceLabel = new Label();
@@ -41,7 +40,9 @@ namespace E_Commerce_Store.Customer
             stockLabel = new Label();
             productDescriptionLabel = new Label();
             sellerLabel = new Label();
+            productPictureBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)inCartNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productPictureBox).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
@@ -49,14 +50,6 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(titleLabel, "titleLabel");
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
-            // 
-            // productImageButton
-            // 
-            productImageButton.BackgroundImage = Properties.Resources.cart;
-            resources.ApplyResources(productImageButton, "productImageButton");
-            productImageButton.ForeColor = Color.FromArgb(241, 250, 238);
-            productImageButton.Name = "productImageButton";
-            productImageButton.UseVisualStyleBackColor = true;
             // 
             // inCartNumericUpDown
             // 
@@ -101,31 +94,39 @@ namespace E_Commerce_Store.Customer
             sellerLabel.ForeColor = Color.FromArgb(241, 250, 238);
             sellerLabel.Name = "sellerLabel";
             // 
+            // productPictureBox
+            // 
+            productPictureBox.BackgroundImage = Properties.Resources.cart;
+            resources.ApplyResources(productPictureBox, "productPictureBox");
+            productPictureBox.BorderStyle = BorderStyle.FixedSingle;
+            productPictureBox.Name = "productPictureBox";
+            productPictureBox.TabStop = false;
+            // 
             // ProductView
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(productPictureBox);
             Controls.Add(sellerLabel);
             Controls.Add(productDescriptionLabel);
             Controls.Add(stockLabel);
             Controls.Add(publishedAtLabel);
             Controls.Add(priceLabel);
             Controls.Add(inCartNumericUpDown);
-            Controls.Add(productImageButton);
             Controls.Add(titleLabel);
             Controls.Add(cartLabel);
             MaximizeBox = false;
             Name = "ProductView";
             Load += ProductView_Load;
             ((System.ComponentModel.ISupportInitialize)inCartNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productPictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label titleLabel;
-        private Button productImageButton;
         private NumericUpDown inCartNumericUpDown;
         private Label cartLabel;
         private Label priceLabel;
@@ -133,5 +134,6 @@ namespace E_Commerce_Store.Customer
         private Label stockLabel;
         private Label productDescriptionLabel;
         private Label sellerLabel;
+        private PictureBox productPictureBox;
     }
 }

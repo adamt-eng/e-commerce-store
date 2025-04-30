@@ -80,7 +80,7 @@ internal partial class ProductView : Form
             var imageData = await client.GetByteArrayAsync(url);
 
             using var ms = new MemoryStream(imageData);
-            productImageButton.BackgroundImage = Image.FromStream(ms);
+            productPictureBox.BackgroundImage = Image.FromStream(ms);
         }
         catch (Exception ex)
         {
