@@ -118,8 +118,7 @@ internal partial class AdminPage : Form
 
     private void addButton_Click(object sender, EventArgs e)
     {
-        var addCat = new AddCategory();
-        addCat.ShowDialog();
+        new AddCategory().ShowDialog();
     }
 
     private void registerButton_Click(object sender, EventArgs e)
