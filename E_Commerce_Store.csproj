@@ -23,34 +23,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AddPayment.cs">
+    <Compile Update="Customer\Add Payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Add Address.cs">
+    <Compile Update="Customer\Add Address.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AddCategory.cs">
+    <Compile Update="Admin\Add Category.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AddProduct.cs">
+    <Compile Update="Seller\Add Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SellerPage.cs">
+    <Compile Update="Seller\Seller Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AdminPage.cs">
+    <Compile Update="Admin\Admin Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThankYou.cs">
+    <Compile Update="Customer\Thank You.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PreviousOrders.cs">
+    <Compile Update="Customer\Previous Orders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Register.cs">
+    <Compile Update="Common\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CustomerPage.cs">
+    <Compile Update="Customer\Customer Page.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
