@@ -15,13 +15,12 @@ internal partial class AddPayment : Form
 
         if (string.IsNullOrEmpty(cardNumber) || string.IsNullOrEmpty(cardholderName))
         {
-            MessageBox.Show("Please fill in all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Please fill in all fields.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
         try
         {
-            // Insert the payment details into the database
             var query = $"""
                          
                                              INSERT INTO Payment (Customer_ID, Card_Number, CardHolder_Name, Card_Expiry_Date)
@@ -32,15 +31,14 @@ internal partial class AddPayment : Form
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Payment added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Payment added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             new MyProfile().Show();
             Close();
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Failed to add payment method. Error: {ex.Message}", "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
+            MessageBox.Show($"Failed to add payment. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

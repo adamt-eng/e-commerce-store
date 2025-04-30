@@ -38,7 +38,7 @@ internal partial class AddProduct : Form
         var categoryComboBoxSelectedItem = categoryComboBox.SelectedItem;
         if (categoryComboBoxSelectedItem == null)
         {
-            MessageBox.Show("Invalid category.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Invalid category.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
         var category = categoryComboBoxSelectedItem.ToString();
@@ -47,21 +47,19 @@ internal partial class AddProduct : Form
 
         if (string.IsNullOrWhiteSpace(productName) || string.IsNullOrWhiteSpace(priceText) || string.IsNullOrWhiteSpace(stockText))
         {
-            MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Please fill in all fields.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
-        // Validate price
         if (!decimal.TryParse(priceText, out var price))
         {
-            MessageBox.Show("Price must be a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Price must be a valid number.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
-        // Validate stock
         if (!int.TryParse(stockText, out var stock))
         {
-            MessageBox.Show("Stock must be a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Stock must be a valid number.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
@@ -78,14 +76,14 @@ internal partial class AddProduct : Form
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Product added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Close();
             (Login.MainForm as SellerPage).LoadSellerProducts();
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Failed to add product. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Failed to add product. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

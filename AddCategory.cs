@@ -9,13 +9,12 @@ internal partial class AddCategory : Form
 
     private void doneButton_Click(object sender, EventArgs e)
     {
-        // get entered product details
         var name = nameTextBox.Text.Trim();
         var description = descriptionTextBox.Text.Trim();
 
         if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description))
         {
-            MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Please fill in all fields.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
@@ -31,18 +30,13 @@ internal partial class AddCategory : Form
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Category added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //to clear form after product is added
-            nameTextBox.Clear();
-            descriptionTextBox.Clear();
+            MessageBox.Show("Category added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             (Login.MainForm as AdminPage).RefreshCategories();
-
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Failed to add category. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Failed to add category. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

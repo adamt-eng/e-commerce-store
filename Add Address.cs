@@ -9,14 +9,13 @@ internal partial class AddAddress : Form
 
     private void doneButton_Click(object sender, EventArgs e)
     {
-        // get entered product details
         var city = textBox1.Text.Trim();
         var label = nameTextBox.Text.Trim();
         var description = descriptionTextBox.Text.Trim();
 
         if (string.IsNullOrWhiteSpace(label) || string.IsNullOrWhiteSpace(city) || string.IsNullOrWhiteSpace(description))
         {
-            MessageBox.Show("Please fill in all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Please fill in all fields.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
@@ -31,18 +30,14 @@ internal partial class AddAddress : Form
 
             Program.DatabaseHandler.ExecuteQuery(query);
 
-            MessageBox.Show("Address added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Address added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //to clear form after address is added
-            nameTextBox.Clear();
-            descriptionTextBox.Clear();
-            textBox1.Clear();
             new MyProfile().Show();
             Close();
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"Failed to add address. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Failed to add address. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
