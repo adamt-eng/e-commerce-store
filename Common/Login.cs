@@ -73,11 +73,7 @@ internal partial class Login : Form
         return result is DataTable { Rows.Count: > 0 } table ? table.Rows[0][0].ToString() : null;
     }
 
-    private void registerLabel_Click(object sender, EventArgs e)
-    {
-        Hide();
-        new Register().ShowDialog();
-    }
+    private void registerLabel_Click(object sender, EventArgs e) => new Register().ShowDialog();
 
     private void Login_Load(object sender, EventArgs e) => loginTypeComboBox.SelectedIndex = 0;
 }

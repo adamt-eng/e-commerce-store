@@ -64,8 +64,7 @@ internal partial class Register : Form
 
             MessageBox.Show("Registration successful! You can now log in.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            Hide();
-            Program.LoginFormInstance.ShowDialog();
+            Close();
         }
         catch (Exception ex)
         {
