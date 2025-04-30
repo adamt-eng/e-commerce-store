@@ -92,7 +92,6 @@ namespace E_Commerce_Store
             loginTypeComboBox.FormattingEnabled = true;
             loginTypeComboBox.Items.AddRange(new object[] { resources.GetString("loginTypeComboBox.Items"), resources.GetString("loginTypeComboBox.Items1"), resources.GetString("loginTypeComboBox.Items2") });
             loginTypeComboBox.Name = "loginTypeComboBox";
-            loginTypeComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // loginTypeLabel
             // 
