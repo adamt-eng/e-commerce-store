@@ -133,7 +133,7 @@
     <value>3, 4, 3, 4</value>
   </data>
   <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1587, 90</value>
+    <value>1656, 90</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
@@ -158,13 +158,13 @@
     <value>3</value>
   </data>
   <data name="ordersGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 110</value>
+    <value>14, 110</value>
   </data>
   <data name="ordersGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
   <data name="ordersGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>882, 487</value>
+    <value>825, 487</value>
   </data>
   <data name="ordersGridView.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -304,7 +304,7 @@
     <value>NoControl</value>
   </data>
   <data name="myProfileButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1605, 13</value>
+    <value>1595, 28</value>
   </data>
   <data name="myProfileButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -328,13 +328,13 @@
     <value>1</value>
   </data>
   <data name="detailsGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>900, 110</value>
+    <value>845, 110</value>
   </data>
   <data name="detailsGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
   <data name="detailsGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 487</value>
+    <value>825, 487</value>
   </data>
   <data name="detailsGridView.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>

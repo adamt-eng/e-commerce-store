@@ -36,9 +36,9 @@ namespace E_Commerce_Store
             searchForProductsTextBox = new TextBox();
             cartButton = new Button();
             titleLabel = new Label();
-            dataGridView1 = new DataGridView();
+            productsDataGridView = new DataGridView();
             myProfileButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)productsDataGridView).BeginInit();
             SuspendLayout();
             // 
             // searchForProductsTextBox
@@ -65,13 +65,13 @@ namespace E_Commerce_Store
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
             // 
-            // dataGridView1
+            // productsDataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView1, "dataGridView1");
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            productsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(productsDataGridView, "productsDataGridView");
+            productsDataGridView.Name = "productsDataGridView";
+            productsDataGridView.ReadOnly = true;
+            productsDataGridView.CellDoubleClick += productsDataGridView_CellDoubleClick;
             // 
             // myProfileButton
             // 
@@ -88,14 +88,14 @@ namespace E_Commerce_Store
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(myProfileButton);
-            Controls.Add(dataGridView1);
+            Controls.Add(productsDataGridView);
             Controls.Add(titleLabel);
             Controls.Add(cartButton);
             Controls.Add(searchForProductsTextBox);
             MinimizeBox = false;
             Name = "CustomerPage";
             Load += CustomerPage_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)productsDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,7 +105,7 @@ namespace E_Commerce_Store
         private TextBox searchForProductsTextBox;
         private Button cartButton;
         private Label titleLabel;
-        private DataGridView dataGridView1;
+        private DataGridView productsDataGridView;
         private Button myProfileButton;
     }
 }

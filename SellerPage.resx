@@ -220,40 +220,40 @@
   <data name="&gt;&gt;DeleteButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AddButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="addButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="AddButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="addButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
   </data>
-  <data name="AddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="addButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AddButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1431, 120</value>
   </data>
-  <data name="AddButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="addButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="AddButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 48</value>
   </data>
-  <data name="AddButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="addButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="AddButton.Text" xml:space="preserve">
+  <data name="addButton.Text" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="&gt;&gt;AddButton.Name" xml:space="preserve">
-    <value>AddButton</value>
+  <data name="&gt;&gt;addButton.Name" xml:space="preserve">
+    <value>addButton</value>
   </data>
-  <data name="&gt;&gt;AddButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;addButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;AddButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;addButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

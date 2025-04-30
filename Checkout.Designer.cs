@@ -85,7 +85,7 @@ namespace E_Commerce_Store
             backButton.ForeColor = Color.FromArgb(241, 250, 238);
             backButton.Name = "backButton";
             backButton.UseVisualStyleBackColor = true;
-            backButton.Click += backButton_Click_1;
+            backButton.Click += backButton_Click;
             // 
             // Checkout
             // 
