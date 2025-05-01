@@ -117,29 +117,93 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="searchForProductsTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
-  </data>
-  <data name="searchForProductsTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 100</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="searchForProductsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="searchForProductsTextBox.Multiline" type="System.Boolean, mscorlib">
+  <data name="productsFlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="productsFlowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="productsFlowLayoutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="productsFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 161</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="productsFlowLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="productsFlowLayoutPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>11, 13, 11, 13</value>
+  </data>
+  <data name="productsFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1271, 530</value>
+  </data>
+  <data name="productsFlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="productsFlowLayoutPanel.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;productsFlowLayoutPanel.Name" xml:space="preserve">
+    <value>productsFlowLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;productsFlowLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;productsFlowLayoutPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;productsFlowLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="searchPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="searchPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 151</value>
+  </data>
+  <data name="searchPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="searchPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1271, 10</value>
+  </data>
+  <data name="searchPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;searchPanel.Name" xml:space="preserve">
+    <value>searchPanel</value>
+  </data>
+  <data name="&gt;&gt;searchPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;searchPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="searchForProductsTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="searchForProductsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 96</value>
+  </data>
+  <data name="searchForProductsTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
   <data name="searchForProductsTextBox.PlaceholderText" xml:space="preserve">
-    <value>Search for products</value>
+    <value>Search for products...</value>
   </data>
   <data name="searchForProductsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1729, 64</value>
+    <value>1071, 32</value>
   </data>
   <data name="searchForProductsTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;searchForProductsTextBox.Name" xml:space="preserve">
     <value>searchForProductsTextBox</value>
@@ -148,71 +212,31 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;searchForProductsTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>topPanel</value>
   </data>
   <data name="&gt;&gt;searchForProductsTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cartButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="cartButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="cartButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
-  </data>
-  <data name="cartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1749, 98</value>
-  </data>
-  <data name="cartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="cartButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 64</value>
-  </data>
-  <data name="cartButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cartButton.Name" xml:space="preserve">
-    <value>cartButton</value>
-  </data>
-  <data name="&gt;&gt;cartButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cartButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cartButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="titleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="titleLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15pt</value>
+    <value>Segoe UI, 16pt, style=Bold</value>
   </data>
   <data name="titleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="titleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 12</value>
-  </data>
-  <data name="titleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>433, 26</value>
   </data>
   <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1870, 78</value>
+    <value>255, 37</value>
   </data>
   <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="titleLabel.Text" xml:space="preserve">
-    <value>Products</value>
-  </data>
-  <data name="titleLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>E-Commerce Store</value>
   </data>
   <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
     <value>titleLabel</value>
@@ -221,171 +245,34 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;titleLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>topPanel</value>
   </data>
   <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="productsDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 172</value>
-  </data>
-  <data name="productsDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="productsDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="productsDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1870, 832</value>
-  </data>
-  <data name="productsDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;productsDataGridView.Name" xml:space="preserve">
-    <value>productsDataGridView</value>
-  </data>
-  <data name="&gt;&gt;productsDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;productsDataGridView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;productsDataGridView.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="myProfileButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <data name="myProfileButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+    <value>Zoom</value>
   </data>
   <data name="myProfileButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="myProfileButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 13pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="myProfileButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="myProfileButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1819, 98</value>
+    <value>1128, 90</value>
   </data>
   <data name="myProfileButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="myProfileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 64</value>
+    <value>79, 53</value>
   </data>
   <data name="myProfileButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;myProfileButton.Name" xml:space="preserve">
     <value>myProfileButton</value>
@@ -394,10 +281,70 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;myProfileButton.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>topPanel</value>
   </data>
   <data name="&gt;&gt;myProfileButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
+  </data>
+  <data name="cartButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="cartButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cartButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1213, 87</value>
+  </data>
+  <data name="cartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="cartButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 53</value>
+  </data>
+  <data name="cartButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cartButton.Name" xml:space="preserve">
+    <value>cartButton</value>
+  </data>
+  <data name="&gt;&gt;cartButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cartButton.Parent" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;cartButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="topPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="topPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="topPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="topPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1271, 151</value>
+  </data>
+  <data name="topPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Name" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -406,13 +353,13 @@
     <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>12, 30</value>
+    <value>8, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1907, 1036</value>
+    <value>1271, 691</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>2, 3, 2, 3</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -57,9 +57,7 @@
     <Compile Update="Common\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Customer\Customer Page.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Customer\Customer Page.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
