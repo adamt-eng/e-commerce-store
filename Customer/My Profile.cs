@@ -27,6 +27,9 @@ internal partial class MyProfile : Form
             MessageBox.Show("Failed to load profile data.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        addressListBox.Items.Clear();
+        paymentMethodsListBox.Items.Clear();
+
         result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Customer_Address WHERE Customer_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table2)
