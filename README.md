@@ -119,11 +119,12 @@ CREATE TABLE [dbo].[order_contains_product] (
 );
 
 CREATE TABLE [dbo].[Payment] (
-    [Card_Number]      VARCHAR (20)  NOT NULL,
-    [CardHolder_Name]  VARCHAR (100) NOT NULL,
-    [Card_Expiry_Date] DATE          NOT NULL,
-    [Customer_ID]      INT           NOT NULL,
-    PRIMARY KEY CLUSTERED ([Card_Number] ASC),
-    FOREIGN KEY ([Customer_ID]) REFERENCES [dbo].[Customer] ([Customer_ID])
+    [Card_Number]      VARCHAR(20)  NOT NULL,
+    [CardHolder_Name]  VARCHAR(100) NOT NULL,
+    [Card_Expiry_Date] DATE         NOT NULL,
+    [Customer_ID]      INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([Customer_ID], [Card_Number]),
+    FOREIGN KEY ([Customer_ID]) REFERENCES [dbo].[Customer]([Customer_ID])
 );
+
 ```
