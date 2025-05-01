@@ -33,12 +33,13 @@ namespace E_Commerce_Store.Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             titleLabel = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             comboBox = new ComboBox();
             deleteButton = new Button();
             addButton = new Button();
             registerButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            orderStatusComboBox = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
@@ -47,11 +48,11 @@ namespace E_Commerce_Store.Admin
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView1, "dataGridView1");
-            dataGridView1.Name = "dataGridView1";
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(dataGridView, "dataGridView");
+            dataGridView.Name = "dataGridView";
             // 
             // comboBox
             // 
@@ -85,6 +86,14 @@ namespace E_Commerce_Store.Admin
             registerButton.UseVisualStyleBackColor = true;
             registerButton.Click += RegisterButton_Click;
             // 
+            // orderStatusComboBox
+            // 
+            resources.ApplyResources(orderStatusComboBox, "orderStatusComboBox");
+            orderStatusComboBox.FormattingEnabled = true;
+            orderStatusComboBox.Items.AddRange(new object[] { resources.GetString("orderStatusComboBox.Items"), resources.GetString("orderStatusComboBox.Items1"), resources.GetString("orderStatusComboBox.Items2"), resources.GetString("orderStatusComboBox.Items3"), resources.GetString("orderStatusComboBox.Items4") });
+            orderStatusComboBox.Name = "orderStatusComboBox";
+            orderStatusComboBox.SelectedIndexChanged += OrderStatusComboBox_SelectedIndexChanged;
+            // 
             // AdminPage
             // 
             resources.ApplyResources(this, "$this");
@@ -94,23 +103,25 @@ namespace E_Commerce_Store.Admin
             Controls.Add(addButton);
             Controls.Add(deleteButton);
             Controls.Add(comboBox);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView);
             Controls.Add(titleLabel);
+            Controls.Add(orderStatusComboBox);
             MaximizeBox = false;
             Name = "AdminPage";
             FormClosed += AdminPage_FormClosed;
             Load += AdminPage_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label titleLabel;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView;
         private ComboBox comboBox;
         private Button deleteButton;
         private Button addButton;
         private Button registerButton;
+        private ComboBox orderStatusComboBox;
     }
 }
