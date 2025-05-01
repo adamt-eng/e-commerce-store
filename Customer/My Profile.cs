@@ -9,7 +9,7 @@ internal partial class MyProfile : Form
 {
     internal MyProfile() => InitializeComponent();
 
-    private void MyProfile_Load(object sender, EventArgs e)
+    internal void MyProfile_Load(object sender, EventArgs e)
     {
         var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Customer WHERE Customer_ID = {Login.User.Value}");
 
@@ -108,7 +108,7 @@ internal partial class MyProfile : Form
 
     private void ShowPreviousOrdersButton_Click(object sender, EventArgs e) => new MyOrders().ShowDialog();
 
-    private void AddPaymentLabel_Click(object sender, EventArgs e) => new AddPayment().Show();
+    private void AddPaymentLabel_Click(object sender, EventArgs e) => new AddPayment(this).Show();
     private void DeletePaymentLabel_Click(object sender, EventArgs e)
     {
         if (paymentMethodsListBox.SelectedIndex != -1)
@@ -138,7 +138,7 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void AddAddressLabel_Click(object sender, EventArgs e) => new AddAddress().Show();
+    private void AddAddressLabel_Click(object sender, EventArgs e) => new AddAddress(this).Show();
     private void DeleteAddressLabel_Click(object sender, EventArgs e)
     {
         if (addressListBox.SelectedIndex != -1)

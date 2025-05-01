@@ -6,7 +6,13 @@ namespace E_Commerce_Store.Customer;
 
 internal partial class AddPayment : Form
 {
-    internal AddPayment() => InitializeComponent();
+    private readonly MyProfile _myProfile;
+
+    internal AddPayment(MyProfile myProfile)
+    {
+        InitializeComponent();
+        _myProfile = myProfile;
+    }
 
     private void DoneButton_Click(object sender, EventArgs e)
     {
@@ -33,6 +39,8 @@ internal partial class AddPayment : Form
             Program.DatabaseHandler.ExecuteQuery(query);
 
             MessageBox.Show("Payment added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            _myProfile.MyProfile_Load(null, null);
 
             Close();
         }

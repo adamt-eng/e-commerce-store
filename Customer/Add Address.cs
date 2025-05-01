@@ -6,7 +6,13 @@ namespace E_Commerce_Store.Customer;
 
 internal partial class AddAddress : Form
 {
-    internal AddAddress() => InitializeComponent();
+    private readonly MyProfile _myProfile;
+
+    internal AddAddress(MyProfile myProfile)
+    {
+        InitializeComponent();
+        _myProfile = myProfile;
+    }
 
     private void DoneButton_Click(object sender, EventArgs e)
     {
@@ -32,6 +38,8 @@ internal partial class AddAddress : Form
             Program.DatabaseHandler.ExecuteQuery(query);
 
             MessageBox.Show("Address added successfully!", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            _myProfile.MyProfile_Load(null, null);
 
             Close();
         }
