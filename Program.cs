@@ -15,6 +15,9 @@ internal static class Program
         ApplicationConfiguration.Initialize();
 
         DatabaseHandler = new DatabaseHandler("Data Source=ADAM;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
+
+        DatabaseHandler.ValidateDatabase();
+        
         LoginFormInstance = new Login();
 
         Application.Run(LoginFormInstance);
