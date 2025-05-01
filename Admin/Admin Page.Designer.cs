@@ -53,6 +53,7 @@ namespace E_Commerce_Store.Admin
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dataGridView, "dataGridView");
             dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
             // 
             // comboBox
             // 
