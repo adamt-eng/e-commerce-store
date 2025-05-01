@@ -100,6 +100,7 @@ namespace E_Commerce_Store.Common
             // 
             // Login
             // 
+            AcceptButton = loginButton;
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
