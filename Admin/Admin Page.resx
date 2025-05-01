@@ -157,31 +157,31 @@
   <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dataGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 180</value>
   </data>
-  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="dataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+  <data name="dataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>1539, 555</value>
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
+  <data name="&gt;&gt;dataGridView.Name" xml:space="preserve">
+    <value>dataGridView</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dataGridView.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="comboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -330,6 +330,51 @@
   </data>
   <data name="&gt;&gt;registerButton.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="orderStatusComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="orderStatusComboBox.Items" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="orderStatusComboBox.Items1" xml:space="preserve">
+    <value>Delivered</value>
+  </data>
+  <data name="orderStatusComboBox.Items2" xml:space="preserve">
+    <value>Shipped</value>
+  </data>
+  <data name="orderStatusComboBox.Items3" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="orderStatusComboBox.Items4" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="orderStatusComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1091, 134</value>
+  </data>
+  <data name="orderStatusComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="orderStatusComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 38</value>
+  </data>
+  <data name="orderStatusComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="orderStatusComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;orderStatusComboBox.Name" xml:space="preserve">
+    <value>orderStatusComboBox</value>
+  </data>
+  <data name="&gt;&gt;orderStatusComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderStatusComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;orderStatusComboBox.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
