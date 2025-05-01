@@ -28,7 +28,7 @@ internal partial class MyOrders : Form
         _orderDetails.Columns.Add("Seller_Name");
         _orderDetails.Columns.Add("Category_Name");
 
-        var query = $"""
+        /*var query = $"""
                          SELECT 
                              o.Order_ID,
                              o.Order_Date,
@@ -54,8 +54,8 @@ internal partial class MyOrders : Form
                              o.Customer_ID = {Login.User.Value}
                          ORDER BY 
                              o.Order_Date DESC
-                     """;
-        // var query = $"SELECT * FROM fn_GetPreviousOrders({Login.User.Value}) ORDER BY Order_Date DESC";
+                     """;*/
+        var query = $"SELECT * FROM fn_GetPreviousOrders({Login.User.Value}) ORDER BY Order_Date DESC";
         var table = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
         if (table.Rows.Count == 0)
         {
@@ -72,12 +72,7 @@ internal partial class MyOrders : Form
 
             if (!orderIds.Contains(orderId))
             {
-                _orders.Rows.Add(
-                    row["Order_ID"],
-                    ((DateTime)row["Order_Date"]).ToString("yyyy-MM-dd"),
-                    row["Order_Status"],
-                    row["Total_Price"]
-                );
+                _orders.Rows.Add(row["Order_ID"], ((DateTime)row["Order_Date"]).ToString("yyyy-MM-dd"), row["Order_Status"], row["Total_Price"]);
                 orderIds.Add(orderId);
             }
 

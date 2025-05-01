@@ -47,4 +47,19 @@ internal class DatabaseHandler(string connectionString)
         _sqlConnection.Close();
         throw new InvalidOperationException("Query syntax incorrect.");
     }
+
+    // Method to execute stored procedures with parameters
+    internal void ExecuteParametrizedStoredProcedure(string procedureName, SqlParameter[] parameters)
+    {
+        _sqlConnection.Open();
+
+        using (var command = new SqlCommand(procedureName, _sqlConnection))
+        {
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddRange(parameters);
+            command.ExecuteNonQuery();
+        }
+
+        _sqlConnection.Close();
+    }
 }

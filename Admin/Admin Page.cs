@@ -73,29 +73,27 @@ internal partial class AdminPage : Form
             if (dataGridView.SelectedRows.Count > 0)
             {
                 var selectedRow = dataGridView.SelectedRows[0];
-                var selectedRowIndex = selectedRow.Index;
-
-                if (selectedRowIndex < 0) return;
+                if (selectedRow.DataBoundItem is not DataRowView rowView) return;
+                var row = rowView.Row;
 
                 if (dataGridView.DataSource == _users)
                 {
-                    var customerId = _users.Rows[selectedRowIndex]["Customer_ID"];
+                    var customerId = row["Customer_ID"];
                     Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Customer WHERE Customer_ID = {customerId}");
                 }
                 else if (dataGridView.DataSource == _sellers)
                 {
-                    var sellerId = _sellers.Rows[selectedRowIndex]["Seller_ID"];
+                    var sellerId = row["Seller_ID"];
                     Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Seller WHERE Seller_ID = {sellerId}");
                 }
                 else if (dataGridView.DataSource == _products)
                 {
-                    var productId = _products.Rows[selectedRowIndex]["Product_ID"];
-                    Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Product WHERE Product_ID = {productId}");
-                    // Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {productId}");
+                    var productId = row["Product_ID"];
+                    Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {productId}");
                 }
                 else if (dataGridView.DataSource == _categories)
                 {
-                    var categoryId = _categories.Rows[selectedRowIndex]["Category_ID"];
+                    var categoryId = row["Category_ID"];
                     Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Category WHERE Category_ID = {categoryId}");
                 }
                 else
@@ -103,20 +101,17 @@ internal partial class AdminPage : Form
                     return;
                 }
 
-                MessageBox.Show("Product deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
+                MessageBox.Show("Deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ComboBox_SelectedIndexChanged(null, null);
             }
             else
             {
-                MessageBox.Show("Please select a full row to delete.", "E-Commerce Store", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a full row to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        catch
+        catch (Exception ex)
         {
-            MessageBox.Show("Invalid row.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Invalid row. Details: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

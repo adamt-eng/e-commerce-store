@@ -42,9 +42,9 @@ internal partial class SellerPage : Form
         {
             var selectedRowIndex = dataGridView.SelectedRows[0].Index;
 
-            // Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {_products.Rows[selectedRowIndex]["Product_ID"]}");
+            Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {_products.Rows[selectedRowIndex]["Product_ID"]}");
 
-            Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Product WHERE Product_ID = {_products.Rows[selectedRowIndex]["Product_ID"]}");
+            // Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Product WHERE Product_ID = {_products.Rows[selectedRowIndex]["Product_ID"]}");
 
             _products.Rows.RemoveAt(selectedRowIndex);
 
