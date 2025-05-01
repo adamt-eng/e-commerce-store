@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Common;
 
 internal class DatabaseHandler(string connectionString)
 {
