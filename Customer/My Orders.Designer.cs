@@ -32,39 +32,49 @@ namespace E_Commerce_Store.Customer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyOrders));
-            titleLabel = new Label();
             ordersGridView = new DataGridView();
             detailsGridView = new DataGridView();
+            selectOrderLabel = new Label();
+            orderDetailsLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)ordersGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)detailsGridView).BeginInit();
             SuspendLayout();
-            // 
-            // titleLabel
-            // 
-            resources.ApplyResources(titleLabel, "titleLabel");
-            titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
-            titleLabel.Name = "titleLabel";
             // 
             // ordersGridView
             // 
             ordersGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(ordersGridView, "ordersGridView");
             ordersGridView.Name = "ordersGridView";
+            ordersGridView.ReadOnly = true;
             // 
             // detailsGridView
             // 
             detailsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(detailsGridView, "detailsGridView");
             detailsGridView.Name = "detailsGridView";
+            detailsGridView.ReadOnly = true;
+            // 
+            // selectOrderLabel
+            // 
+            resources.ApplyResources(selectOrderLabel, "selectOrderLabel");
+            selectOrderLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            selectOrderLabel.Name = "selectOrderLabel";
+            // 
+            // orderDetailsLabel
+            // 
+            resources.ApplyResources(orderDetailsLabel, "orderDetailsLabel");
+            orderDetailsLabel.ForeColor = Color.FromArgb(241, 250, 238);
+            orderDetailsLabel.Name = "orderDetailsLabel";
             // 
             // MyOrders
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(orderDetailsLabel);
+            Controls.Add(selectOrderLabel);
             Controls.Add(detailsGridView);
             Controls.Add(ordersGridView);
-            Controls.Add(titleLabel);
             MaximizeBox = false;
             Name = "MyOrders";
             Load += MyOrders_Load;
@@ -74,8 +84,9 @@ namespace E_Commerce_Store.Customer
         }
 
         #endregion
-        private Label titleLabel;
         private DataGridView ordersGridView;
         private DataGridView detailsGridView;
+        private Label selectOrderLabel;
+        private Label orderDetailsLabel;
     }
 }
