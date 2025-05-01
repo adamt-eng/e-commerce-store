@@ -132,7 +132,7 @@ namespace E_Commerce_Store.Common
             registerButton.ForeColor = Color.FromArgb(241, 250, 238);
             registerButton.Name = "registerButton";
             registerButton.UseVisualStyleBackColor = true;
-            registerButton.Click += registerButton_Click;
+            registerButton.Click += RegisterButton_Click;
             // 
             // userTypeLabel
             // 
@@ -146,7 +146,7 @@ namespace E_Commerce_Store.Common
             userTypeComboBox.FormattingEnabled = true;
             userTypeComboBox.Items.AddRange(new object[] { resources.GetString("userTypeComboBox.Items"), resources.GetString("userTypeComboBox.Items1") });
             userTypeComboBox.Name = "userTypeComboBox";
-            userTypeComboBox.SelectedIndexChanged += userTypeComboBox_SelectedIndexChanged;
+            userTypeComboBox.SelectedIndexChanged += UserTypeComboBox_SelectedIndexChanged;
             // 
             // label1
             // 

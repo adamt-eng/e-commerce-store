@@ -64,7 +64,7 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void enableEditingCheckBox_CheckedChanged(object sender, EventArgs e)
+    private void EnableEditingCheckBox_CheckedChanged(object sender, EventArgs e)
     {
         saveButton.Enabled = !saveButton.Enabled;
 
@@ -78,7 +78,7 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void saveButton_Click(object sender, EventArgs e)
+    private void SaveButton_Click(object sender, EventArgs e)
     {
         var firstName = firstNameTextBox.Text.Trim();
         var lastName = lastNameTextBox.Text.Trim();
@@ -106,10 +106,10 @@ internal partial class MyProfile : Form
         Program.DatabaseHandler.ExecuteQuery(query);
     }
 
-    private void showPreviousOrdersButton_Click(object sender, EventArgs e) => new MyOrders().ShowDialog();
+    private void ShowPreviousOrdersButton_Click(object sender, EventArgs e) => new MyOrders().ShowDialog();
 
-    private void addPaymentLabel_Click(object sender, EventArgs e) => new AddPayment().Show();
-    private void deletePaymentLabel_Click(object sender, EventArgs e)
+    private void AddPaymentLabel_Click(object sender, EventArgs e) => new AddPayment().Show();
+    private void DeletePaymentLabel_Click(object sender, EventArgs e)
     {
         if (paymentMethodsListBox.SelectedIndex != -1)
         {
@@ -138,8 +138,8 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void addAddressLabel_Click(object sender, EventArgs e) => new AddAddress().Show();
-    private void deleteAddressLabel_Click(object sender, EventArgs e)
+    private void AddAddressLabel_Click(object sender, EventArgs e) => new AddAddress().Show();
+    private void DeleteAddressLabel_Click(object sender, EventArgs e)
     {
         if (addressListBox.SelectedIndex != -1)
         {
@@ -168,5 +168,5 @@ internal partial class MyProfile : Form
         }
     }
 
-    private void changePasswordButton_Click(object sender, EventArgs e) => new ChangePassword().Show();
+    private void ChangePasswordButton_Click(object sender, EventArgs e) => new ChangePassword().Show();
 }

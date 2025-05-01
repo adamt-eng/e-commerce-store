@@ -8,7 +8,7 @@ internal partial class Register : Form
     internal Register() => InitializeComponent();
     internal bool RegisterAsAdmin;
 
-    private void registerButton_Click(object sender, EventArgs e)
+    private void RegisterButton_Click(object sender, EventArgs e)
     {
         var firstName = firstNameTextBox.Text.Trim();
         var lastName = lastNameTextBox.Text.Trim();
@@ -88,7 +88,7 @@ internal partial class Register : Form
 
     private void Register_Load(object sender, EventArgs e) => userTypeComboBox.SelectedIndex = 0;
 
-    private void userTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+    private void UserTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (userTypeComboBox.SelectedIndex == 0)
         {

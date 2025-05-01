@@ -61,7 +61,7 @@ namespace E_Commerce_Store.Customer
             saveButton.ForeColor = Color.FromArgb(241, 250, 238);
             saveButton.Name = "saveButton";
             saveButton.UseVisualStyleBackColor = true;
-            saveButton.Click += saveButton_Click;
+            saveButton.Click += SaveButton_Click;
             // 
             // phoneNumberLabel
             // 
@@ -120,7 +120,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(enableEditingCheckBox, "enableEditingCheckBox");
             enableEditingCheckBox.Name = "enableEditingCheckBox";
             enableEditingCheckBox.UseVisualStyleBackColor = true;
-            enableEditingCheckBox.CheckedChanged += enableEditingCheckBox_CheckedChanged;
+            enableEditingCheckBox.CheckedChanged += EnableEditingCheckBox_CheckedChanged;
             // 
             // addressesGroupBox
             // 
@@ -138,7 +138,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(deleteAddressLabel, "deleteAddressLabel");
             deleteAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
             deleteAddressLabel.Name = "deleteAddressLabel";
-            deleteAddressLabel.Click += deleteAddressLabel_Click;
+            deleteAddressLabel.Click += DeleteAddressLabel_Click;
             // 
             // addAddressLabel
             // 
@@ -146,7 +146,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(addAddressLabel, "addAddressLabel");
             addAddressLabel.ForeColor = Color.FromArgb(241, 250, 238);
             addAddressLabel.Name = "addAddressLabel";
-            addAddressLabel.Click += addAddressLabel_Click;
+            addAddressLabel.Click += AddAddressLabel_Click;
             // 
             // addressListBox
             // 
@@ -170,7 +170,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(deletePaymentLabel, "deletePaymentLabel");
             deletePaymentLabel.ForeColor = Color.FromArgb(241, 250, 238);
             deletePaymentLabel.Name = "deletePaymentLabel";
-            deletePaymentLabel.Click += deletePaymentLabel_Click;
+            deletePaymentLabel.Click += DeletePaymentLabel_Click;
             // 
             // paymentMethodsListBox
             // 
@@ -184,7 +184,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(addPaymentLabel, "addPaymentLabel");
             addPaymentLabel.ForeColor = Color.FromArgb(241, 250, 238);
             addPaymentLabel.Name = "addPaymentLabel";
-            addPaymentLabel.Click += addPaymentLabel_Click;
+            addPaymentLabel.Click += AddPaymentLabel_Click;
             // 
             // myOrdersButton
             // 
@@ -192,7 +192,7 @@ namespace E_Commerce_Store.Customer
             myOrdersButton.ForeColor = Color.FromArgb(241, 250, 238);
             myOrdersButton.Name = "myOrdersButton";
             myOrdersButton.UseVisualStyleBackColor = true;
-            myOrdersButton.Click += showPreviousOrdersButton_Click;
+            myOrdersButton.Click += ShowPreviousOrdersButton_Click;
             // 
             // changePasswordButton
             // 
@@ -200,7 +200,7 @@ namespace E_Commerce_Store.Customer
             changePasswordButton.ForeColor = Color.FromArgb(241, 250, 238);
             changePasswordButton.Name = "changePasswordButton";
             changePasswordButton.UseVisualStyleBackColor = true;
-            changePasswordButton.Click += changePasswordButton_Click;
+            changePasswordButton.Click += ChangePasswordButton_Click;
             // 
             // MyProfile
             // 
