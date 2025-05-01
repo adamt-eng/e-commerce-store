@@ -13,4 +13,9 @@ internal partial class Validation
         
     [GeneratedRegex(@"^(\+?\d{1,3}[-.\s]?)?(\(?\d{1,4}\)?[-.\s]?)?[\d]{1,4}[-.\s]?[\d]{1,4}[-.\s]?[\d]{1,4}$")]
     private static partial Regex PhoneNumberRegex();
+
+    internal static bool IsValidUrl(string url) => UrlRegex().IsMatch(url);
+
+    [GeneratedRegex(@"^(https?:\/\/)?([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}(:\d+)?(\/\S*)?$", RegexOptions.IgnoreCase)]
+    private static partial Regex UrlRegex();
 }
