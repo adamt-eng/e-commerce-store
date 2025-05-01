@@ -8,7 +8,7 @@ internal partial class AddPayment : Form
 {
     internal AddPayment() => InitializeComponent();
 
-    private void doneButton_Click(object sender, EventArgs e)
+    private void DoneButton_Click(object sender, EventArgs e)
     {
         var cardNumber = cardNumberTextBox.Text.Trim();
         var cardholderName = cardholderNameTextBox.Text.Trim();

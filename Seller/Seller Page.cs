@@ -22,7 +22,7 @@ internal partial class SellerPage : Form
 
         LoadSellerProducts();
 
-        dataGridView1.DataSource = _products;
+        dataGridView.DataSource = _products;
     }
 
     internal void LoadSellerProducts()
@@ -33,14 +33,14 @@ internal partial class SellerPage : Form
 
         _products.Clear();
         _products = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
-        dataGridView1.DataSource = _products;
+        dataGridView.DataSource = _products;
     }
 
-    private void DeleteButton_Click_1(object sender, EventArgs e)
+    private void DeleteButton_Click(object sender, EventArgs e)
     {
-        if (dataGridView1.SelectedRows.Count != 0)
+        if (dataGridView.SelectedRows.Count != 0)
         {
-            var selectedRowIndex = dataGridView1.SelectedRows[0].Index;
+            var selectedRowIndex = dataGridView.SelectedRows[0].Index;
 
             // Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {_products.Rows[selectedRowIndex]["Product_ID"]}");
 
@@ -56,7 +56,7 @@ internal partial class SellerPage : Form
         }
     }
 
-    private void addButton_Click(object sender, EventArgs e) => new AddProduct().ShowDialog();
+    private void AddButton_Click(object sender, EventArgs e) => new AddProduct().ShowDialog();
 
     private void SellerPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 }

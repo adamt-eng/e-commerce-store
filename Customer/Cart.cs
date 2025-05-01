@@ -43,18 +43,18 @@ internal partial class Cart : Form
         TotalPriceLabel.Text = $"Total: ${Convert.ToDecimal(((DataTable)Program.DatabaseHandler.ExecuteQuery($"SELECT SUM(p.Price * at.Quantity) AS TotalPrice FROM Added_To at JOIN Product p ON at.Product_ID = p.Product_ID WHERE at.Cart_ID = {CartId}")).Rows[0]["TotalPrice"])}";
     }
 
-    private void backToHomePageButton_Click(object sender, EventArgs e)
+    private void BackToHomePageButton_Click(object sender, EventArgs e)
     {
         Login.MainForm.Show();
         Close();
     }
 
-    private void proceedToCheckoutButton_Click(object sender, EventArgs e)
+    private void ProceedToCheckoutButton_Click(object sender, EventArgs e)
     {
         new Checkout(this).ShowDialog();
 
         if (!PurchaseDone) return;
 
-        backToHomePageButton_Click(null, null);
+        BackToHomePageButton_Click(null, null);
     }
 }

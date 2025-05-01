@@ -8,7 +8,7 @@ internal partial class AddAddress : Form
 {
     internal AddAddress() => InitializeComponent();
 
-    private void doneButton_Click(object sender, EventArgs e)
+    private void DoneButton_Click(object sender, EventArgs e)
     {
         var city = textBox1.Text.Trim();
         var label = nameTextBox.Text.Trim();

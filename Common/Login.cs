@@ -16,7 +16,7 @@ internal partial class Login : Form
 
     internal Login() => InitializeComponent();
 
-    private async void loginButton_Click(object sender, EventArgs e)
+    private async void LoginButton_Click(object sender, EventArgs e)
     {
         try
         {
@@ -78,7 +78,7 @@ internal partial class Login : Form
         }
     }
 
-    private void registerLabel_Click(object sender, EventArgs e) => new Register().ShowDialog();
+    private void RegisterLabel_Click(object sender, EventArgs e) => new Register().ShowDialog();
 
     private void Login_Load(object sender, EventArgs e) => loginTypeComboBox.SelectedIndex = 0;
 }

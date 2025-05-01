@@ -94,7 +94,7 @@ internal partial class Checkout : Form
         Close();
     }
 
-    private void backButton_Click(object sender, EventArgs e) => Close();
+    private void BackButton_Click(object sender, EventArgs e) => Close();
 
     private void Checkout_Load(object sender, EventArgs e)
     {

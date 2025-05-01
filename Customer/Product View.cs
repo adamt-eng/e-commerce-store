@@ -88,7 +88,7 @@ internal partial class ProductView : Form
         }
     }
 
-    private void inCartNumericUpDown_ValueChanged(object sender, EventArgs e)
+    private void InCartNumericUpDown_ValueChanged(object sender, EventArgs e)
     {
         var customerId = Login.User.Value;
         var quantity = (int)inCartNumericUpDown.Value;

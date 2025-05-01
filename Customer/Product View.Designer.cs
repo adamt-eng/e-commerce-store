@@ -55,7 +55,7 @@ namespace E_Commerce_Store.Customer
             // 
             resources.ApplyResources(inCartNumericUpDown, "inCartNumericUpDown");
             inCartNumericUpDown.Name = "inCartNumericUpDown";
-            inCartNumericUpDown.ValueChanged += inCartNumericUpDown_ValueChanged;
+            inCartNumericUpDown.ValueChanged += InCartNumericUpDown_ValueChanged;
             // 
             // cartLabel
             // 

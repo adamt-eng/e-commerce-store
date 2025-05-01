@@ -18,14 +18,14 @@ internal partial class AdminPage : Form
     private void AdminPage_Load(object sender, EventArgs e)
     {
         RefreshTables();
-        comboBox1.SelectedIndex = 0;
+        comboBox.SelectedIndex = 0;
     }
 
-    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+    private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
         addButton.Hide();
         RefreshTables();
-        switch (comboBox1.SelectedIndex)
+        switch (comboBox.SelectedIndex)
         {
             case 0:
                 dataGridView1.DataSource = _users;
@@ -63,7 +63,7 @@ internal partial class AdminPage : Form
         dataGridView1.DataSource = _categories;
     }
 
-    private void deleteButton_Click(object sender, EventArgs e)
+    private void DeleteButton_Click(object sender, EventArgs e)
     {
         if (dataGridView1.SelectedRows.Count > 0)
         {
@@ -100,7 +100,7 @@ internal partial class AdminPage : Form
 
             MessageBox.Show("Product deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshTables();
-            comboBox1_SelectedIndexChanged(null, null);
+            ComboBox_SelectedIndexChanged(null, null);
         }
         else
         {
@@ -117,12 +117,11 @@ internal partial class AdminPage : Form
         _categories = (DataTable)Program.DatabaseHandler.ExecuteQuery("SELECT * FROM Category");
     }
 
-    private void addButton_Click(object sender, EventArgs e) => new AddCategory().ShowDialog();
+    private void AddButton_Click(object sender, EventArgs e) => new AddCategory().ShowDialog();
 
-    private void registerButton_Click(object sender, EventArgs e)
+    private void RegisterButton_Click(object sender, EventArgs e)
     {
-        var register = new Register();
-        register.RegisterAsAdmin = true;
+        var register = new Register { RegisterAsAdmin = true };
         register.ShowDialog();
     }
 

@@ -14,8 +14,7 @@ internal class DatabaseHandler(string connectionString)
 
         query = query.Trim();
 
-        var sqlCommand = new SqlCommand(query, _sqlConnection);
-        sqlCommand.CommandType = CommandType.Text;
+        var sqlCommand = new SqlCommand(query, _sqlConnection) { CommandType = CommandType.Text };
 
         // Procedure check
         if (query.StartsWith("sp_", StringComparison.OrdinalIgnoreCase))

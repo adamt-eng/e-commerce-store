@@ -88,7 +88,7 @@ namespace E_Commerce_Store.Admin
             doneButton.ForeColor = Color.FromArgb(241, 250, 238);
             doneButton.Name = "doneButton";
             doneButton.UseVisualStyleBackColor = true;
-            doneButton.Click += doneButton_Click;
+            doneButton.Click += DoneButton_Click;
             // 
             // AddCategory
             // 

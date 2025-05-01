@@ -8,7 +8,7 @@ internal partial class AddCategory : Form
 {
     internal AddCategory() => InitializeComponent();
 
-    private void doneButton_Click(object sender, EventArgs e)
+    private void DoneButton_Click(object sender, EventArgs e)
     {
         var name = nameTextBox.Text.Trim();
         var description = descriptionTextBox.Text.Trim();

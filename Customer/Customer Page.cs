@@ -55,7 +55,7 @@ internal partial class CustomerPage : Form
         productsDataGridView.DataSource = _products;
     }
 
-    private void searchForProductsTextBox_TextChanged(object sender, EventArgs e)
+    private void SearchForProductsTextBox_TextChanged(object sender, EventArgs e)
     {
         var productView = _products.DefaultView;
         productView.RowFilter = string.Format("Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchForProductsTextBox.Text.ToLower());
@@ -63,9 +63,9 @@ internal partial class CustomerPage : Form
         productsDataGridView.DataSource = productView;
     }
 
-    private void myProfileButton_Click(object sender, EventArgs e) => new MyProfile().ShowDialog();
+    private void MyProfileButton_Click(object sender, EventArgs e) => new MyProfile().ShowDialog();
 
-    private void cartButton_Click(object sender, EventArgs e)
+    private void CartButton_Click(object sender, EventArgs e)
     {
         var query = $"""
                      
@@ -95,7 +95,7 @@ internal partial class CustomerPage : Form
     }
 
 
-    private void productsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    private void ProductsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex < 0) return;
 

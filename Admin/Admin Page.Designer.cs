@@ -34,7 +34,7 @@ namespace E_Commerce_Store.Admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             titleLabel = new Label();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
+            comboBox = new ComboBox();
             deleteButton = new Button();
             addButton = new Button();
             registerButton = new Button();
@@ -53,13 +53,13 @@ namespace E_Commerce_Store.Admin
             resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
             // 
-            // comboBox1
+            // comboBox
             // 
-            resources.ApplyResources(comboBox1, "comboBox1");
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2"), resources.GetString("comboBox1.Items3"), resources.GetString("comboBox1.Items4") });
-            comboBox1.Name = "comboBox1";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            resources.ApplyResources(comboBox, "comboBox");
+            comboBox.FormattingEnabled = true;
+            comboBox.Items.AddRange(new object[] { resources.GetString("comboBox.Items"), resources.GetString("comboBox.Items1"), resources.GetString("comboBox.Items2"), resources.GetString("comboBox.Items3"), resources.GetString("comboBox.Items4") });
+            comboBox.Name = "comboBox";
+            comboBox.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
             // 
             // deleteButton
             // 
@@ -67,7 +67,7 @@ namespace E_Commerce_Store.Admin
             deleteButton.ForeColor = Color.FromArgb(241, 250, 238);
             deleteButton.Name = "deleteButton";
             deleteButton.UseVisualStyleBackColor = true;
-            deleteButton.Click += deleteButton_Click;
+            deleteButton.Click += DeleteButton_Click;
             // 
             // addButton
             // 
@@ -75,7 +75,7 @@ namespace E_Commerce_Store.Admin
             addButton.ForeColor = Color.FromArgb(241, 250, 238);
             addButton.Name = "addButton";
             addButton.UseVisualStyleBackColor = true;
-            addButton.Click += addButton_Click;
+            addButton.Click += AddButton_Click;
             // 
             // registerButton
             // 
@@ -83,7 +83,7 @@ namespace E_Commerce_Store.Admin
             registerButton.ForeColor = Color.FromArgb(241, 250, 238);
             registerButton.Name = "registerButton";
             registerButton.UseVisualStyleBackColor = true;
-            registerButton.Click += registerButton_Click;
+            registerButton.Click += RegisterButton_Click;
             // 
             // AdminPage
             // 
@@ -93,7 +93,7 @@ namespace E_Commerce_Store.Admin
             Controls.Add(registerButton);
             Controls.Add(addButton);
             Controls.Add(deleteButton);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBox);
             Controls.Add(dataGridView1);
             Controls.Add(titleLabel);
             MaximizeBox = false;
@@ -108,7 +108,7 @@ namespace E_Commerce_Store.Admin
 
         private Label titleLabel;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
+        private ComboBox comboBox;
         private Button deleteButton;
         private Button addButton;
         private Button registerButton;

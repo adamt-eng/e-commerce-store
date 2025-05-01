@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace E_Commerce_Store;
+namespace E_Commerce_Store.Common;
 
 internal static class PasswordHasher
 {

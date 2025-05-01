@@ -49,7 +49,7 @@ namespace E_Commerce_Store.Customer
             saveButton.ForeColor = Color.FromArgb(241, 250, 238);
             saveButton.Name = "saveButton";
             saveButton.UseVisualStyleBackColor = true;
-            saveButton.Click += doneButton_Click;
+            saveButton.Click += SaveButton_Click;
             // 
             // ChangePassword
             // 

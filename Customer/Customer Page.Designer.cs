@@ -47,7 +47,7 @@ namespace E_Commerce_Store.Customer
             searchForProductsTextBox.ForeColor = Color.FromArgb(241, 250, 238);
             searchForProductsTextBox.Name = "searchForProductsTextBox";
             searchForProductsTextBox.TabStop = false;
-            searchForProductsTextBox.TextChanged += searchForProductsTextBox_TextChanged;
+            searchForProductsTextBox.TextChanged += SearchForProductsTextBox_TextChanged;
             // 
             // cartButton
             // 
@@ -56,7 +56,7 @@ namespace E_Commerce_Store.Customer
             cartButton.ForeColor = Color.FromArgb(241, 250, 238);
             cartButton.Name = "cartButton";
             cartButton.UseVisualStyleBackColor = true;
-            cartButton.Click += cartButton_Click;
+            cartButton.Click += CartButton_Click;
             // 
             // titleLabel
             // 
@@ -70,7 +70,7 @@ namespace E_Commerce_Store.Customer
             resources.ApplyResources(productsDataGridView, "productsDataGridView");
             productsDataGridView.Name = "productsDataGridView";
             productsDataGridView.ReadOnly = true;
-            productsDataGridView.CellDoubleClick += productsDataGridView_CellDoubleClick;
+            productsDataGridView.CellDoubleClick += ProductsDataGridView_CellDoubleClick;
             // 
             // myProfileButton
             // 
@@ -79,7 +79,7 @@ namespace E_Commerce_Store.Customer
             myProfileButton.ForeColor = Color.FromArgb(241, 250, 238);
             myProfileButton.Name = "myProfileButton";
             myProfileButton.UseVisualStyleBackColor = true;
-            myProfileButton.Click += myProfileButton_Click;
+            myProfileButton.Click += MyProfileButton_Click;
             // 
             // CustomerPage
             // 

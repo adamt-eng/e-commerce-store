@@ -49,7 +49,7 @@ namespace E_Commerce_Store.Common
             loginButton.ForeColor = Color.FromArgb(241, 250, 238);
             loginButton.Name = "loginButton";
             loginButton.UseVisualStyleBackColor = true;
-            loginButton.Click += loginButton_Click;
+            loginButton.Click += LoginButton_Click;
             // 
             // emailTextBox
             // 
@@ -71,7 +71,7 @@ namespace E_Commerce_Store.Common
             resources.ApplyResources(registerLabel, "registerLabel");
             registerLabel.ForeColor = Color.FromArgb(230, 57, 70);
             registerLabel.Name = "registerLabel";
-            registerLabel.Click += registerLabel_Click;
+            registerLabel.Click += RegisterLabel_Click;
             // 
             // progressBarPanel
             // 

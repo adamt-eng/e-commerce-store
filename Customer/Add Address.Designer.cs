@@ -90,7 +90,7 @@ namespace E_Commerce_Store.Customer
             doneButton.ForeColor = Color.FromArgb(241, 250, 238);
             doneButton.Name = "doneButton";
             doneButton.UseVisualStyleBackColor = true;
-            doneButton.Click += doneButton_Click;
+            doneButton.Click += DoneButton_Click;
             // 
             // textBox1
             // 

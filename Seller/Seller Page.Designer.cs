@@ -33,10 +33,10 @@ namespace E_Commerce_Store.Seller
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerPage));
             titleLabel = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             DeleteButton = new Button();
             addButton = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
@@ -45,11 +45,11 @@ namespace E_Commerce_Store.Seller
             titleLabel.ForeColor = Color.FromArgb(241, 250, 238);
             titleLabel.Name = "titleLabel";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView1, "dataGridView1");
-            dataGridView1.Name = "dataGridView1";
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(dataGridView, "dataGridView");
+            dataGridView.Name = "dataGridView";
             // 
             // DeleteButton
             // 
@@ -57,7 +57,7 @@ namespace E_Commerce_Store.Seller
             DeleteButton.ForeColor = Color.FromArgb(241, 250, 238);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.UseVisualStyleBackColor = true;
-            DeleteButton.Click += DeleteButton_Click_1;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // addButton
             // 
@@ -65,7 +65,7 @@ namespace E_Commerce_Store.Seller
             addButton.ForeColor = Color.FromArgb(241, 250, 238);
             addButton.Name = "addButton";
             addButton.UseVisualStyleBackColor = true;
-            addButton.Click += addButton_Click;
+            addButton.Click += AddButton_Click;
             // 
             // SellerPage
             // 
@@ -74,20 +74,20 @@ namespace E_Commerce_Store.Seller
             BackColor = Color.FromArgb(29, 53, 87);
             Controls.Add(addButton);
             Controls.Add(DeleteButton);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView);
             Controls.Add(titleLabel);
             MaximizeBox = false;
             Name = "SellerPage";
             FormClosed += SellerPage_FormClosed;
             Load += SellerPage_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label titleLabel;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView;
         private Button DeleteButton;
         private Button addButton;
     }

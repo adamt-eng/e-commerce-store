@@ -30,7 +30,7 @@ internal partial class AddProduct : Form
         }
     }
 
-    private void loginButton_Click(object sender, EventArgs e)
+    private void LoginButton_Click(object sender, EventArgs e)
     {
         var productName = nameTextBox.Text.Trim();
         var productDescription = descriptionTextBox.Text.Trim();
@@ -93,5 +93,5 @@ internal partial class AddProduct : Form
         }
     }
 
-    private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e) => categoryDescriptionlabel.Text = Categories.First(cat => cat.Item1 == categoryComboBox.SelectedItem.ToString()).Item3;
+    private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e) => categoryDescriptionlabel.Text = Categories.First(cat => cat.Item1 == categoryComboBox.SelectedItem.ToString()).Item3;
 }

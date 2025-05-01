@@ -53,7 +53,7 @@ namespace E_Commerce_Store.Customer
             proceedToCheckoutButton.ForeColor = Color.FromArgb(241, 250, 238);
             proceedToCheckoutButton.Name = "proceedToCheckoutButton";
             proceedToCheckoutButton.UseVisualStyleBackColor = true;
-            proceedToCheckoutButton.Click += proceedToCheckoutButton_Click;
+            proceedToCheckoutButton.Click += ProceedToCheckoutButton_Click;
             // 
             // TotalPriceLabel
             // 
@@ -74,7 +74,7 @@ namespace E_Commerce_Store.Customer
             backToHomePageButton.ForeColor = Color.FromArgb(241, 250, 238);
             backToHomePageButton.Name = "backToHomePageButton";
             backToHomePageButton.UseVisualStyleBackColor = true;
-            backToHomePageButton.Click += backToHomePageButton_Click;
+            backToHomePageButton.Click += BackToHomePageButton_Click;
             // 
             // Cart
             // 

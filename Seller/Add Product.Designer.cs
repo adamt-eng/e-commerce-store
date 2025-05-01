@@ -111,7 +111,7 @@ namespace E_Commerce_Store.Seller
             categoryComboBox.FormattingEnabled = true;
             resources.ApplyResources(categoryComboBox, "categoryComboBox");
             categoryComboBox.Name = "categoryComboBox";
-            categoryComboBox.SelectedIndexChanged += categoryComboBox_SelectedIndexChanged;
+            categoryComboBox.SelectedIndexChanged += CategoryComboBox_SelectedIndexChanged;
             // 
             // doneButton
             // 
@@ -119,7 +119,7 @@ namespace E_Commerce_Store.Seller
             doneButton.ForeColor = Color.FromArgb(241, 250, 238);
             doneButton.Name = "doneButton";
             doneButton.UseVisualStyleBackColor = true;
-            doneButton.Click += loginButton_Click;
+            doneButton.Click += LoginButton_Click;
             // 
             // nameTextBox
             // 

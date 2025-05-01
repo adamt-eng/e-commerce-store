@@ -184,46 +184,46 @@
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="comboBox1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="comboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
   </data>
-  <data name="comboBox1.Items" xml:space="preserve">
+  <data name="comboBox.Items" xml:space="preserve">
     <value>Users</value>
   </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
+  <data name="comboBox.Items1" xml:space="preserve">
     <value>Sellers</value>
   </data>
-  <data name="comboBox1.Items2" xml:space="preserve">
+  <data name="comboBox.Items2" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="comboBox1.Items3" xml:space="preserve">
+  <data name="comboBox.Items3" xml:space="preserve">
     <value>Orders</value>
   </data>
-  <data name="comboBox1.Items4" xml:space="preserve">
+  <data name="comboBox.Items4" xml:space="preserve">
     <value>Categories</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="comboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>1348, 134</value>
   </data>
-  <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="comboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="comboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 38</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="comboBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
+  <data name="&gt;&gt;comboBox.Name" xml:space="preserve">
+    <value>comboBox</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;comboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;comboBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;comboBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="deleteButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">

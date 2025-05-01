@@ -8,7 +8,7 @@ internal partial class ChangePassword : Form
 {
     internal ChangePassword() => InitializeComponent();
 
-    private void doneButton_Click(object sender, EventArgs e)
+    private void SaveButton_Click(object sender, EventArgs e)
     {
         var newPassword = passwordTextBox.Text.Trim();
 
