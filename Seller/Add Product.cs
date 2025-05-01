@@ -37,6 +37,7 @@ internal partial class AddProduct : Form
         var priceText = priceTextBox.Text.Trim();
         var stockText = stockTextBox.Text.Trim();
         var categoryComboBoxSelectedItem = categoryComboBox.SelectedItem;
+        var imageLink = imageLinkTextBox.Text.Trim();
 
         if (categoryComboBoxSelectedItem == null)
         {
@@ -62,6 +63,12 @@ internal partial class AddProduct : Form
             return;
         }
 
+        if (!Validation.IsValidUrl(imageLink))
+        {
+            MessageBox.Show("Image link must be a valid URL.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
         var categoryId = Categories.First(cat => cat.Item1 == categoryComboBoxSelectedItem.ToString()).Item2;
 
         try
@@ -69,7 +76,7 @@ internal partial class AddProduct : Form
             var query = $"""
                          
                                              INSERT INTO Product (Product_Name, Price, Product_Description, Quantity_In_Stock, Published_At, Category_ID, Seller_ID, Image_Link)
-                                             VALUES ('{productName}', {price}, '{productDescription}', {stock}, '{DateTime.Now:yyyy-MM-dd}', {categoryId}, {Login.User.Value}, '{imageLinkTextBox.Text.Trim()}')
+                                             VALUES ('{productName}', {price}, '{productDescription}', {stock}, '{DateTime.Now:yyyy-MM-dd}', {categoryId}, {Login.User.Value}, '{imageLink}')
                                          
                          """;
 
