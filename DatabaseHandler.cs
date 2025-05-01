@@ -17,6 +17,15 @@ internal class DatabaseHandler(string connectionString)
         var sqlCommand = new SqlCommand(query, _sqlConnection);
         sqlCommand.CommandType = CommandType.Text;
 
+        // Procedure check
+        if (query.StartsWith("sp_", StringComparison.OrdinalIgnoreCase))
+        {
+            // Execute the stored procedure
+            var rowsAffected = sqlCommand.ExecuteNonQuery();
+            _sqlConnection.Close();
+            return rowsAffected;
+        }
+
         if (query.StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
         {
             // For SELECT, return the data as a DataTable

@@ -55,7 +55,7 @@ internal partial class MyOrders : Form
                          ORDER BY 
                              o.Order_Date DESC
                      """;
-
+        // var query = $"SELECT * FROM fn_GetPreviousOrders({Login.User.Value}) ORDER BY Order_Date DESC";
         var table = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
         if (table.Rows.Count == 0)
         {

@@ -131,6 +131,7 @@ internal partial class Checkout : Form
                          JOIN Product p ON a.Product_ID = p.Product_ID
                          WHERE c.Customer_ID = {Login.User.Value}
                      """;
+        // var query = $"SELECT dbo.fn_GetTotalPrice({Login.User.Value}) AS Total";
         var totalTable = (DataTable)(Program.DatabaseHandler.ExecuteQuery(query));
 
         if (totalTable.Rows.Count > 0 && totalTable.Rows[0]["Total"] != DBNull.Value)

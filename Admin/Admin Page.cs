@@ -86,6 +86,7 @@ internal partial class AdminPage : Form
             {
                 var productId = _products.Rows[selectedRowIndex]["Product_ID"];
                 Program.DatabaseHandler.ExecuteQuery($"DELETE FROM Product WHERE Product_ID = {productId}");
+                // Program.DatabaseHandler.ExecuteQuery($"sp_DeleteProduct {productId}");
             }
             else if (dataGridView1.DataSource == _categories)
             {
@@ -94,17 +95,16 @@ internal partial class AdminPage : Form
             }
             else
             {
-                MessageBox.Show("Unknown table selected.");
                 return;
             }
 
-            MessageBox.Show("Deleted successfully.");
+            MessageBox.Show("Product deleted successfully.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshTables();
             comboBox1_SelectedIndexChanged(null, null);
         }
         else
         {
-            MessageBox.Show("Please select a full row to delete.");
+            MessageBox.Show("Please select a full row to delete.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 
