@@ -43,7 +43,7 @@ internal partial class Checkout : Form
         var insertOrderQuery = $"""
                                     INSERT INTO [dbo].[Order] 
                                     (Order_Date, Order_Status, Shipping_Address_ID, Billing_Address_ID, Customer_ID, Total_Price)
-                                    VALUES (GETDATE(), 'Delivered', {shippingAddressId}, {shippingAddressId}, {Login.User.Value}, {total})
+                                    VALUES (GETDATE(), 'Pending', {shippingAddressId}, {shippingAddressId}, {Login.User.Value}, {total})
                                 """;
         Program.DatabaseHandler.ExecuteQuery(insertOrderQuery);
 
