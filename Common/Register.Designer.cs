@@ -34,7 +34,7 @@ namespace E_Commerce_Store.Common
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             firstNameTextBox = new TextBox();
             lastNameTextBox = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            dobDateTimePicker = new DateTimePicker();
             dateOfBirthLabel = new Label();
             nameLabel = new Label();
             emailLabel = new Label();
@@ -66,11 +66,11 @@ namespace E_Commerce_Store.Common
             lastNameTextBox.Name = "lastNameTextBox";
             lastNameTextBox.TabStop = false;
             // 
-            // dateTimePicker1
+            // dobDateTimePicker
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            resources.ApplyResources(dateTimePicker1, "dateTimePicker1");
-            dateTimePicker1.Name = "dateTimePicker1";
+            dobDateTimePicker.Format = DateTimePickerFormat.Short;
+            resources.ApplyResources(dobDateTimePicker, "dobDateTimePicker");
+            dobDateTimePicker.Name = "dobDateTimePicker";
             // 
             // dateOfBirthLabel
             // 
@@ -178,7 +178,7 @@ namespace E_Commerce_Store.Common
             Controls.Add(emailTextBox);
             Controls.Add(nameLabel);
             Controls.Add(dateOfBirthLabel);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dobDateTimePicker);
             Controls.Add(lastNameTextBox);
             Controls.Add(firstNameTextBox);
             Controls.Add(addressTextBox);
@@ -196,7 +196,7 @@ namespace E_Commerce_Store.Common
         private TextBox passwordTextBox;
         private TextBox firstNameTextBox;
         private TextBox lastNameTextBox;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dobDateTimePicker;
         private Label dateOfBirthLabel;
         private Label nameLabel;
         private Label emailLabel;

@@ -8,11 +8,18 @@ internal partial class Register : Form
     internal Register() => InitializeComponent();
     internal bool RegisterAsAdmin;
 
+    private void Register_Load(object sender, EventArgs e)
+    {
+        userTypeComboBox.SelectedIndex = 0;
+        dobDateTimePicker.MinDate = DateTime.Today.AddYears(-100);
+        dobDateTimePicker.MaxDate = DateTime.Today;
+    }
+
     private void RegisterButton_Click(object sender, EventArgs e)
     {
         var firstName = firstNameTextBox.Text.Trim();
         var lastName = lastNameTextBox.Text.Trim();
-        var dateOfBirth = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+        var dateOfBirth = dobDateTimePicker.Value.ToString("yyyy-MM-dd");
         var email = emailTextBox.Text.Trim();
         var password = passwordTextBox.Text.Trim();
         var phoneNumber = phoneNumberTextBox.Text.Trim();
@@ -86,14 +93,12 @@ internal partial class Register : Form
         }
     }
 
-    private void Register_Load(object sender, EventArgs e) => userTypeComboBox.SelectedIndex = 0;
-
     private void UserTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (userTypeComboBox.SelectedIndex == 0)
         {
             // Show the date of birth field and hide the address field
-            dateTimePicker1.Visible = true;
+            dobDateTimePicker.Visible = true;
             dateOfBirthLabel.Visible = true;
             addressTextBox.Visible = false;
             label1.Visible = false;
@@ -101,7 +106,7 @@ internal partial class Register : Form
         else
         {
             // Show the address text field and hide the date of birth field
-            dateTimePicker1.Visible = false;
+            dobDateTimePicker.Visible = false;
             dateOfBirthLabel.Visible = false;
             addressTextBox.Visible = true;
             label1.Visible = true;

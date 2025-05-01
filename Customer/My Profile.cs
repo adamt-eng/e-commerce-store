@@ -11,6 +11,9 @@ internal partial class MyProfile : Form
 
     internal void MyProfile_Load(object sender, EventArgs e)
     {
+        dobDateTimePicker.MinDate = DateTime.Today.AddYears(-100);
+        dobDateTimePicker.MaxDate = DateTime.Today;
+
         var result = Program.DatabaseHandler.ExecuteQuery($"SELECT * FROM Customer WHERE Customer_ID = {Login.User.Value}");
 
         if (result is DataTable { Rows.Count: > 0 } table)
