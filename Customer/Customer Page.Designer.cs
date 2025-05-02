@@ -36,9 +36,6 @@ namespace E_Commerce_Store.Customer
             titleLabel = new Label();
             myProfileButton = new Button();
             productsFlowLayoutPanel = new FlowLayoutPanel();
-            topPanel = new Panel();
-            searchPanel = new Panel();
-            topPanel.SuspendLayout();
             SuspendLayout();
             // 
             // searchForProductsTextBox
@@ -54,7 +51,6 @@ namespace E_Commerce_Store.Customer
             // 
             cartButton.BackgroundImage = Properties.Resources.cart;
             resources.ApplyResources(cartButton, "cartButton");
-            cartButton.FlatAppearance.BorderSize = 0;
             cartButton.ForeColor = Color.FromArgb(241, 250, 238);
             cartButton.Name = "cartButton";
             cartButton.UseVisualStyleBackColor = true;
@@ -68,6 +64,7 @@ namespace E_Commerce_Store.Customer
             // 
             // myProfileButton
             // 
+            myProfileButton.BackgroundImage = Properties.Resources.account;
             resources.ApplyResources(myProfileButton, "myProfileButton");
             myProfileButton.FlatAppearance.BorderSize = 0;
             myProfileButton.ForeColor = Color.FromArgb(241, 250, 238);
@@ -81,48 +78,30 @@ namespace E_Commerce_Store.Customer
             productsFlowLayoutPanel.BackColor = Color.FromArgb(29, 53, 87);
             productsFlowLayoutPanel.Name = "productsFlowLayoutPanel";
             // 
-            // topPanel
-            // 
-            topPanel.BackColor = Color.FromArgb(29, 53, 87);
-            topPanel.Controls.Add(searchForProductsTextBox);
-            topPanel.Controls.Add(titleLabel);
-            topPanel.Controls.Add(myProfileButton);
-            topPanel.Controls.Add(cartButton);
-            resources.ApplyResources(topPanel, "topPanel");
-            topPanel.Name = "topPanel";
-            // 
-            // searchPanel
-            // 
-            searchPanel.BackColor = Color.FromArgb(29, 53, 87);
-            resources.ApplyResources(searchPanel, "searchPanel");
-            searchPanel.Name = "searchPanel";
-            searchPanel.Paint += searchPanel_Paint;
-            // 
             // CustomerPage
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 53, 87);
+            Controls.Add(cartButton);
+            Controls.Add(titleLabel);
+            Controls.Add(myProfileButton);
             Controls.Add(productsFlowLayoutPanel);
-            Controls.Add(searchPanel);
-            Controls.Add(topPanel);
+            Controls.Add(searchForProductsTextBox);
             MaximizeBox = false;
             Name = "CustomerPage";
             FormClosed += CustomerPage_FormClosed;
             Load += CustomerPage_Load;
-            topPanel.ResumeLayout(false);
-            topPanel.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
-        #endregion 
+        #endregion
 
         private TextBox searchForProductsTextBox;
         private Button cartButton;
         private Label titleLabel;
         private Button myProfileButton;
         private FlowLayoutPanel productsFlowLayoutPanel;
-        private Panel topPanel;
-        private Panel searchPanel;
     }
 }
