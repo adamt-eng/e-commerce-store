@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -59,14 +60,14 @@ namespace E_Commerce_Store.Customer
                 _products.ImportRow(row);
             }
 
-            DisplayProducts();
+            DisplayProducts(_products);
         }
 
-        private void DisplayProducts()
+        private void DisplayProducts(DataTable filteredTable)
         {
             productsFlowLayoutPanel.Controls.Clear();
 
-            foreach (DataRow row in _products.Rows)
+            foreach (DataRow row in filteredTable.Rows)
             {
                 // Create product panel
                 var productPanel = new Panel
@@ -187,12 +188,14 @@ namespace E_Commerce_Store.Customer
 
         private void SearchForProductsTextBox_TextChanged(object sender, EventArgs e)
         {
-            var productView = _products.DefaultView;
             var searchText = searchForProductsTextBox.Text.ToLower();
-            productView.RowFilter = string.Format("Product_Name LIKE '%{0}%' OR Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchText);
-            var filteredTable = productView.ToTable();
-            _products = filteredTable;
-            DisplayProducts();
+
+            var productView = _products.DefaultView;
+
+            productView.RowFilter = string.IsNullOrWhiteSpace(searchText) ? string.Empty : // Show all products when search text is empty
+                string.Format("Product_Name LIKE '%{0}%' OR Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchText);
+
+            DisplayProducts(productView.ToTable());
         }
 
         private void MyProfileButton_Click(object sender, EventArgs e) => new MyProfile().ShowDialog();
@@ -225,15 +228,24 @@ namespace E_Commerce_Store.Customer
 
         private void CustomerPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 
-        private static async Task LoadImageFromUrlAsync(string url, PictureBox pictureBox)
+        private readonly Dictionary<string, Image> _imageCache = [];
+        private async Task LoadImageFromUrlAsync(string url, PictureBox pictureBox)
         {
             try
             {
+                if (_imageCache.TryGetValue(url, out var value))
+                {
+                    pictureBox.Image = value;
+                    return;
+                }
+
                 using var client = new HttpClient();
                 var imageData = await client.GetByteArrayAsync(url);
 
                 using var ms = new MemoryStream(imageData);
                 var image = Image.FromStream(ms);
+
+                _imageCache[url] = image;
 
                 if (pictureBox.InvokeRequired)
                 {
@@ -244,7 +256,7 @@ namespace E_Commerce_Store.Customer
                     pictureBox.Image = image;
                 }
             }
-            catch (Exception)
+            catch
             {
                 // MessageBox.Show($"Error loading image: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
