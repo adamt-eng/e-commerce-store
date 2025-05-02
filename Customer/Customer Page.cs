@@ -2,7 +2,8 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Commerce_Store.Common;
 
@@ -24,109 +25,120 @@ namespace E_Commerce_Store.Customer
             _products.Columns.Add("Seller_Name");
             _products.Columns.Add("Category_Name");
             _products.Columns.Add("Image_Link");
+
             LoadProducts();
         }
 
         internal void LoadProducts()
         {
             var query = """
-                SELECT p.Product_ID, p.Product_Name, p.Product_Description AS Description,
-                        p.Quantity_In_Stock AS Quantity, p.Published_At, p.Price,
-                        s.Seller_Name, c.Category_Name, p.Image_Link
-                FROM Product p
-                 LEFT JOIN Category c ON p.Category_ID = c.Category_ID
-                 INNER JOIN Seller s ON p.Seller_ID = s.Seller_ID
-                 WHERE p.Quantity_In_Stock > 0
-                """;
+                        SELECT 
+                            p.Product_ID, 
+                            p.Product_Name,
+                            p.Product_Description AS Description, 
+                            p.Quantity_In_Stock AS Quantity,
+                            p.Published_At, 
+                            p.Price, 
+                            s.Seller_Name, 
+                            c.Category_Name,
+                            p.Image_Link
+                        FROM 
+                            Product p
+                        LEFT JOIN 
+                            Category c ON p.Category_ID = c.Category_ID
+                        INNER JOIN 
+                            Seller s ON p.Seller_ID = s.Seller_ID
+                        WHERE
+                            p.Quantity_In_Stock > 0
+                        """;
+
             _products.Clear();
+
             foreach (DataRow row in ((DataTable)Program.DatabaseHandler.ExecuteQuery(query)).Rows)
             {
                 _products.ImportRow(row);
             }
+
             DisplayProducts();
         }
 
         private void DisplayProducts()
         {
             productsFlowLayoutPanel.Controls.Clear();
+
             foreach (DataRow row in _products.Rows)
             {
                 // Create product panel
-                Panel productPanel = new Panel
+                var productPanel = new Panel
                 {
-                    Width = productsFlowLayoutPanel.Width - 25,
-                    Height = 150,
+                    Width = productsFlowLayoutPanel.Width - 35,
+                    Height = 160,
                     BackColor = Color.FromArgb(69, 93, 127),
                     Margin = new Padding(0, 0, 0, 10)
                 };
 
                 // Add product image
-                PictureBox productImage = new PictureBox
+                var productImage = new PictureBox
                 {
-                    Width = 130,
-                    Height = 130,
+                    Width = 140,
+                    Height = 140,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Location = new Point(10, 10),
                     BackColor = Color.White
                 };
 
-                try
+                // Placeholder until the image loads
+                productImage.BackColor = Color.LightGray;
+
+                var imageUrl = row["Image_Link"].ToString();
+                if (!string.IsNullOrEmpty(imageUrl))
                 {
-                    string imageUrl = row["Image_Link"].ToString();
-                    if (!string.IsNullOrEmpty(imageUrl))
-                    {
-                        using (WebClient webClient = new WebClient())
-                        {
-                            byte[] imageBytes = webClient.DownloadData(imageUrl);
-                            using (MemoryStream ms = new MemoryStream(imageBytes))
-                            {
-                                productImage.Image = Image.FromStream(ms);
-                            }
-                        }
-                    }
-                }
-                catch
-                {
-                    // Use a placeholder image if the image can't be loaded
-                    productImage.BackColor = Color.LightGray;
+                    _ = LoadImageFromUrlAsync(imageUrl, productImage);
                 }
 
                 // Add product details
-                Label nameLabel = new Label
+                var nameLabel = new Label
                 {
                     Text = row["Product_Name"].ToString(),
                     Font = new Font("Segoe UI", 12, FontStyle.Bold),
                     ForeColor = Color.FromArgb(241, 250, 238),
-                    Location = new Point(150, 10),
+                    Location = new Point(160, 10),
                     Width = productPanel.Width - 160,
+                    Height = 38,
                     AutoSize = false
                 };
 
-                Label quantityLabel = new Label
+                var quantityLabel = new Label
                 {
                     Text = $"In Stock: {row["Quantity"]}",
                     Font = new Font("Segoe UI", 9),
                     ForeColor = Color.FromArgb(241, 250, 238),
-                    Location = new Point(150, 40),
-                    Width = 200
+                    Location = new Point(160, 50),
+                    Width = 250,
+                    Height = 26,
+                    AutoSize = false
                 };
 
-                Label priceLabel = new Label
+                var priceLabel = new Label
                 {
                     Text = $"Price: ${row["Price"]}",
                     Font = new Font("Segoe UI", 11, FontStyle.Bold),
                     ForeColor = Color.FromArgb(241, 250, 238),
-                    Location = new Point(150, 70),
-                    Width = 200
+                    Location = new Point(160, 82),
+                    Width = 250,
+                    Height = 30,
+                    AutoSize = false
                 };
 
-                Label categoryLabel = new Label
+                var categoryLabel = new Label
                 {
                     Text = $"Category: {row["Category_Name"]}",
                     Font = new Font("Segoe UI", 9),
                     ForeColor = Color.FromArgb(241, 250, 238),
-                    Location = new Point(150, 100),
-                    Width = 200
+                    Location = new Point(160, 116),
+                    Width = 250,
+                    Height = 30,
+                    AutoSize = false
                 };
 
                 // Store product ID in the panel's Tag property
@@ -134,11 +146,11 @@ namespace E_Commerce_Store.Customer
 
                 // Add click event to the panel
                 productPanel.Click += ProductPanel_Click;
-                productImage.Click += (s, e) => ProductPanel_Click(productPanel, e);
-                nameLabel.Click += (s, e) => ProductPanel_Click(productPanel, e);
-                quantityLabel.Click += (s, e) => ProductPanel_Click(productPanel, e);
-                priceLabel.Click += (s, e) => ProductPanel_Click(productPanel, e);
-                categoryLabel.Click += (s, e) => ProductPanel_Click(productPanel, e);
+                productImage.Click += (_, e) => ProductPanel_Click(productPanel, e);
+                nameLabel.Click += (_, e) => ProductPanel_Click(productPanel, e);
+                quantityLabel.Click += (_, e) => ProductPanel_Click(productPanel, e);
+                priceLabel.Click += (_, e) => ProductPanel_Click(productPanel, e);
+                categoryLabel.Click += (_, e) => ProductPanel_Click(productPanel, e);
 
                 // Add controls to panel
                 productPanel.Controls.Add(productImage);
@@ -152,38 +164,34 @@ namespace E_Commerce_Store.Customer
             }
         }
 
-        private void ProductPanel_Click(object sender, EventArgs e)
+        private static void ProductPanel_Click(object sender, EventArgs e)
         {
-            Panel panel = sender as Panel;
+            var panel = sender as Panel;
             if (panel == null && sender is Control control)
             {
                 panel = control.Parent as Panel;
             }
-            if (panel != null && panel.Tag != null)
+
+            if (panel?.Tag == null) return;
+
+            try
             {
-                try
-                {
-                    int productId = Convert.ToInt32(panel.Tag);
-                    new ProductView(productId).ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Failed to load product. Error: {ex.Message}", "E-Commerce Store",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                var productId = Convert.ToInt32(panel.Tag);
+                new ProductView(productId).ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load product. Error: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void SearchForProductsTextBox_TextChanged(object sender, EventArgs e)
         {
             var productView = _products.DefaultView;
-            string searchText = searchForProductsTextBox.Text.ToLower();
-            productView.RowFilter = string.Format(
-                "Product_Name LIKE '%{0}%' OR Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'",
-                searchText);
-            DataTable filteredTable = productView.ToTable();
+            var searchText = searchForProductsTextBox.Text.ToLower();
+            productView.RowFilter = string.Format("Product_Name LIKE '%{0}%' OR Description LIKE '%{0}%' OR Category_Name LIKE '%{0}%'", searchText);
+            var filteredTable = productView.ToTable();
             _products = filteredTable;
-            // Refresh the product display
             DisplayProducts();
         }
 
@@ -197,27 +205,49 @@ namespace E_Commerce_Store.Customer
                 INNER JOIN Added_To at ON c.Cart_ID = at.Cart_ID
                 WHERE c.Customer_ID = {Login.User.Value}
                 """;
+
             var cartTable = (DataTable)Program.DatabaseHandler.ExecuteQuery(query);
             if (cartTable.Rows.Count > 0)
             {
                 var cart = new Cart(Convert.ToInt32(cartTable.Rows[0]["Cart_ID"]));
                 cart.ShowDialog();
+
                 if (!cart.PurchaseDone) return;
+
                 _products = new DataTable();
                 CustomerPage_Load(null, null);
             }
             else
             {
-                MessageBox.Show("Your cart is empty.", "E-Commerce Store",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your cart is empty.", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void CustomerPage_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 
-        private void searchPanel_Paint(object sender, PaintEventArgs e)
+        private static async Task LoadImageFromUrlAsync(string url, PictureBox pictureBox)
         {
+            try
+            {
+                using var client = new HttpClient();
+                var imageData = await client.GetByteArrayAsync(url);
 
+                using var ms = new MemoryStream(imageData);
+                var image = Image.FromStream(ms);
+
+                if (pictureBox.InvokeRequired)
+                {
+                    pictureBox.Invoke(() => pictureBox.Image = image);
+                }
+                else
+                {
+                    pictureBox.Image = image;
+                }
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show($"Error loading image: {ex.Message}", "E-Commerce Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
