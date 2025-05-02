@@ -10,10 +10,30 @@ internal partial class Register : Form
 
     private void Register_Load(object sender, EventArgs e)
     {
-        userTypeComboBox.SelectedIndex = 0;
+        if (RegisterAsAdmin)
+        {
+            // Hide user type selection for admin registration
+            userTypeComboBox.Visible = false;
+            userTypeLabel.Visible = false;
+
+            // Hide fields not needed for admin
+            dobDateTimePicker.Visible = false;
+            dateOfBirthLabel.Visible = false;
+            addressTextBox.Visible = false;
+            label1.Visible = false;
+
+            // Update form title or add label to indicate admin registration
+            this.Text = "Register Admin";
+        }
+        else
+        {
+            userTypeComboBox.SelectedIndex = 0;
+        }
+
         dobDateTimePicker.MinDate = DateTime.Today.AddYears(-100);
         dobDateTimePicker.MaxDate = DateTime.Today;
     }
+
 
     private void RegisterButton_Click(object sender, EventArgs e)
     {

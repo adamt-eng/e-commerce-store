@@ -21,6 +21,7 @@ internal partial class AdminPage : Form
         comboBox.SelectedIndex = 0;
     }
 
+
     private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
         addButton.Hide();
