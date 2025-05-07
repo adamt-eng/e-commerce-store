@@ -14,7 +14,7 @@ internal static class Program
     {
         ApplicationConfiguration.Initialize();
 
-        DatabaseHandler = new DatabaseHandler("Data Source=ADAM;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
+        DatabaseHandler = new DatabaseHandler("Data Source=COMBUTER;Initial Catalog=e-commerce-database;Integrated Security=True;Trust Server Certificate=True");
 
         DatabaseHandler.ValidateDatabase();
         
